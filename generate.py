@@ -2,33 +2,45 @@
 #This program generates one link
 
 import pyrosim.pyrosim as pyrosim
-
-#Variables
-length = 1
-width = 1
-height = 1
-x = 0
-y = 0
-z = .5
-
-#Tell pyrosim where info about world (box) should be stored
-pyrosim.Start_SDF("boxes.sdf")
-
-#Iterate 10 times to create 10 boxes vertically
-for i in range(10):
+#Create_World creates the simulated world, with a box in it
+def Create_World():
+    #Variables
+    length = 1
+    width = 1
+    height = 1
+    x = -2
+    y = 2
+    z = .5
     
-    #Iterate 5 times to create 5 rows
-    for j in range(5):
+    #Tell pyrosim where info about world (world) should be stored
+    pyrosim.Start_SDF("world.sdf")
 
-        #Iterate 5 times to create 5 columns
-        for k in range(5):
+    #Store a box with specific position and size
+    pyrosim.Send_Cube(name="Box", pos=[x,y,z], size=[width, length, height])
 
-            #Store a box with specific position and size
-            pyrosim.Send_Cube(name="Box", pos=[x + j,y + k,z + i] ,
-                              size=[width * (.9)**i,
-                                    length * (.9)**i,
-                                    height * (.9)**i])
+    #Close sdf file
+    pyrosim.End()
 
-#Close sdf file
-pyrosim.End()
+#Create_Robot creates a robot
+def Create_Robot():
+    #Variables
+    length = 1
+    width = 1
+    height = 1
+    x = 0
+    y = 0
+    z = .5
 
+    #Tell pyrosim where info about body of the robot should be stored
+    pyrosim.Start_URDF("body.urdf")
+    #Store a torso with specific position and size
+    pyrosim.Send_Cube(name="Torso", pos=[x,y,z], size=[width, length, height])
+    pyrosim.End()
+    
+Create_World()
+Create_Robot()
+
+
+
+
+    
