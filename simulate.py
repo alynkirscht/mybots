@@ -17,7 +17,7 @@ p.setGravity(0,0,-9.8)
 planeId = p.loadURDF("plane.urdf")
 
 #Reads in the world described in box.sdf
-p.loadSDF("box.sdf")
+p.loadSDF("boxes.sdf")
 
 #The for loop is used to slow thingd down
 for i in range(1000):
