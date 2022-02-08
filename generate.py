@@ -14,11 +14,20 @@ z = .5
 #Tell pyrosim where info about world (box) should be stored
 pyrosim.Start_SDF("boxes.sdf")
 
-#Store a box with specific position and size
-pyrosim.Send_Cube(name="Box", pos=[x,y,z] , size=[width,length,height])
+#Iterate 10 times to create 10 boxes vertically
+for i in range(10):
+    
+    #Iterate 5 times to create 5 rows
+    for j in range(5):
 
-#Store a box with specific position and size
-pyrosim.Send_Cube(name="Box2", pos=[x+1,y,z+1] , size=[width,length,height])
+        #Iterate 5 times to create 5 columns
+        for k in range(5):
+
+            #Store a box with specific position and size
+            pyrosim.Send_Cube(name="Box", pos=[x + j,y + k,z + i] ,
+                              size=[width * (.9)**i,
+                                    length * (.9)**i,
+                                    height * (.9)**i])
 
 #Close sdf file
 pyrosim.End()
