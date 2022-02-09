@@ -6,6 +6,9 @@ import pybullet_data
 import pyrosim.pyrosim as pyrosim
 import numpy
 import math
+import random
+
+pi = math.pi
 
 #Create objects that handles physics and draws results to GUI
 physicsClient = p.connect(p.GUI)
@@ -45,12 +48,12 @@ for i in range(1000):
     #Add motor for BackLeg and FrontLeg to torso joints
     pyrosim.Set_Motor_For_Joint(bodyIndex = robotId, jointName= "Torso_BackLeg",
                                 controlMode= p.POSITION_CONTROL,
-                                targetPosition= (math.pi/4.0),
-                                maxForce = 500)
+                                targetPosition= random.uniform(-pi/2,pi/2),
+                                maxForce = 35)
     pyrosim.Set_Motor_For_Joint(bodyIndex = robotId, jointName= "Torso_FrontLeg",
                                 controlMode= p.POSITION_CONTROL,
-                                targetPosition= -(math.pi/4.0),
-                                maxForce = 500)
+                                targetPosition= random.uniform(-pi/2,pi/2),
+                                maxForce = 35)
     #Slows things down by 1/60 second of each iteration of the loop
     time.sleep(1/60)
     print (i)
