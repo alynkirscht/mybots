@@ -38,7 +38,7 @@ for i in range(1000):
     backLegSensorsValues[i] = pyrosim.Get_Touch_Sensor_Value_For_Link("BackLeg")
     #Slows things down by 1/60 second of each iteration of the loop
     time.sleep(1/60)
-    #print (i)
+    print (i)
+#Save sensor data to file
+numpy.save("data\\backLegSensorsValues.npy", backLegSensorsValues)
 p.disconnect()
-
-print(backLegSensorsValues)
