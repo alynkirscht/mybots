@@ -5,6 +5,7 @@ import time
 import pybullet_data
 import pyrosim.pyrosim as pyrosim
 import numpy
+import math
 
 #Create objects that handles physics and draws results to GUI
 physicsClient = p.connect(p.GUI)
@@ -40,6 +41,16 @@ for i in range(1000):
     #Add sensor to BackLeg and FrontLeg links
     backLegSensorValues[i] = pyrosim.Get_Touch_Sensor_Value_For_Link("BackLeg")
     frontLegSensorValues[i] = pyrosim.Get_Touch_Sensor_Value_For_Link("FrontLeg")
+
+    #Add motor for BackLeg and FrontLeg to torso joints
+    pyrosim.Set_Motor_For_Joint(bodyIndex = robotId, jointName= "Torso_BackLeg",
+                                controlMode= p.POSITION_CONTROL,
+                                targetPosition= (math.pi/4.0),
+                                maxForce = 500)
+    pyrosim.Set_Motor_For_Joint(bodyIndex = robotId, jointName= "Torso_FrontLeg",
+                                controlMode= p.POSITION_CONTROL,
+                                targetPosition= -(math.pi/4.0),
+                                maxForce = 500)
     #Slows things down by 1/60 second of each iteration of the loop
     time.sleep(1/60)
     print (i)
