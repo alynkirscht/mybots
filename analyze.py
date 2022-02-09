@@ -9,6 +9,7 @@ backLegSensorValues = numpy.load("data/backLegSensorValues.npy")
 frontLegSensorValues = numpy.load("data/frontLegSensorValues.npy")
 
 #Plot analyzed data
-matplotlib.pyplot.plot(backLegSensorValues)
-matplotlib.pyplot.plot(frontLegSensorValues)
+matplotlib.pyplot.plot(backLegSensorValues, label= "Back Leg", linewidth= 2 )
+matplotlib.pyplot.plot(frontLegSensorValues, label= "Front Leg", linewidth= 1)
+matplotlib.pyplot.legend()
 matplotlib.pyplot.show()
