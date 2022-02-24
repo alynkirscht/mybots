@@ -6,15 +6,7 @@ import pybullet_data
 import pyrosim.pyrosim as pyrosim
 import numpy
 import random
-
-pi = numpy.pi
-amplitude_BackLeg = pi/4
-frequency_BackLeg = 10
-phaseOffset_BackLeg = pi/8
-
-amplitude_FrontLeg = pi/4
-frequency_FrontLeg = 10
-phaseOffset_FrontLeg = 0
+import constants as c
 
 #Create objects that handles physics and draws results to GUI
 physicsClient = p.connect(p.GUI)
@@ -23,7 +15,7 @@ physicsClient = p.connect(p.GUI)
 p.setAdditionalSearchPath(pybullet_data.getDataPath())
 
 #Add force of gravity
-p.setGravity(0,0,-9.8)
+p.setGravity(0,0,c.GRAVITY)
 
 #Add floor
 planeId = p.loadURDF("plane.urdf")
@@ -38,16 +30,22 @@ p.loadSDF("world.sdf")
 pyrosim.Prepare_To_Simulate(robotId)
 
 #backLeg sensor vector
-backLegSensorValues = numpy.zeros(1000)
+backLegSensorValues = numpy.zeros(c.REPETITIONS) #amplitude * sin(frequency x)
 
 #frontLeg sensor vector
-frontLegSensorValues = numpy.zeros(1000)
+frontLegSensorValues = numpy.zeros(c.REPETITIONS)
 
 #targetAngles vector
-targetAngles_BackLeg = numpy.zeros(1000)
-targetAngles_BackLeg = amplitude_BackLeg*numpy.sin(frequency_BackLeg * numpy.linspace(0,2*pi,1000) + phaseOffset_BackLeg)
-targetAngles_FrontLeg = numpy.zeros(1000)
-targetAngles_FrontLeg = amplitude_FrontLeg*numpy.sin(frequency_FrontLeg * numpy.linspace(0,2*pi,1000) + phaseOffset_FrontLeg)
+targetAngles_BackLeg = numpy.zeros(c.REPETITIONS)
+targetAngles_BackLeg = c.AMPLITUDE_BACK_LEG*numpy.sin(c.FREQUECY_BACK_LEG
+                                                   * numpy.linspace(c.MIN_SIN,c.MAX_SIN,
+                                                                  c.REPETITIONS)
+                                                      + c.PHASE_OFFSET_BACK_LEG)
+targetAngles_FrontLeg = numpy.zeros(c.REPETITIONS)
+targetAngles_FrontLeg = c.AMPLITUDE_FRONT_LEG*numpy.sin(c.FREQUECY_BACK_LEG
+                                                     * numpy.linspace(c.MIN_SIN,c.MAX_SIN,
+                                                                      c.REPETITIONS)
+                                                     + c.PHASE_OFFSET_FRONT_LEG)
 
 #Save sensor and motor data to file
 #numpy.save("data\\backLegSensorValues.npy", backLegSensorValues)
@@ -57,7 +55,7 @@ targetAngles_FrontLeg = amplitude_FrontLeg*numpy.sin(frequency_FrontLeg * numpy.
 #exit()
 
 #The for loop is used to slow things down
-for i in range(1000):
+for i in range(c.REPETITIONS):
     #Steps physics inside the world
     p.stepSimulation()
     #Add sensor to BackLeg and FrontLeg links
@@ -68,13 +66,13 @@ for i in range(1000):
     pyrosim.Set_Motor_For_Joint(bodyIndex = robotId, jointName= "Torso_BackLeg",
                                 controlMode= p.POSITION_CONTROL,
                                 targetPosition= targetAngles_BackLeg[i],
-                                maxForce = 15)
+                                maxForce = c.MAX_FORCE)
     pyrosim.Set_Motor_For_Joint(bodyIndex = robotId, jointName= "Torso_FrontLeg",
                                 controlMode= p.POSITION_CONTROL,
                                 targetPosition= targetAngles_FrontLeg[i],
-                                maxForce = 15)
+                                maxForce = c.MAX_FORCE)
     #Slows things down by 1/60 second of each iteration of the loop
-    time.sleep(1/60)
+    time.sleep(c.SLEEP_TIME)
     
 p.disconnect()
 
