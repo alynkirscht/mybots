@@ -26,9 +26,10 @@ class SIMULATION:
     def Run(cls):
         #The for loop is used to slow things down
         for i in range(c.REPETITIONS):
-
+            
             #Steps physics inside the world
             p.stepSimulation()
+            '''
             #Add sensor to BackLeg and FrontLeg links
             backLegSensorValues[i] = pyrosim.Get_Touch_Sensor_Value_For_Link("BackLeg")
             frontLegSensorValues[i] = pyrosim.Get_Touch_Sensor_Value_For_Link("FrontLeg")
@@ -42,9 +43,10 @@ class SIMULATION:
                                         controlMode= p.POSITION_CONTROL,
                                         targetPosition= targetAngles_FrontLeg[i],
                                         maxForce = c.MAX_FORCE)
+            '''
             #Slows things down by 1/60 second of each iteration of the loop
             time.sleep(c.SLEEP_TIME)
-
+            
             print(i)
         
         
