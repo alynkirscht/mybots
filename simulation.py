@@ -48,7 +48,6 @@ class SIMULATION:
             time.sleep(c.SLEEP_TIME)
             
             print(i)
-        
-        
-    
-    #p.disconnect()
+            
+    def __del__(self):
+        p.disconnect()
