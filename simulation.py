@@ -16,10 +16,6 @@ class SIMULATION:
         p.setGravity(0,0,c.GRAVITY) 
 
         self.robot = ROBOT()
-
-        #Set up sensors
-        pyrosim.Prepare_To_Simulate(self.robot.robotId)
-    
         self.world = WORLD()
 
     @classmethod
@@ -29,11 +25,11 @@ class SIMULATION:
             
             #Steps physics inside the world
             p.stepSimulation()
-            '''
-            #Add sensor to BackLeg and FrontLeg links
-            backLegSensorValues[i] = pyrosim.Get_Touch_Sensor_Value_For_Link("BackLeg")
-            frontLegSensorValues[i] = pyrosim.Get_Touch_Sensor_Value_For_Link("FrontLeg")
 
+
+            #Enable sensing in robot
+            ROBOT.Sense(i)
+            '''
             #Add motor for BackLeg and FrontLeg to torso joints
             pyrosim.Set_Motor_For_Joint(bodyIndex = robotId, jointName= "Torso_BackLeg",
                                         controlMode= p.POSITION_CONTROL,
@@ -47,7 +43,7 @@ class SIMULATION:
             #Slows things down by 1/60 second of each iteration of the loop
             time.sleep(c.SLEEP_TIME)
             
-            print(i)
+            #print(i)
             
     def __del__(self):
         p.disconnect()
