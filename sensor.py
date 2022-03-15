@@ -11,9 +11,6 @@ class SENSOR:
     
     def Get_Value(self, linkName, t):
         #Get value of sensors
-        #print(self.values[self.t])
         self.values[t] = pyrosim.Get_Touch_Sensor_Value_For_Link(linkName)
-        if (t == c.REPETITIONS-1):
-            print(self.values)
         
        

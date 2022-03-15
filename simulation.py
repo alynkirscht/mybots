@@ -17,9 +17,13 @@ class SIMULATION:
 
         self.robot = ROBOT()
         self.world = WORLD()
+        
+    def __del__(self):
+        p.disconnect()
+        #print("Hello")
 
-    @classmethod
-    def Run(cls):
+    
+    def Run(self):
         #The for loop is used to slow things down
         for i in range(c.REPETITIONS):
             
@@ -28,7 +32,10 @@ class SIMULATION:
 
 
             #Enable sensing in robot
-            ROBOT.Sense(i)
+            self.robot.Sense(i)
+
+            #Enable acting in robot
+            self.robot.Act(i)
             '''
             #Add motor for BackLeg and FrontLeg to torso joints
             pyrosim.Set_Motor_For_Joint(bodyIndex = robotId, jointName= "Torso_BackLeg",
@@ -45,5 +52,4 @@ class SIMULATION:
             
             #print(i)
             
-    def __del__(self):
-        p.disconnect()
+
