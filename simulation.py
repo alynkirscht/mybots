@@ -20,7 +20,6 @@ class SIMULATION:
         
     def __del__(self):
         p.disconnect()
-        #print("Hello")
 
     
     def Run(self):
