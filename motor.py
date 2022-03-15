@@ -5,6 +5,7 @@ import pybullet as p
 class MOTOR:
     def __init__(self, jointName):
         self.jointName = jointName
+        print(self.jointName)
         self.Prepare_To_Act()
 
     def Prepare_To_Act(self):
@@ -12,19 +13,25 @@ class MOTOR:
         self.motorValues = numpy.zeros(c.REPETITIONS)
 
         #Motor vector values
-        self.frequency = 1#c.FREQUECY_BACK_LEG
-        self.amplitude = numpy.pi/4 #c.AMPLITUDE_BACK_LEG
-        self.offset = 0#c.PHASE_OFFSET_FRONT_LEG
+        self.frequency = c.FREQUECY
+        self.amplitude = c.AMPLITUDE
+        self.offset = c.OFFSET
+        if (self.jointName == "Torso_BackLeg"):
+           self.offset = c.PI/8
+        
 
     def Set_Value(self,robotId, i,t):
         #self.motorValues[t] = self.amplitude * numpy.sin(self.frequency * t) + self.offset
         spacedArray = numpy.linspace(c.MIN_SIN,c.MAX_SIN,c.REPETITIONS)
-        self.motorValues[t] = c.AMPLITUDE_BACK_LEG*numpy.sin(c.FREQUECY_BACK_LEG * spacedArray[t]
-                                                             + c.PHASE_OFFSET_BACK_LEG)
+        self.motorValues[t] = self.amplitude * numpy.sin(self.frequency * spacedArray[t]
+                                                             + self.offset)
         #Add motor for joints
         pyrosim.Set_Motor_For_Joint(bodyIndex = robotId, jointName= self.jointName,
                                 controlMode= p.POSITION_CONTROL,
                                 targetPosition= self.motorValues[t],
                                 maxForce = c.MAX_FORCE)
+
+    def Save_Values(self):
+        numpy.save("data\\" + self.jointName + "SensorValues.npy", self.motorValues)
         
         
