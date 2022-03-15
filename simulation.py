@@ -33,6 +33,8 @@ class SIMULATION:
             #Enable sensing in robot
             self.robot.Sense(i)
 
+            self.robot.Think()
+
             #Enable acting in robot
             self.robot.Act(i)
             '''
