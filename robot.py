@@ -1,6 +1,3 @@
-import pybullet as p
-import pyrosim.pyrosim as pyrosim
-from sensor import SENSOR
 from motor import MOTOR
 import constants as c
 
@@ -30,6 +27,9 @@ class ROBOT:
     def Sense(self, t):
         for i in self.sensors:
             self.sensors[i].Get_Value(i, t)
+
+    def Think(self):
+        pass
 
 
     def Prepare_To_Act(self):
