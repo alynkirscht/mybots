@@ -1,3 +1,8 @@
+#Alyn Kirsch Tornell
+#This program generates one link
+
+import pyrosim.pyrosim as pyrosim
+#Create_World creates the simulated world, with a box in it
 def Create_World():
     
     #Tell pyrosim where info about world (world) should be stored
