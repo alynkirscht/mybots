@@ -41,7 +41,13 @@ def Generate_Brain():
     #Tell pyrosim where info about brain of the robot should be stored
     pyrosim.Start_NeuralNetwork("brain.nndf")
 
+    #Send sensor neurons
     pyrosim.Send_Sensor_Neuron(name = 0, linkName = "Torso")
+    pyrosim.Send_Sensor_Neuron(name = 1, linkName = "BackLeg")
+    pyrosim.Send_Sensor_Neuron(name = 2, linkName = "FrontLeg")
+
+    pyrosim.Send_Motor_Neuron( name = 3, jointName = "Torso_Backleg")
+    pyrosim.Send_Motor_Neuron( name = 4, jointName = "Torso_Frontleg")
 
     pyrosim.End()
     
