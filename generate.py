@@ -14,8 +14,7 @@ def Create_World():
     #Close sdf file
     pyrosim.End()
 
-#Create_Robot creates a robot
-def Create_Robot():
+def Generate_Body():
 
     #Tell pyrosim where info about body of the robot should be stored
     pyrosim.Start_URDF("body.urdf")
@@ -36,10 +35,19 @@ def Create_Robot():
     pyrosim.Send_Cube( name="FrontLeg", pos=[.5,0,-.5], size=[1,1,1])
 
     pyrosim.End()
-    
+
+def Generate_Brain():
+
+    #Tell pyrosim where info about brain of the robot should be stored
+    pyrosim.Start_NeuralNetwork("brain.nndf")
+
+    pyrosim.Send_Sensor_Neuron(name = 0, linkName = "Torso")
+
+    pyrosim.End()
     
 Create_World()
-Create_Robot()
+Generate_Body()
+Generate_Brain()
 
 
 
