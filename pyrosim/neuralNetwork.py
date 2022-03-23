@@ -2,8 +2,6 @@ from pyrosim.neuron  import NEURON
 
 from pyrosim.synapse import SYNAPSE
 
-import pyrosim.pyrosim as pyrosim
-
 
 class NEURAL_NETWORK: 
 
