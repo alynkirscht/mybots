@@ -2,6 +2,7 @@
 #This program generates one link
 
 import pyrosim.pyrosim as pyrosim
+import random
 #Create_World creates the simulated world, with a box in it
 def Create_World():
     
@@ -49,10 +50,16 @@ def Generate_Brain():
     pyrosim.Send_Motor_Neuron( name = 3, jointName = "Torso_BackLeg")
     pyrosim.Send_Motor_Neuron( name = 4, jointName = "Torso_FrontLeg")
 
-    pyrosim.Send_Synapse( sourceNeuronName = 0 , targetNeuronName = 3 , weight = 1.0 )
+    '''pyrosim.Send_Synapse( sourceNeuronName = 0 , targetNeuronName = 3 , weight = 1.0 )
     pyrosim.Send_Synapse( sourceNeuronName = 1 , targetNeuronName = 3 , weight = 2.0 )
     pyrosim.Send_Synapse( sourceNeuronName = 0 , targetNeuronName = 4 , weight = 1.0 )
-    pyrosim.Send_Synapse( sourceNeuronName = 2 , targetNeuronName = 4 , weight = 2.0 )
+    pyrosim.Send_Synapse( sourceNeuronName = 2 , targetNeuronName = 4 , weight = 2.0 )'''
+
+    for i in range(2):
+        for j in range(3,5):
+            pyrosim.Send_Synapse( sourceNeuronName = i , targetNeuronName = j ,
+                                  weight = random.uniform(-1,1) )
+            
     
     pyrosim.End()
     
