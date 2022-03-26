@@ -53,5 +53,7 @@ class SIMULATION:
             time.sleep(c.SLEEP_TIME)
             
             #print(i)
+    def Get_Fitness(self):
+        self.robot.Get_Fitness()
             
 

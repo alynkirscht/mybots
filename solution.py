@@ -8,13 +8,17 @@ class SOLUTION:
         self.weights = numpy.array([[numpy.random.rand(),numpy.random.rand()],
                         [numpy.random.rand(),numpy.random.rand()],
                         [numpy.random.rand(),numpy.random.rand()]])
+        print(self.weights)
         
         self.weights = self.weights * 2 -1
 
+        print(self.weights)
+        
+        
     def Evaluate(self):
         self.Create_World()
-        self.Generate_Body()
-        self.Generate_Brain()
+        self.Create_Body()
+        self.Create_Brain()
         os.system("python3 simulate.py")
 
     def Create_World(self):
@@ -25,7 +29,7 @@ class SOLUTION:
 
         pyrosim.End()
 
-    def Generate_Body(self):
+    def Create_Body(self):
 
         pyrosim.Start_URDF("body.urdf")
         
@@ -41,7 +45,7 @@ class SOLUTION:
 
         pyrosim.End()
 
-    def Generate_Brain(self):
+    def Create_Brain(self):
 
         pyrosim.Start_NeuralNetwork("brain.nndf")
 
