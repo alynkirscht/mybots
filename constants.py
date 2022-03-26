@@ -9,3 +9,4 @@ MIN_SIN = 0
 OFFSET= 0
 MAX_FORCE = 15
 SLEEP_TIME = 1/60
+numberOfGenerations = 2

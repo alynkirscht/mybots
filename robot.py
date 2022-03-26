@@ -61,6 +61,7 @@ class ROBOT:
         xCoordindateOfLinkZero = positionOfLinkZero[0]
         file = open("fitness.txt", "w")
         file.write(str(xCoordindateOfLinkZero))
+        file.close()
 
 
         
