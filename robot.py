@@ -20,6 +20,7 @@ class ROBOT:
         #Activate motors
         self.Prepare_To_Act()
 
+
         #Creates neural network
         self.nn = NEURAL_NETWORK("brain" + solutionID + ".nndf")
 
@@ -58,13 +59,15 @@ class ROBOT:
         self.nn.Update()
         self.nn.Print()
 
-    def Get_Fitness(self):
+    def Get_Fitness(self, solutionID):
         stateOfLinkZero = p.getLinkState(self.robotId,0)
         positionOfLinkZero = stateOfLinkZero[0]
         xCoordindateOfLinkZero = positionOfLinkZero[0]
-        file = open("fitness.txt", "w")
+        file = open("tmp" + solutionID + ".txt", "w")
         file.write(str(xCoordindateOfLinkZero))
         file.close()
+        os.system("rename tmp" + str(solutionID) + ".txt fitness" +
+                  str(solutionID) + ".txt")
 
 
         

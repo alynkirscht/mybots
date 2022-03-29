@@ -10,4 +10,4 @@ OFFSET= 0
 MAX_FORCE = 15
 SLEEP_TIME = 1/999999999
 numberOfGenerations = 10
-populationSize = 2
+populationSize = 10

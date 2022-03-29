@@ -16,9 +16,10 @@ class SIMULATION:
         #Create normal force generated when hitting floor
         p.setAdditionalSearchPath(pybullet_data.getDataPath())
         #Add force of gravity
-        p.setGravity(0,0,c.GRAVITY) 
-
-        self.robot = ROBOT(solutionID)
+        p.setGravity(0,0,c.GRAVITY)
+        
+        self.solutionID = solutionID
+        self.robot = ROBOT(self.solutionID)
         self.world = WORLD()
 
         self.directOrGUI = directOrGUI
@@ -49,6 +50,6 @@ class SIMULATION:
             
             #print(i)
     def Get_Fitness(self):
-        self.robot.Get_Fitness()
+        self.robot.Get_Fitness(self.solutionID)
             
 
