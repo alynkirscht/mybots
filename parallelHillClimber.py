@@ -29,8 +29,7 @@ class PARALLEL_HILL_CLIMBER:
         
         self.Evaluate(self.children)
     
-
-##        self.Print()
+        self.Print()
         
 ##        self.Select()            
     
@@ -50,8 +49,11 @@ class PARALLEL_HILL_CLIMBER:
             self.parent = self.child
 
     def Print(self):
-        print(self.parent.fitness, self.child.fitness)
-
+        print("")
+        for i in self.parents:
+            print(self.parents[i].fitness, self.children[i].fitness)
+        print("")
+        
     def Show_Best(self):
         ''' self.parent.Evaluate("GUI")'''
         pass
