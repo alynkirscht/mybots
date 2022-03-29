@@ -50,7 +50,7 @@ class SIMULATION:
                                         maxForce = c.MAX_FORCE)
             '''
             #Slows things down by 1/60 second of each iteration of the loop
-            time.sleep(c.SLEEP_TIME)
+            #time.sleep(c.SLEEP_TIME)
             
             #print(i)
     def Get_Fitness(self):
