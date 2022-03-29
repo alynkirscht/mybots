@@ -5,19 +5,21 @@ import os
 import sys
 
 class SOLUTION:
-    def __init__(self):
+    def __init__(self, nextAvailableID):
         self.weights = numpy.array([[numpy.random.rand(),numpy.random.rand()],
                         [numpy.random.rand(),numpy.random.rand()],
                         [numpy.random.rand(),numpy.random.rand()]])
         
         self.weights = self.weights * 2 -1
+
+        self.myID = nextAvailableID
         
         
     def Evaluate(self, directOrGUI):
         self.Create_World()
         self.Create_Body()
         self.Create_Brain()
-        os.system("python3 simulate.py " + directOrGUI )
+        os.system("start /B python3 simulate.py " + directOrGUI)
 
         fitnessFile = open("fitness.txt", "r")
         self.fitness = float(fitnessFile.readline())
@@ -72,3 +74,6 @@ class SOLUTION:
         randomColumn = random.randint(0,1)
 
         self.weights[randomRow, randomColumn] = random.random() * 2 -1
+
+    def Set_ID(self):
+        return self.myID + 1
