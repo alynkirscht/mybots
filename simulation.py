@@ -8,8 +8,7 @@ import time
 
 class SIMULATION:
     def __init__(self):
-        self.physicsClient = p.connect(p.GUI) #handles physics and draws
-                                              #results to GUI
+        self.physicsClient = p.connect(p.DIRECT) 
         #Create normal force generated when hitting floor
         p.setAdditionalSearchPath(pybullet_data.getDataPath())
         #Add force of gravity
