@@ -7,8 +7,12 @@ from robot import ROBOT
 import time
 
 class SIMULATION:
-    def __init__(self):
-        self.physicsClient = p.connect(p.DIRECT) 
+    def __init__(self, directOrGUI):
+        if (directOrGUI == "DIRECT"):
+            self.physicsClient = p.connect(p.DIRECT)
+        elif (directOrGUI == "GUI"):
+            self.physicsClient = p.connect(p.GUI)
+            
         #Create normal force generated when hitting floor
         p.setAdditionalSearchPath(pybullet_data.getDataPath())
         #Add force of gravity
@@ -49,7 +53,7 @@ class SIMULATION:
                                         maxForce = c.MAX_FORCE)
             '''
             #Slows things down by 1/60 second of each iteration of the loop
-            #time.sleep(c.SLEEP_TIME)
+            time.sleep(1/9999999999999999999999) #c.SLEEP_TIME
             
             #print(i)
     def Get_Fitness(self):
