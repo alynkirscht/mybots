@@ -8,5 +8,6 @@ MAX_SIN = 2*PI
 MIN_SIN = 0
 OFFSET= 0
 MAX_FORCE = 15
-SLEEP_TIME = 1/60
+SLEEP_TIME = 1/999999999
 numberOfGenerations = 10
+populationSize = 2
