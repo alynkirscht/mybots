@@ -7,7 +7,7 @@ from robot import ROBOT
 import time
 
 class SIMULATION:
-    def __init__(self, directOrGUI):
+    def __init__(self, directOrGUI, solutionID):
         if (directOrGUI == "DIRECT"):
             self.physicsClient = p.connect(p.DIRECT)
         elif (directOrGUI == "GUI"):
@@ -18,8 +18,10 @@ class SIMULATION:
         #Add force of gravity
         p.setGravity(0,0,c.GRAVITY) 
 
-        self.robot = ROBOT()
+        self.robot = ROBOT(solutionID)
         self.world = WORLD()
+
+        self.directOrGUI = directOrGUI
         
     def __del__(self):
         p.disconnect()
@@ -41,19 +43,9 @@ class SIMULATION:
 
             #Enable acting in robot
             self.robot.Act(i)
-            '''
-            #Add motor for BackLeg and FrontLeg to torso joints
-            pyrosim.Set_Motor_For_Joint(bodyIndex = robotId, jointName= "Torso_BackLeg",
-                                        controlMode= p.POSITION_CONTROL,
-                                        targetPosition= targetAngles_BackLeg[i],
-                                        maxForce = c.MAX_FORCE)
-            pyrosim.Set_Motor_For_Joint(bodyIndex = robotId, jointName= "Torso_FrontLeg",
-                                        controlMode= p.POSITION_CONTROL,
-                                        targetPosition= targetAngles_FrontLeg[i],
-                                        maxForce = c.MAX_FORCE)
-            '''
-            #Slows things down by 1/60 second of each iteration of the loop
-            time.sleep(1/9999999999999999999999) #c.SLEEP_TIME
+
+            if (self.directOrGUI == "GUI"):
+                time.sleep(c.SLEEP_TIME) 
             
             #print(i)
     def Get_Fitness(self):

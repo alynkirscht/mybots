@@ -19,7 +19,7 @@ class SOLUTION:
         self.Create_World()
         self.Create_Body()
         self.Create_Brain()
-        os.system("start /B python3 simulate.py " + directOrGUI)
+        os.system("start /B python3 simulate.py " + directOrGUI + " " + str(self.myID) )
 
         fitnessFile = open("fitness.txt", "r")
         self.fitness = float(fitnessFile.readline())
@@ -52,7 +52,7 @@ class SOLUTION:
 
     def Create_Brain(self):
 
-        pyrosim.Start_NeuralNetwork("brain.nndf")
+        pyrosim.Start_NeuralNetwork("brain" + str(self.myID) + ".nndf")
 
         pyrosim.Send_Sensor_Neuron(name = 0, linkName = "Torso")
         pyrosim.Send_Sensor_Neuron(name = 1, linkName = "BackLeg")

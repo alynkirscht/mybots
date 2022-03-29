@@ -4,9 +4,10 @@ from sensor import SENSOR
 from motor import MOTOR
 import constants as c
 from pyrosim.neuralNetwork import NEURAL_NETWORK
+import os
 
 class ROBOT:
-    def __init__(self):
+    def __init__(self, solutionID):
         #Add robot
         self.robotId = p.loadURDF("body.urdf")
 
@@ -20,7 +21,9 @@ class ROBOT:
         self.Prepare_To_Act()
 
         #Creates neural network
-        self.nn = NEURAL_NETWORK("brain.nndf")
+        self.nn = NEURAL_NETWORK("brain" + solutionID + ".nndf")
+
+        os.system("del brain" + solutionID + ".nndf")
 
 
     def Prepare_To_Sense(self):
