@@ -48,8 +48,9 @@ class SIMULATION:
             if (self.directOrGUI == "GUI"):
                 time.sleep(c.SLEEP_TIME) 
             
-            #print(i)
+            
     def Get_Fitness(self):
         self.robot.Get_Fitness(self.solutionID)
+        
             
 

@@ -82,5 +82,7 @@ class SOLUTION:
         self.fitness = float(fitnessFile.readline())
         fitnessFile.close()
         os.system("del fitness" + str(self.myID) + ".txt")
+
+    
                   
         
