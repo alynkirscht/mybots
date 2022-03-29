@@ -8,11 +8,8 @@ class SOLUTION:
         self.weights = numpy.array([[numpy.random.rand(),numpy.random.rand()],
                         [numpy.random.rand(),numpy.random.rand()],
                         [numpy.random.rand(),numpy.random.rand()]])
-        print(self.weights)
         
         self.weights = self.weights * 2 -1
-
-        print(self.weights)
         
         
     def Evaluate(self):
@@ -47,6 +44,7 @@ class SOLUTION:
                             type = "revolute", position = [2,0,1])
         pyrosim.Send_Cube( name="FrontLeg", pos=[.5,0,-.5], size=[1,1,1])
 
+
         pyrosim.End()
 
     def Create_Brain(self):
@@ -67,3 +65,9 @@ class SOLUTION:
                                      weight = self.weights[currentRow][currentColumn])
         
         pyrosim.End()
+
+    def Mutate(self):
+        randomRow = random.randint(0,2)
+        randomColumn = random.randint(0,1)
+
+        self.weights[randomRow, randomColumn] = random.random() * 2 -1
