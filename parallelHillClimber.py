@@ -56,8 +56,15 @@ class PARALLEL_HILL_CLIMBER:
         print("")
         
     def Show_Best(self):
-        ''' self.parent.Evaluate("GUI")'''
-        pass
+        bestFitness = self.parents[0].fitness
+        bestFitnessID = 0
+        for i in range(len(self.parents)-1):
+            if (bestFitness > self.parents[i+1].fitness):
+                bestFitness = self.parents[i+1].fitness
+                bestFitnessID = i+1        
+        
+        self.parents[bestFitnessID].Start_Simulation("GUI")
+        
 
     def Evaluate(self, solutions):
         for i in solutions:
@@ -65,4 +72,5 @@ class PARALLEL_HILL_CLIMBER:
 
         for i in solutions:
             solutions[i].Wait_For_Simulation_To_End()
+            
 

@@ -3,6 +3,7 @@
 from simulation import SIMULATION
 import sys
 
+print(sys.argv[0])
 directOrGUI = sys.argv[1]
 solutionID = sys.argv[2]
 simulation = SIMULATION(directOrGUI, solutionID)

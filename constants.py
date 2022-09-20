@@ -11,5 +11,5 @@ MAX_FORCE = 15
 SLEEP_TIME = 1/999999999
 numberOfGenerations = 1
 populationSize = 1
-numSensorNeurons = 8
-numMotorNeurons = 7
+numSensorNeurons = 2
+numMotorNeurons = 1
