@@ -5,6 +5,7 @@ from motor import MOTOR
 import constants as c
 from pyrosim.neuralNetwork import NEURAL_NETWORK
 import os
+import numpy
 
 class ROBOT:
     def __init__(self, solutionID):
@@ -33,12 +34,12 @@ class ROBOT:
         for linkName in pyrosim.linkNamesToIndices:
             #Create an instance of SENSOR class for each link
             self.sensors[linkName] = SENSOR(linkName)
+        print(self.sensors)
 
         
     def Sense(self, t):
         for i in self.sensors:
             self.sensors[i].Get_Value(i, t)
-
 
     def Prepare_To_Act(self):
         self.motors = {}
@@ -60,6 +61,22 @@ class ROBOT:
         self.nn.Print()
 
     def Get_Fitness(self, solutionID):
+        
+        for t in range(c.REPETITIONS):
+            self.sensors['FrontLowerLeg'].Get_Value('FrontLowerLeg',t).Save_Values()
+            self.sensors['LeftLowerLeg'].Get_Value('LeftLowerLeg',t).Save_Values()
+            self.sensors['RightLowerLeg'].Get_Value('RightLowerLeg',t).Save_Values()
+            self.sensors['BackLowerLeg'].Get_Value('BackLowerLeg',t).Save_Values()
+            pyrosim.Get_Touch_Sensor_Value_For_Link(linkName)
+            for i in self.sensors:
+                self.sensor_values = self.Sense(t)
+            self.avg_sensors = numpy.array(self.sensor_values)
+        file = open("tmp" + solutionID + ".txt", "w")
+        file.write(str(self.avg_sensors))
+        file.close()
+        os.system("rename tmp" + str(solutionID) + ".txt fitness" +
+                  str(solutionID) + ".txt")
+        """
         stateOfLinkZero = p.getLinkState(self.robotId,0)
         positionOfLinkZero = stateOfLinkZero[0]
         xCoordindateOfLinkZero = positionOfLinkZero[0]
@@ -67,7 +84,4 @@ class ROBOT:
         file.write(str(xCoordindateOfLinkZero))
         file.close()
         os.system("rename tmp" + str(solutionID) + ".txt fitness" +
-                  str(solutionID) + ".txt")
-
-
-        
+                  str(solutionID) + ".txt")"""
