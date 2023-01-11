@@ -1,3 +1,4 @@
+from statistics import mode
 import pybullet as p
 import pyrosim.pyrosim as pyrosim
 from sensor import SENSOR
@@ -29,13 +30,11 @@ class ROBOT:
 
 
     def Prepare_To_Sense(self):
+        self.sensor_names = ["FrontLowerLeg", "LeftLowerLeg", "RightLowerLeg", "BackLowerLeg"]
         self.sensors = {}
-
-        for linkName in pyrosim.linkNamesToIndices:
-            #Create an instance of SENSOR class for each link
+        for linkName in self.sensor_names:
+            #Create an instance of SENSOR class for each lower leg
             self.sensors[linkName] = SENSOR(linkName)
-        print(self.sensors)
-
         
     def Sense(self, t):
         for i in self.sensors:
@@ -61,21 +60,24 @@ class ROBOT:
         self.nn.Print()
 
     def Get_Fitness(self, solutionID):
-        
-        for t in range(c.REPETITIONS):
-            self.sensors['FrontLowerLeg'].Get_Value('FrontLowerLeg',t).Save_Values()
-            self.sensors['LeftLowerLeg'].Get_Value('LeftLowerLeg',t).Save_Values()
-            self.sensors['RightLowerLeg'].Get_Value('RightLowerLeg',t).Save_Values()
-            self.sensors['BackLowerLeg'].Get_Value('BackLowerLeg',t).Save_Values()
-            pyrosim.Get_Touch_Sensor_Value_For_Link(linkName)
-            for i in self.sensors:
-                self.sensor_values = self.Sense(t)
-            self.avg_sensors = numpy.array(self.sensor_values)
-        file = open("tmp" + solutionID + ".txt", "w")
-        file.write(str(self.avg_sensors))
+        self.sensor_values = []
+        self.mean = []
+        for t in range(10):
+            self.sensor_values.clear()
+            for linkname in self.sensor_names:
+                self.sensor_values.append(pyrosim.Get_Touch_Sensor_Value_For_Link(linkname))
+                print(self.sensor_values)
+            self.mean.append(numpy.mean(self.sensor_values))
+        print(self.mean)
+            
+        file = open("tmp" + solutionID + ".txt", "a")
+        file.write(str(self.mean))
         file.close()
         os.system("rename tmp" + str(solutionID) + ".txt fitness" +
-                  str(solutionID) + ".txt")
+                str(solutionID) + ".txt")
+
+        
+        
         """
         stateOfLinkZero = p.getLinkState(self.robotId,0)
         positionOfLinkZero = stateOfLinkZero[0]
