@@ -1,12 +1,12 @@
 <robot name = "robot">
     <link name="s1">
         <inertial>
-            <origin xyz="0 0 0.25" rpy="1.0"/>
+            <origin xyz="0 0 0.25" rpy="1 0 0"/>
             <mass value="1" />
             <inertia ixx="100" ixy="0" ixz="0" iyy="100" iyz="0" izz="100" />
         </inertial>
         <visual>
-            <origin xyz="0 0 0.25" rpy="1.0"/>
+            <origin xyz="0 0 0.25" rpy="1 0 0"/>
             <geometry>
                 <box size="0.5 0.5 0.5" />
             </geometry>
@@ -15,7 +15,7 @@
             </material>
         </visual>
         <collision>
-            <origin xyz="0 0 0.25" rpy="1.0"/>
+            <origin xyz="0 0 0.25" rpy="1 0 0"/>
             <geometry>
                 <box size="0.5 0.5 0.5" />
             </geometry>
@@ -24,18 +24,18 @@
     <joint name="s1_s2" type="revolute">
        <parent link="s1"/>
        <child  link="s2"/>
-       <origin rpy="0 0 0" xyz="0.25 -0.25 0" />
+       <origin rpy="0 0 0" xyz="0.25 0 0" />
        <axis xyz="0 0 1"/>
        <limit effort="0.0" lower="-3.14159" upper="3.14159" velocity="0.0"/>
     </joint>
     <link name="s2">
         <inertial>
-            <origin xyz="0.25 -0.25 0.25" rpy="1.0"/>
+            <origin xyz="0.25 0.25 0.25" rpy="1 0 0"/>
             <mass value="1" />
             <inertia ixx="100" ixy="0" ixz="0" iyy="100" iyz="0" izz="100" />
         </inertial>
         <visual>
-            <origin xyz="0.25 -0.25 0.25" rpy="1.0"/>
+            <origin xyz="0.25 0.25 0.25" rpy="1 0 0"/>
             <geometry>
                 <box size="0.5 0.5 0.5" />
             </geometry>
@@ -44,7 +44,7 @@
             </material>
         </visual>
         <collision>
-            <origin xyz="0.25 -0.25 0.25" rpy="1.0"/>
+            <origin xyz="0.25 0.25 0.25" rpy="1 0 0"/>
             <geometry>
                 <box size="0.5 0.5 0.5" />
             </geometry>
