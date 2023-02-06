@@ -29,8 +29,8 @@ class SOLUTION:
         pyrosim.Send_Cube(name="s1", pos=[0,0,.25], size=[.5, .5, .5], rpy= "0 0 1")
         
         pyrosim.Send_Joint( name = "s1_s2", parent = "s1", child = "s2",
-                            type = "revolute", position = [0.25, 0 , 0], jointAxis="0 0 1")
-        pyrosim.Send_Cube(name="s2", pos=[.25, .25, .25], size=[.5, .5, .5], rpy= "0 0 1")
+                            type = "revolute", position = [0.44, .15 , 0], jointAxis="0 0 1")
+        pyrosim.Send_Cube(name="s2", pos=[.25, 0, .25], size=[.5, .5, .5], rpy= "0 0 1")
         
         '''
         pyrosim.Send_Joint( name = "Torso_FrontLeg", parent = "Torso", child = "FrontLeg",
