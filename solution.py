@@ -26,17 +26,24 @@ class SOLUTION:
 
         pyrosim.Start_URDF("body.urdf")
         
-        pyrosim.Send_Cube(name="s1", pos=[0,0,.25], size=[.5, .5, .5], rpy= "0 0 1")
+        pyrosim.Send_Cube(name="s0", pos=[0,0,.5], size=[1, 1, 1])
+
         
+        pyrosim.Send_Joint( name = "s0_s1", parent = "s0", child = "s1",
+                            type = "revolute", position = [0, .5 , .5], jointAxis="0 0 1")
+        
+        pyrosim.Send_Cube(name="s1", pos=[0, .5, 0], size=[1, 1, 1])
+
         pyrosim.Send_Joint( name = "s1_s2", parent = "s1", child = "s2",
-                            type = "revolute", position = [0.44, .15 , 0], jointAxis="0 0 1")
-        pyrosim.Send_Cube(name="s2", pos=[.25, 0, .25], size=[.5, .5, .5], rpy= "0 0 1")
+                            type = "revolute", position = [0, 1 , 0], jointAxis="0 1 0")
         
-        '''
-        pyrosim.Send_Joint( name = "Torso_FrontLeg", parent = "Torso", child = "FrontLeg",
-                            type = "revolute", position = [2, 0, 1], jointAxis="0 1 0")
-        pyrosim.Send_Cube( name="FrontLeg", pos=[0.5, 0, -.5], size=[1, 1, 1])
-        '''
+        pyrosim.Send_Cube(name="s2", pos=[0, .5, 0], size=[1, 1, 1])
+        
+        
+        pyrosim.Send_Joint( name = "s2_s3", parent = "s2", child = "s3",
+                            type = "revolute", position = [0, 1 , 0], jointAxis="0 0 1")
+        
+        pyrosim.Send_Cube(name="s3", pos=[0, .5, 0], size=[1, 1, 1])
 
         pyrosim.End()
         
@@ -44,14 +51,14 @@ class SOLUTION:
     def Create_Brain(self):
         pyrosim.Start_NeuralNetwork("brain" + str(self.myID) + ".nndf")
 
-        pyrosim.Send_Sensor_Neuron(name = 0, linkName = "s1")
-        pyrosim.Send_Sensor_Neuron(name = 1, linkName = "s2")
-        #pyrosim.Send_Sensor_Neuron(name = 2, linkName = "FrontLeg")
-
+        pyrosim.Send_Sensor_Neuron(name = 0, linkName = "s0")
+        pyrosim.Send_Sensor_Neuron(name = 1, linkName = "s1")
+        pyrosim.Send_Sensor_Neuron(name = 2, linkName = "s2")
+        pyrosim.Send_Sensor_Neuron(name = 3, linkName = "s3")
         
-        pyrosim.Send_Motor_Neuron( name = 2, jointName = "s1_s2")
-        #pyrosim.Send_Motor_Neuron( name = 3, jointName = "Torso_FrontLeg")
-       
+        pyrosim.Send_Motor_Neuron( name = 4, jointName = "s0_s1")
+        pyrosim.Send_Motor_Neuron( name = 5, jointName = "s1_s2")
+        pyrosim.Send_Motor_Neuron( name = 6, jointName = "s2_s3")
         
         for currentRow in range(c.numSensorNeurons):
             for currentColumn in range(c.numMotorNeurons):
