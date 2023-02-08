@@ -8,7 +8,8 @@ import constants as c
 
 class SOLUTION:
     def __init__(self, nextAvailableID):
-        self.numLinksJoint = 10
+        # randomize size of snake
+        self.numLinksJoint = random.randint(0, 10)
         self.numSensorNeurons = self.numLinksJoint + 2
         self.numMotorNeurons = self.numLinksJoint + 1
 
@@ -31,6 +32,8 @@ class SOLUTION:
     def Create_Body(self):
 
         pyrosim.Start_URDF("body.urdf")
+
+        normalVector = self.Random_Normal_Vector()
         
         pyrosim.Send_Cube(name="s0", pos=[0,0,.5], size=[1, 1, 1])
 
@@ -38,18 +41,14 @@ class SOLUTION:
                             type = "revolute", position = [0, .5 , .5], jointAxis="1 0 0")
         
         for linksJoint in range(self.numLinksJoint):
-            # intercalate different normal vectors
-            normalVector = "0 1 0"
-            if (linksJoint % 2 == 0):
-                normalVector = "0 0 1"
-
-
+            normalVector = self.Random_Normal_Vector()
 
             pyrosim.Send_Cube(name='s' + str(linksJoint + 1), pos=[0, .5, 0], size=[1, 1, 1])
 
             pyrosim.Send_Joint( name = 's' + str(linksJoint + 1) + '_' + 's' + str(linksJoint + 2), parent = 's' + str(linksJoint + 1), child = 's' + str(linksJoint + 2),
                                 type = "revolute", position = [0, 1 , 0], jointAxis=normalVector)
-            
+
+        normalVector = self.Random_Normal_Vector()    
         pyrosim.Send_Cube(name='s' + str(self.numLinksJoint + 1), pos=[0, .5, 0], size=[1, 1, 1])
 
         pyrosim.End()
@@ -95,6 +94,18 @@ class SOLUTION:
         self.fitness = float(fitnessFile.readline())
         fitnessFile.close()
         os.system("del fitness" + str(self.myID) + ".txt")
+    
+    def Random_Normal_Vector(self):
+        # randomize normal vectors
+        randomVector = random.randint(0,2)
+        if randomVector == 0:
+            normalVector = "1 0 0"
+        elif randomVector == 1:
+            normalVector = "0 1 0"
+        elif randomVector == 2:
+            normalVector = "0 0 1"
+
+        return normalVector
 
     
                   
