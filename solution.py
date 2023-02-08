@@ -8,15 +8,17 @@ import constants as c
 
 class SOLUTION:
     def __init__(self, nextAvailableID):
-        self.weights = numpy.random.random((c.numSensorNeurons,c.numMotorNeurons))
+        self.numLinksJoint = 10
+        self.numSensorNeurons = self.numLinksJoint + 2
+        self.numMotorNeurons = self.numLinksJoint + 1
+
+        self.weights = numpy.random.random((self.numSensorNeurons,self.numMotorNeurons))
        
         self.weights = self.weights * 2 -1
 
         self.myID = nextAvailableID
 
-        self.numLinksJoint = 1
-        self.numSensorNeurons = self.numLinksJoint + 2
-        self.numMotorNeurons = self.numLinksJoint + 1
+       
         
     def Create_World(self):
         
@@ -65,7 +67,7 @@ class SOLUTION:
         for currentRow in range(self.numSensorNeurons):
             for currentColumn in range(self.numMotorNeurons):
                 pyrosim.Send_Synapse(sourceNeuronName = currentRow ,
-                                     targetNeuronName = currentColumn + self.numSensorNeurons ,
+                                     targetNeuronName = currentColumn + self.numSensorNeurons,
                                      weight = self.weights[currentRow][currentColumn])
         
         pyrosim.End()
