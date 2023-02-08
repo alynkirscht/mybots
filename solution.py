@@ -36,11 +36,17 @@ class SOLUTION:
                             type = "revolute", position = [0, .5 , .5], jointAxis="1 0 0")
         
         for linksJoint in range(self.numLinksJoint):
+            # intercalate different normal vectors
+            normalVector = "0 1 0"
+            if (linksJoint % 2 == 0):
+                normalVector = "0 0 1"
+
+
 
             pyrosim.Send_Cube(name='s' + str(linksJoint + 1), pos=[0, .5, 0], size=[1, 1, 1])
 
             pyrosim.Send_Joint( name = 's' + str(linksJoint + 1) + '_' + 's' + str(linksJoint + 2), parent = 's' + str(linksJoint + 1), child = 's' + str(linksJoint + 2),
-                                type = "revolute", position = [0, 1 , 0], jointAxis="0 0 1")
+                                type = "revolute", position = [0, 1 , 0], jointAxis=normalVector)
             
         pyrosim.Send_Cube(name='s' + str(self.numLinksJoint + 1), pos=[0, .5, 0], size=[1, 1, 1])
 
