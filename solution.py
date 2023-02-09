@@ -31,7 +31,7 @@ class SOLUTION:
 
     def Create_Body(self):
 
-        pyrosim.Start_URDF("body.urdf")
+        pyrosim.Start_URDF("body" + str(self.myID) + ".urdf")
 
         normalVector = self.Random_Normal_Vector()
         

@@ -9,10 +9,14 @@ import os
 class ROBOT:
     def __init__(self, solutionID):
         #Add robot
-        self.robotId = p.loadURDF("body.urdf")
+        self.robotId = p.loadURDF("body" + solutionID + ".urdf")
+
+        os.system("del body" + solutionID + ".urdf")
 
         #Set up sensors
         pyrosim.Prepare_To_Simulate(self.robotId)
+
+        
 
         #Activate sensors
         self.Prepare_To_Sense()
