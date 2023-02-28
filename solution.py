@@ -9,7 +9,8 @@ import constants as c
 class SOLUTION:
     def __init__(self, nextAvailableID):
         # randomize size of snake
-        self.numLinksJoint = random.randint(0, 10)
+        # minimum size of snake is 2 links, max size is 10 links
+        self.numLinksJoint =  3 #random.randint(1, 10)
         self.numSensorNeurons = self.numLinksJoint + 2
         self.numMotorNeurons = self.numLinksJoint + 1
 
@@ -34,6 +35,8 @@ class SOLUTION:
 
     def Create_Body(self):
 
+        jointAxis = str(self.normalAxis[0]).replace('[', '').replace(']', '')
+
         pyrosim.Start_URDF("body" + str(self.myID) + ".urdf")
         
         pyrosim.Send_Cube(name="s0", pos=[0,0,.5], size=[1, 1, 1])
@@ -41,8 +44,8 @@ class SOLUTION:
         pyrosim.Send_Joint( name = "s0_s1", parent = "s0", child = "s1",
                             type = "revolute", position = [0, .5 , .5], jointAxis="1 0 0")
 
-        for linksJoint in range(self.numLinksJoint):
-            # number of joints is 1 less than num joints
+        for linksJoint in range(1, self.numLinksJoint):
+            # number of joints is 1 less than num links
             if (linksJoint != self.numLinksJoint - 1):
                 jointAxis = str(self.normalAxis[linksJoint]).replace('[', '').replace(']', '')
                 print(jointAxis)
