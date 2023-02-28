@@ -9,8 +9,8 @@ import constants as c
 class SOLUTION:
     def __init__(self, nextAvailableID):
         # randomize size of snake
-        # minimum size of snake is 2 links, max size is 10 links
-        self.numLinksJoint =  3 #random.randint(1, 10)
+        #min size 2 links, max size 12 links
+        self.numLinksJoint = random.randint(0, 10)
         self.numSensorNeurons = self.numLinksJoint + 2
         self.numMotorNeurons = self.numLinksJoint + 1
 
@@ -19,7 +19,7 @@ class SOLUTION:
         self.weights = self.weights * 2 -1
 
         # array of arrays for the values of the normal axis with numLinksJoints - 1 num of rows and 3 num of columns
-        self.normalAxis = numpy.random.randint(2, size = (self.numLinksJoint - 1, 3))
+        self.normalAxis = numpy.random.randint(2, size = (self.numLinksJoint + 2, 3))
 
         self.myID = nextAvailableID
 
@@ -42,10 +42,10 @@ class SOLUTION:
         pyrosim.Send_Cube(name="s0", pos=[0,0,.5], size=[1, 1, 1])
 
         pyrosim.Send_Joint( name = "s0_s1", parent = "s0", child = "s1",
-                            type = "revolute", position = [0, .5 , .5], jointAxis="1 0 0")
+                            type = "revolute", position = [0, .5 , .5], jointAxis=jointAxis)
 
-        for linksJoint in range(1, self.numLinksJoint):
-            # number of joints is 1 less than num links
+        for linksJoint in range(self.numLinksJoint):
+            # number of joints is 1 less than num joints
             if (linksJoint != self.numLinksJoint - 1):
                 jointAxis = str(self.normalAxis[linksJoint]).replace('[', '').replace(']', '')
                 print(jointAxis)
@@ -99,8 +99,3 @@ class SOLUTION:
         self.fitness = float(fitnessFile.readline())
         fitnessFile.close()
         os.system("del fitness" + str(self.myID) + ".txt")
-    
-
-    
-                  
-        
