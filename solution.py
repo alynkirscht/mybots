@@ -29,7 +29,7 @@ class SOLUTION:
         
         pyrosim.Start_SDF("world.sdf")
 
-        pyrosim.Send_Cube(name="Box", pos=[-2,2,.5], size=[1, 1, 1])
+        pyrosim.Send_Cube(name="Box", pos=[-2,2,.5], size=[2, 1, 1])
 
         pyrosim.End()
 
@@ -48,7 +48,6 @@ class SOLUTION:
             # number of joints is 1 less than num joints
             if (linksJoint != self.numLinksJoint - 1):
                 jointAxis = str(self.normalAxis[linksJoint]).replace('[', '').replace(']', '')
-                print(jointAxis)
             pyrosim.Send_Cube(name='s' + str(linksJoint + 1), pos=[0, .5, 0], size=[1, 1, 1])
             
             pyrosim.Send_Joint( name = 's' + str(linksJoint + 1) + '_' + 's' + str(linksJoint + 2), parent = 's' + str(linksJoint + 1), child = 's' + str(linksJoint + 2),
