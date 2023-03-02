@@ -2,6 +2,8 @@ from solution import SOLUTION
 import constants as c
 import copy
 import os
+import numpy
+import csv
 
 class PARALLEL_HILL_CLIMBER:
     def __init__(self):
@@ -62,7 +64,14 @@ class PARALLEL_HILL_CLIMBER:
         for i in range(len(self.parents)-1):
             if (bestFitness > self.parents[i+1].fitness):
                 bestFitness = self.parents[i+1].fitness
-                bestFitnessID = i+1        
+                bestFitnessID = i+1    
+                    
+        # Save best angle values
+        with open('data\\angleAxis.csv', 'a', newline='') as file:
+            writer = csv.writer(file)
+
+            writer.writerow(self.parents[bestFitnessID].normalAxis)
+            file.close()
         
         self.parents[bestFitnessID].Start_Simulation("GUI")
         
