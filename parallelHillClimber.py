@@ -71,6 +71,7 @@ class PARALLEL_HILL_CLIMBER:
             writer = csv.writer(file)
 
             writer.writerow(self.parents[bestFitnessID].normalAxis)
+            writer.writerow([bestFitness])
             file.close()
         
         self.parents[bestFitnessID].Start_Simulation("GUI")

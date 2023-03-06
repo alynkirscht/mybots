@@ -9,8 +9,8 @@ import constants as c
 class SOLUTION:
     def __init__(self, nextAvailableID):
         # randomize size of snake
-        #min size 2 links, max size 12 links
-        self.numLinksJoint = random.randint(0, 10)
+        #size 6 links, 5 joints
+        self.numLinksJoint =  4 # random.randint(0, 10)
         self.numSensorNeurons = self.numLinksJoint + 2
         self.numMotorNeurons = self.numLinksJoint + 1
 
@@ -18,9 +18,13 @@ class SOLUTION:
        
         self.weights = self.weights * 2 -1
 
-        # array of arrays for the values of the normal axis with numLinksJoints - 1 num of rows and 3 num of columns
-        self.normalAxis = numpy.random.randint(2, size = (self.numLinksJoint + 2, 3))
-
+        # array of arrays for the values of the normal axis with numLinksJoints + 1 num of rows and 3 num of columns
+        self.normalAxis = numpy.zeros((self.numLinksJoint + 1, 3))
+        for i in range(self.numLinksJoint + 1):
+            row = numpy.zeros(3)
+            while numpy.all(row == 0):
+                row = numpy.random.randint(2, size=3)
+            self.normalAxis[i] = row
         self.myID = nextAvailableID
 
        
