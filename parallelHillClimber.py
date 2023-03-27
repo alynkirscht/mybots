@@ -67,12 +67,12 @@ class PARALLEL_HILL_CLIMBER:
                 bestFitnessID = i+1    
                     
         # Save best angle values
-        with open('data\\angleAxisRandom.csv', 'a', newline='') as file:
+        with open('data\\angleAxis30Gen.csv', 'a', newline='') as file:
             writer = csv.writer(file)
 
-            for i in range(len(self.parents)):
-                writer.writerow(self.parents[i].normalAxis)
-                writer.writerow([self.parents[i].fitness])
+            writer.writerow(self.parents[bestFitnessID].normalAxis)
+            writer.writerow([bestFitness])
+            
             file.close()
         
         self.parents[bestFitnessID].Start_Simulation("GUI")

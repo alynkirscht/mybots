@@ -19,7 +19,7 @@ class SOLUTION:
         self.weights = self.weights * 2 -1
 
         # array of arrays for the values of the normal axis with numLinksJoints + 1 num of rows and 3 num of columns
-        # self.normalAxis = numpy.array([[1., 0., 0.],[1., 0., 0.],[1., 0., 1.],[0., 1., 0.],[0., 1., 0.]])
+        # self.normalAxis = numpy.array([[1., 0., 0.],[0., 1., 1.],[1., 0., 0.],[0., 1., 0.],[1., 0., 1.]])
         
         self.normalAxis = numpy.zeros((self.numLinksJoint + 1, 3))
         for i in range(self.numLinksJoint + 1):
@@ -27,7 +27,7 @@ class SOLUTION:
             while numpy.all(row == 0):
                 row = numpy.random.randint(2, size=3)
             self.normalAxis[i] = row
-        
+    
         self.myID = nextAvailableID
         
        
@@ -36,7 +36,7 @@ class SOLUTION:
         
         pyrosim.Start_SDF("world.sdf")
 
-        pyrosim.Send_Cube(name="Box", pos=[-2,2,.5], size=[2, 1, 1])
+        # pyrosim.Send_Cube(name="Box", pos=[-2,2,.5], size=[2, 1, 1])
 
         pyrosim.End()
 
