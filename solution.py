@@ -10,7 +10,7 @@ class SOLUTION:
     def __init__(self, nextAvailableID):
         # randomize size of snake
         #size 6 links, 5 joints
-        self.numLinksJoint =  4 # random.randint(0, 10)
+        self.numLinksJoint =  1 # size 3 # random.randint(0, 10)
         self.numSensorNeurons = self.numLinksJoint + 2
         self.numMotorNeurons = self.numLinksJoint + 1
 

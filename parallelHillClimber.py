@@ -22,9 +22,11 @@ class PARALLEL_HILL_CLIMBER:
         self.Evaluate(self.parents)
         
         for currentGeneration in range(c.numberOfGenerations):
-            self.Evolve_For_One_Generation()
+            self.Evolve_For_One_Generation(currentGeneration)
             
-    def Evolve_For_One_Generation(self):
+                
+            
+    def Evolve_For_One_Generation(self, currentGeneration):
         
         self.Spawn()
     
@@ -34,7 +36,10 @@ class PARALLEL_HILL_CLIMBER:
     
         self.Print()
         
-        self.Select()            
+        self.Select()
+
+        if currentGeneration % 10 == 0: 
+            self.Show_Best()           
     
     def Spawn(self):
         self.children = {}
