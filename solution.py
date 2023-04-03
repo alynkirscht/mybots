@@ -100,7 +100,7 @@ class SOLUTION:
     def Wait_For_Simulation_To_End(self):
         while not os.path.exists("fitness" + str(self.myID) + ".txt"):
             time.sleep(0.01)
-            
+        os.system("chomd 755 fitness" + str(self.myID) + ".txt")    
         fitnessFile = open("fitness" + str(self.myID) + ".txt", "r")
         self.fitness = float(fitnessFile.readline())
         fitnessFile.close()
