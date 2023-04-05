@@ -4,6 +4,7 @@ import copy
 import os
 import numpy
 import csv
+import time
 
 class PARALLEL_HILL_CLIMBER:
     def __init__(self):
@@ -22,7 +23,7 @@ class PARALLEL_HILL_CLIMBER:
         self.Evaluate(self.parents)
         
         for currentGeneration in range(c.numberOfGenerations):
-            self.Evolve_For_One_Generation(currentGeneration)
+            self.Evolve_For_One_Generation(currentGeneration + 1)
             
                 
             
@@ -39,7 +40,7 @@ class PARALLEL_HILL_CLIMBER:
         self.Select()
 
         if currentGeneration % 10 == 0: 
-            self.Show_Best()           
+            pass #self.Show_Best()           
     
     def Spawn(self):
         self.children = {}
@@ -61,26 +62,39 @@ class PARALLEL_HILL_CLIMBER:
         print("")
         for i in self.parents:
             print(self.parents[i].fitness, self.children[i].fitness)
+            fitness = self.parents[i].fitness
+            """
+            with open('data\\3seg_final.csv', 'a', newline='') as file:
+                writer = csv.writer(file)
+
+                writer.writerow(self.parents[i].normalAxis)
+                writer.writerow([fitness])
+                file.close()"""
         print("")
+
+
         
     def Show_Best(self):
         bestFitness = self.parents[0].fitness
         bestFitnessID = 0
+
         for i in range(len(self.parents)-1):
             if (bestFitness > self.parents[i+1].fitness):
                 bestFitness = self.parents[i+1].fitness
                 bestFitnessID = i+1    
                     
         # Save best angle values
-        with open('data\\angleAxis30Gen.csv', 'a', newline='') as file:
+        with open('data\\best3seg.csv', 'a', newline='') as file:
             writer = csv.writer(file)
 
             writer.writerow(self.parents[bestFitnessID].normalAxis)
             writer.writerow([bestFitness])
+
             
             file.close()
         
         self.parents[bestFitnessID].Start_Simulation("GUI")
+
         
 
     def Evaluate(self, solutions):
