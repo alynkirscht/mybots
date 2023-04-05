@@ -5,12 +5,12 @@ from motor import MOTOR
 import constants as c
 from pyrosim.neuralNetwork import NEURAL_NETWORK
 import os
+import pybullet
 
 class ROBOT:
     def __init__(self, solutionID):
         #Add robot
         self.robotId = p.loadURDF("body" + solutionID + ".urdf")
-
         os.system("del body" + solutionID + ".urdf")
 
         #Set up sensors
@@ -64,11 +64,12 @@ class ROBOT:
         self.nn.Print()
 
     def Get_Fitness(self, solutionID):
-        stateOfLinkZero = p.getLinkState(self.robotId,0)
-        positionOfLinkZero = stateOfLinkZero[0]
-        yCoordindateOfLinkZero = positionOfLinkZero[1]
+        basePositionAndOrientation = p.getBasePositionAndOrientation(self.robotId)
+        basePosition = basePositionAndOrientation[0]
+        yPosition = basePosition[1]
+    
         file = open("tmp" + solutionID + ".txt", "w")
-        file.write(str(yCoordindateOfLinkZero))
+        file.write(str(yPosition))
         file.close()
         os.system("rename tmp" + str(solutionID) + ".txt fitness" +
                   str(solutionID) + ".txt")
