@@ -63,13 +63,13 @@ class PARALLEL_HILL_CLIMBER:
         for i in self.parents:
             print(self.parents[i].fitness, self.children[i].fitness)
             fitness = self.parents[i].fitness
-            """
-            with open('data\\3seg_final.csv', 'a', newline='') as file:
+            
+            with open('data\\4seg_final.csv', 'a', newline='') as file:
                 writer = csv.writer(file)
 
                 writer.writerow(self.parents[i].normalAxis)
                 writer.writerow([fitness])
-                file.close()"""
+                file.close()
         print("")
 
 
@@ -84,7 +84,7 @@ class PARALLEL_HILL_CLIMBER:
                 bestFitnessID = i+1    
                     
         # Save best angle values
-        with open('data\\best3seg.csv', 'a', newline='') as file:
+        with open('data\\best4seg.csv', 'a', newline='') as file:
             writer = csv.writer(file)
 
             writer.writerow(self.parents[bestFitnessID].normalAxis)

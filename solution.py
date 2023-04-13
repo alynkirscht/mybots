@@ -1,3 +1,4 @@
+from subprocess import Popen, PIPE
 import numpy
 import pyrosim.pyrosim as pyrosim
 import random
@@ -10,7 +11,7 @@ class SOLUTION:
     def __init__(self, nextAvailableID):
         # randomize size of snake
         #size 6 links, 5 joints
-        self.numLinksJoint =  1 # size 3 # random.randint(0, 10)
+        self.numLinksJoint =  2 # size 4 # random.randint(0, 10)
         self.numSensorNeurons = self.numLinksJoint + 2
         self.numMotorNeurons = self.numLinksJoint + 1
 
@@ -63,7 +64,6 @@ class SOLUTION:
         pyrosim.Send_Cube(name='s' + str(self.numLinksJoint + 1), pos=[0, .5, 0], size=[1, 1, 1])
 
         pyrosim.End()
-        
 
     def Create_Brain(self):
         pyrosim.Start_NeuralNetwork("brain" + str(self.myID) + ".nndf")
@@ -87,6 +87,17 @@ class SOLUTION:
         randomColumn = random.randint(0,self.numMotorNeurons-1)
 
         self.weights[randomRow, randomColumn] = random.random() * 2 -1
+
+        randomJoint = random.randint(0, self.numLinksJoint)
+        randomCol = random.randint(0, 2)
+        if self.normalAxis[randomJoint, randomCol] == 0:
+            self.normalAxis[randomJoint, randomCol] = 1
+        elif self.normalAxis[randomJoint, randomCol] == 1:
+            row = self.normalAxis[randomJoint]
+            if numpy.count_nonzero(row) == 1 and row[randomCol] == 1:
+                pass
+            else:
+                self.normalAxis[randomJoint, randomCol] = 0
 
     def Set_ID(self):
         return self.myID + 1

@@ -9,6 +9,6 @@ MIN_SIN = 0
 OFFSET= 0
 MAX_FORCE = 15
 SLEEP_TIME = 1/999999999
-numberOfGenerations = 30
+numberOfGenerations = 50
 populationSize = 10
 motorJointRange = 0.5
