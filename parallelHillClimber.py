@@ -14,6 +14,7 @@ class PARALLEL_HILL_CLIMBER:
         
         self.parents = {}
         self.nextAvailableID = 0
+        self.fitnessMatrix = numpy.zeros(shape=(c.populationSize, c.numberOfGenerations))
 
         for i in range(0, c.populationSize):
             self.parents[i]= SOLUTION(self.nextAvailableID)
@@ -39,8 +40,7 @@ class PARALLEL_HILL_CLIMBER:
         
         self.Select()
 
-        if currentGeneration % 10 == 0: 
-            pass #self.Show_Best()           
+        self.Store_Fitness(currentGeneration)        
     
     def Spawn(self):
         self.children = {}
@@ -58,13 +58,19 @@ class PARALLEL_HILL_CLIMBER:
             if (self.parents[i].fitness > self.children[i].fitness):
                 self.parents[i] = self.children[i]
 
+    def Store_Fitness(self, currentGeneration):
+        population = 0
+        for key in self.parents:
+            sol = self.parents[key]
+            self.fitnessMatrix[population][currentGeneration-1] = sol.fitness
+            population += 1
+
     def Print(self):
         print("")
         for i in self.parents:
             print(self.parents[i].fitness, self.children[i].fitness)
             fitness = self.parents[i].fitness
-            
-            with open('data\\4seg_final.csv', 'a', newline='') as file:
+            with open('data\\n3_brainiac.csv', 'a', newline='') as file:
                 writer = csv.writer(file)
 
                 writer.writerow(self.parents[i].normalAxis)
@@ -84,7 +90,7 @@ class PARALLEL_HILL_CLIMBER:
                 bestFitnessID = i+1    
                     
         # Save best angle values
-        with open('data\\best4seg.csv', 'a', newline='') as file:
+        with open('data\\bestnseg_braniac.csv', 'a', newline='') as file:
             writer = csv.writer(file)
 
             writer.writerow(self.parents[bestFitnessID].normalAxis)
@@ -94,6 +100,13 @@ class PARALLEL_HILL_CLIMBER:
             file.close()
         
         self.parents[bestFitnessID].Start_Simulation("GUI")
+
+        if(c.numHiddenNeurons == 0):
+            currentlyTesting = "A" 
+        elif(c.numHiddenNeurons > 0):
+            currentlyTesting = "B"
+        numpy.savetxt("matrix" + currentlyTesting + ".csv", self.fitnessMatrix, delimiter =', ')
+        numpy.save("matrix" + currentlyTesting + ".npy", self.fitnessMatrix)
 
         
 

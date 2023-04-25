@@ -11,13 +11,16 @@ class SOLUTION:
     def __init__(self, nextAvailableID):
         # randomize size of snake
         #size 6 links, 5 joints
-        self.numLinksJoint =  2 # size 4 # random.randint(0, 10)
+        self.numLinksJoint =  random.randint(1, 3) #size ranges from 3 links to 5 links
         self.numSensorNeurons = self.numLinksJoint + 2
+        self.numHiddenNeurons = c.numHiddenNeurons
         self.numMotorNeurons = self.numLinksJoint + 1
 
-        self.weights = numpy.random.random((self.numSensorNeurons,self.numMotorNeurons))
-       
-        self.weights = self.weights * 2 -1
+        self.sensorToHidden = numpy.random.random((self.numSensorNeurons,self.numHiddenNeurons))
+        self.hiddenToMotor = numpy.random.random((self.numHiddenNeurons,self.numMotorNeurons))
+
+        self.sensorToHidden = self.sensorToHidden * 2 - 1
+        self.hiddenToMotor = self.hiddenToMotor * 2 - 1
 
         # array of arrays for the values of the normal axis with numLinksJoints + 1 num of rows and 3 num of columns
         # self.normalAxis = numpy.array([[1., 0., 0.],[0., 1., 1.],[1., 0., 0.],[0., 1., 0.],[1., 0., 1.]])
@@ -70,34 +73,122 @@ class SOLUTION:
 
         for sensor in range(self.numSensorNeurons):
             pyrosim.Send_Sensor_Neuron(name = sensor, linkName = 's' + str(sensor))
+
+        for hidden in range(self.numHiddenNeurons):
+            pyrosim.Send_Hidden_Neuron( name = hidden + self.numSensorNeurons)
         
         for motor in range (self.numMotorNeurons): 
-            pyrosim.Send_Motor_Neuron( name = (motor + self.numSensorNeurons) , jointName = 's' + str(motor) + '_' + 's' + str(motor + 1) )
+            pyrosim.Send_Motor_Neuron( name = (motor + self.numSensorNeurons + self.numHiddenNeurons) , jointName = 's' + str(motor) + '_' + 's' + str(motor + 1) )
         
+        # sensor to hidden
         for currentRow in range(self.numSensorNeurons):
-            for currentColumn in range(self.numMotorNeurons):
+            for currentColumn in range(self.numHiddenNeurons):
                 pyrosim.Send_Synapse(sourceNeuronName = currentRow ,
                                      targetNeuronName = currentColumn + self.numSensorNeurons,
-                                     weight = self.weights[currentRow][currentColumn])
+                                     weight = self.sensorToHidden[currentRow][currentColumn])
+        
+        # hidden to motor
+        for currentRow in range(self.numHiddenNeurons):
+            for currentColumn in range(self.numMotorNeurons):
+                pyrosim.Send_Synapse(sourceNeuronName = currentRow + self.numSensorNeurons,
+                                    targetNeuronName = currentColumn + self.numSensorNeurons + self.numHiddenNeurons, 
+                                    weight = self.hiddenToMotor[currentRow][currentColumn])
         
         pyrosim.End()
 
+
     def Mutate(self):
-        randomRow = random.randint(0,self.numSensorNeurons-1)
-        randomColumn = random.randint(0,self.numMotorNeurons-1)
+        
 
-        self.weights[randomRow, randomColumn] = random.random() * 2 -1
+        # random size or joint
+        sizeOrJoint = random.randint(0,1)
+        if sizeOrJoint == 0:
+            # increase or decrease snake
+            incOrDecSize = random.randint(0,1)
+            # change size
+            #increase size of snake if size is 3 or rand variable is 0 and size is 4
+            if (self.numLinksJoint == 1 or (self.numLinksJoint == 2 and incOrDecSize == 0)):    
+                self.numLinksJoint += 1
 
-        randomJoint = random.randint(0, self.numLinksJoint)
-        randomCol = random.randint(0, 2)
-        if self.normalAxis[randomJoint, randomCol] == 0:
-            self.normalAxis[randomJoint, randomCol] = 1
-        elif self.normalAxis[randomJoint, randomCol] == 1:
-            row = self.normalAxis[randomJoint]
-            if numpy.count_nonzero(row) == 1 and row[randomCol] == 1:
-                pass
-            else:
-                self.normalAxis[randomJoint, randomCol] = 0
+                # add new row to normalAxis array
+                new_row = numpy.zeros(3)
+                while numpy.all(new_row == 0):
+                    new_row = numpy.random.randint(2, size=3)
+                self.normalAxis = numpy.vstack((self.normalAxis, new_row))
+
+                # update neurons
+                self.numSensorNeurons = self.numLinksJoint + 2
+                self.numMotorNeurons = self.numLinksJoint + 1
+
+                 # Increase size by 1 in both dimensions
+                sensorToHidden = numpy.zeros((self.numSensorNeurons, self.numHiddenNeurons))
+                sensorToHidden[:self.numSensorNeurons -1, :] = self.sensorToHidden
+
+                hiddenToMotor = numpy.zeros((self.numHiddenNeurons, self.numMotorNeurons))
+                hiddenToMotor[:, :self.numMotorNeurons -1] = self.hiddenToMotor
+
+                # Append new values
+                new_weight_row_sToH = numpy.random.random((1, self.numHiddenNeurons)) * 2 - 1
+                sensorToHidden[-1, :] = new_weight_row_sToH
+                new_weight_column_sToH = numpy.random.random((self.numSensorNeurons, 1)) * 2 - 1
+                sensorToHidden[:, -1] = new_weight_column_sToH.flatten()
+
+                new_weight_row_hToM = numpy.random.random((1, self.numMotorNeurons)) * 2 - 1
+                hiddenToMotor[-1, :] = new_weight_row_hToM
+                new_weight_column_hToM = numpy.random.random((self.numHiddenNeurons, 1)) * 2 - 1
+                hiddenToMotor[:, -1] = new_weight_column_hToM.flatten()
+
+                self.sensorToHidden = sensorToHidden
+                self.hiddenToMotor = hiddenToMotor
+
+            # decrease size if snake is of size 5 or rand variable is 1 and is of size 4
+            elif (self.numLinksJoint == 3 or (self.numLinksJoint == 2 and incOrDecSize == 1)): 
+                self.numLinksJoint -= 1
+
+                # remove last row from normalAxis array
+                self.normalAxis = self.normalAxis[:-1]
+                
+                # update neurons
+                self.numSensorNeurons = self.numLinksJoint + 2
+                self.numMotorNeurons = self.numLinksJoint + 1
+
+               
+                # Create the new array with the desired size
+                sensorToHidden = numpy.zeros((self.numSensorNeurons, self.numHiddenNeurons))
+                hiddenToMotor = numpy.zeros((self.numHiddenNeurons, self.numMotorNeurons))
+
+                # Copy the values from the original array to the new array
+                for i in range(self.numSensorNeurons):
+                    for j in range(self.numHiddenNeurons):
+                        sensorToHidden[i,j] = sensorToHidden[i,j]
+                for i in range(self.numHiddenNeurons):
+                    for j in range(self.numMotorNeurons):
+                        hiddenToMotor[i,j] = hiddenToMotor[i,j]
+                
+                self.sensorToHidden = sensorToHidden
+                self.hiddenToMotor = hiddenToMotor
+            
+
+        # change joint axis
+        else:
+            randomRowSToH = random.randint(0,self.numSensorNeurons-1)
+            randomColumnSToH = random.randint(0,self.numHiddenNeurons-1)
+            randomRowHToM = random.randint(0,self.numHiddenNeurons-1)
+            randomColumnHToM = random.randint(0,self.numMotorNeurons-1)
+
+            self.sensorToHidden[randomRowSToH, randomColumnSToH] = random.random() * 2 -1
+            self.hiddenToMotor[randomRowHToM, randomColumnHToM] = random.random() * 2 -1
+
+            randomJoint = random.randint(0, self.numLinksJoint)
+            randomCol = random.randint(0, 2)
+            if self.normalAxis[randomJoint, randomCol] == 0:
+                self.normalAxis[randomJoint, randomCol] = 1
+            elif self.normalAxis[randomJoint, randomCol] == 1:
+                row = self.normalAxis[randomJoint]
+                if numpy.count_nonzero(row) == 1 and row[randomCol] == 1:
+                    pass
+                else:
+                    self.normalAxis[randomJoint, randomCol] = 0
 
     def Set_ID(self):
         return self.myID + 1

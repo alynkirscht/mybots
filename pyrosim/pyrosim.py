@@ -23,6 +23,8 @@ NNDF_FILETYPE   = 2
 # global availableLinkIndex
 
 # global linkNamesToIndices
+def Send_Hidden_Neuron(name):
+    f.write(' <neuron name = "' + str(name) + '" type = "hidden" />\n')
 
 def End():
 
