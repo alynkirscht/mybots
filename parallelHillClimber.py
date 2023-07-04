@@ -7,6 +7,9 @@ import csv
 import time
 
 class PARALLEL_HILL_CLIMBER:
+    '''
+    
+    '''
     def __init__(self):
         os.system("del brain*.nndf")
         os.system("del fitness*.txt")
@@ -55,7 +58,7 @@ class PARALLEL_HILL_CLIMBER:
 
     def Select(self):
         for i in self.parents:
-            if (self.parents[i].fitness > self.children[i].fitness):
+            if (self.parents[i].fitness < self.children[i].fitness):
                 self.parents[i] = self.children[i]
 
     def Store_Fitness(self, currentGeneration):
@@ -70,12 +73,13 @@ class PARALLEL_HILL_CLIMBER:
         for i in self.parents:
             print(self.parents[i].fitness, self.children[i].fitness)
             fitness = self.parents[i].fitness
-            with open('data\\n3_brainiac.csv', 'a', newline='') as file:
+            # Write to file
+            """with open('data\\nh6.csv', 'a', newline='') as file:
                 writer = csv.writer(file)
 
                 writer.writerow(self.parents[i].normalAxis)
                 writer.writerow([fitness])
-                file.close()
+                file.close()"""
         print("")
 
 
@@ -90,23 +94,24 @@ class PARALLEL_HILL_CLIMBER:
                 bestFitnessID = i+1    
                     
         # Save best angle values
-        with open('data\\bestnseg_braniac.csv', 'a', newline='') as file:
+        """with open('data\\bestn.csv', 'a', newline='') as file:
             writer = csv.writer(file)
 
             writer.writerow(self.parents[bestFitnessID].normalAxis)
             writer.writerow([bestFitness])
 
             
-            file.close()
+            file.close()"""
         
         self.parents[bestFitnessID].Start_Simulation("GUI")
-
-        if(c.numHiddenNeurons == 0):
-            currentlyTesting = "A" 
+        
+        # Create output matrices
+        """if(c.numHiddenNeurons == 0):
+            currentlyTesting = "A5" 
         elif(c.numHiddenNeurons > 0):
-            currentlyTesting = "B"
+            currentlyTesting = "B6"
         numpy.savetxt("matrix" + currentlyTesting + ".csv", self.fitnessMatrix, delimiter =', ')
-        numpy.save("matrix" + currentlyTesting + ".npy", self.fitnessMatrix)
+        numpy.save("matrix" + currentlyTesting + ".npy", self.fitnessMatrix)"""
 
         
 

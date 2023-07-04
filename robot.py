@@ -5,7 +5,6 @@ from motor import MOTOR
 import constants as c
 from pyrosim.neuralNetwork import NEURAL_NETWORK
 import os
-import pybullet
 
 class ROBOT:
     def __init__(self, solutionID):
