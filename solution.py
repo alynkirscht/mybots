@@ -9,6 +9,7 @@ import constants as c
 
 class SOLUTION:
     def __init__(self, nextAvailableID):
+        """Here I would initialize node?"""
         # randomize size of snake
         #size 6 links, 5 joints
         self.numLinksJoint =  random.randint(1, 3) #size ranges from 3 links to 5 links
