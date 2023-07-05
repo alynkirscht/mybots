@@ -12,50 +12,25 @@ class SOLUTION:
     def __init__(self, nextAvailableID):
         
 
-        """Here I would initialize node?"""
+        """Recursion variables """
         self.recursive_limit = random.randint(3,5)
-        self.root_node_pos = [0, 0, 0.5] 
-        self.root_node_size = [1,1,1]
-        self.node_ID = 0
-
-        # Root node
-        root_node = NODE( self.node_ID, self.root_node_size, self.recursive_limit, "neurons", 
-                          self.root_node_pos, "node_orientation", "scale")
-
-        self.node_ID += 1
-        self.recursive_limit -= 1
-
-        pyrosim.Start_URDF("body" + str(self.myID) + ".urdf")
-        pyrosim.Send_Cube( name="s" + str(root_node.node_ID), pos=root_node.connections.node_pos,
-                           size=root_node.part_dimensions)
-        pyrosim.Send_Joint( name = "s" + str(root_node.node_ID) + "_s" + str(root_node.node_ID + 1),
-                            parent = "s" + str(root_node.node_ID), child = "s" + str(root_node.node_ID + 1),
-                            type = root_node.joint_type, position = root_node.connections.joint_pos, 
-                            jointAxis=root_node.joint_axis)
-         
-        # randomize size of snake
-        #size 6 links, 5 joints
+        self.node_size = [1,1,1]
+        self.node_scale = [1,1,1]
+        self.root_link = [0,0,.5]
+        self.root_joint = [0,.5,.5] 
+        self.node_pos = [0,.5,0] 
+        self.joint_pos = [0,1,0]
         
         self.numLinksJoint =  random.randint(1, 3) #size ranges from 3 links to 5 links
-        self.numSensorNeurons = self.numLinksJoint + 2
+        self.numSensorNeurons = self.recursive_limit
         self.numHiddenNeurons = c.numHiddenNeurons
-        self.numMotorNeurons = self.numLinksJoint + 1
+        self.numMotorNeurons = self.recursive_limit - 1
 
         self.sensorToHidden = numpy.random.random((self.numSensorNeurons,self.numHiddenNeurons))
         self.hiddenToMotor = numpy.random.random((self.numHiddenNeurons,self.numMotorNeurons))
 
         self.sensorToHidden = self.sensorToHidden * 2 - 1
         self.hiddenToMotor = self.hiddenToMotor * 2 - 1
-
-        # array of arrays for the values of the normal axis with numLinksJoints + 1 num of rows and 3 num of columns
-        # self.normalAxis = numpy.array([[1., 0., 0.],[0., 1., 1.],[1., 0., 0.],[0., 1., 0.],[1., 0., 1.]])
-        
-        self.normalAxis = numpy.zeros((self.numLinksJoint + 1, 3))
-        for i in range(self.numLinksJoint + 1):
-            row = numpy.zeros(3)
-            while numpy.all(row == 0):
-                row = numpy.random.randint(2, size=3)
-            self.normalAxis[i] = row
     
         self.myID = nextAvailableID
         
@@ -71,18 +46,10 @@ class SOLUTION:
 
     def Create_Body(self):
         """This is Karl Sims new"""
-        
-
-        for linksJoint in range(self.numLinksJoint):
-            # number of joints is 1 less than num joints
-            if (linksJoint != self.numLinksJoint - 1):
-                jointAxis = str(self.normalAxis[linksJoint]).replace('[', '').replace(']', '')
-            pyrosim.Send_Cube(name='s' + str(linksJoint + 1), pos=[0, .5, 0], size=[1, 1, 1])
-            
-            pyrosim.Send_Joint( name = 's' + str(linksJoint + 1) + '_' + 's' + str(linksJoint + 2), parent = 's' + str(linksJoint + 1), child = 's' + str(linksJoint + 2),
-                                type = "revolute", position = [0, 1 , 0], jointAxis=jointAxis)
-              
-        pyrosim.Send_Cube(name='s' + str(self.numLinksJoint + 1), pos=[0, .5, 0], size=[1, 1, 1])
+        pyrosim.Start_URDF("body" + str(self.myID) + ".urdf")
+        # Root node
+        root_node = NODE( self.node_size, self.recursive_limit, "neurons", self.root_link, self.root_joint, 
+                          self.node_pos, self.joint_pos, "node_orientation", self.node_scale)
 
         pyrosim.End()
 
@@ -125,7 +92,7 @@ class SOLUTION:
             incOrDecSize = random.randint(0,1)
             # change size
             #increase size of snake if size is 3 or rand variable is 0 and size is 4
-            if (self.numLinksJoint == 1 or (self.numLinksJoint == 2 and incOrDecSize == 0)):    
+            if (self.recursive_limit == 3 or (self.recursive_limit == 4 and incOrDecSize == 0)):    
                 self.numLinksJoint += 1
 
                 # add new row to normalAxis array
