@@ -6,12 +6,36 @@ import os
 import sys
 import time
 import constants as c
+from node import NODE
 
 class SOLUTION:
     def __init__(self, nextAvailableID):
+        
+
         """Here I would initialize node?"""
+        self.recursive_limit = random.randint(3,5)
+        self.root_node_pos = [0, 0, 0.5] 
+        self.root_node_size = [1,1,1]
+        self.node_ID = 0
+
+        # Root node
+        root_node = NODE( self.node_ID, self.root_node_size, self.recursive_limit, "neurons", 
+                          self.root_node_pos, "node_orientation", "scale")
+
+        self.node_ID += 1
+        self.recursive_limit -= 1
+
+        pyrosim.Start_URDF("body" + str(self.myID) + ".urdf")
+        pyrosim.Send_Cube( name="s" + str(root_node.node_ID), pos=root_node.connections.node_pos,
+                           size=root_node.part_dimensions)
+        pyrosim.Send_Joint( name = "s" + str(root_node.node_ID) + "_s" + str(root_node.node_ID + 1),
+                            parent = "s" + str(root_node.node_ID), child = "s" + str(root_node.node_ID + 1),
+                            type = root_node.joint_type, position = root_node.connections.joint_pos, 
+                            jointAxis=root_node.joint_axis)
+         
         # randomize size of snake
         #size 6 links, 5 joints
+        
         self.numLinksJoint =  random.randint(1, 3) #size ranges from 3 links to 5 links
         self.numSensorNeurons = self.numLinksJoint + 2
         self.numHiddenNeurons = c.numHiddenNeurons
@@ -46,15 +70,8 @@ class SOLUTION:
         pyrosim.End()
 
     def Create_Body(self):
-
-        jointAxis = str(self.normalAxis[0]).replace('[', '').replace(']', '')
-
-        pyrosim.Start_URDF("body" + str(self.myID) + ".urdf")
+        """This is Karl Sims new"""
         
-        pyrosim.Send_Cube(name="s0", pos=[0,0,.5], size=[1, 1, 1])
-
-        pyrosim.Send_Joint( name = "s0_s1", parent = "s0", child = "s1",
-                            type = "revolute", position = [0, .5 , .5], jointAxis=jointAxis)
 
         for linksJoint in range(self.numLinksJoint):
             # number of joints is 1 less than num joints
