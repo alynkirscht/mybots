@@ -7,6 +7,9 @@ import sys
 import time
 import constants as c
 from node import NODE
+from connections import CONNECTIONS
+import networkx as nx
+import matplotlib.pyplot as plt
 
 class SOLUTION:
     def __init__(self, nextAvailableID):
@@ -14,17 +17,10 @@ class SOLUTION:
 
         """Recursion variables """
         self.recursive_limit = random.randint(3,5)
-        self.node_size = [1,1,1]
-        self.node_scale = [1,1,1]
-        self.root_link = [0,0,.5]
-        self.root_joint = [0,.5,.5] 
-        self.node_pos = [0,.5,0] 
-        self.joint_pos = [0,1,0]
-        
-        self.numLinksJoint =  random.randint(1, 3) #size ranges from 3 links to 5 links
-        self.numSensorNeurons = self.recursive_limit
+        self.num_links = self.recursive_limit # Starting recursive number
+        self.numSensorNeurons = self.num_links
         self.numHiddenNeurons = c.numHiddenNeurons
-        self.numMotorNeurons = self.recursive_limit - 1
+        self.numMotorNeurons = self.num_links - 1
 
         self.sensorToHidden = numpy.random.random((self.numSensorNeurons,self.numHiddenNeurons))
         self.hiddenToMotor = numpy.random.random((self.numHiddenNeurons,self.numMotorNeurons))
@@ -46,12 +42,64 @@ class SOLUTION:
 
     def Create_Body(self):
         """This is Karl Sims new"""
-        pyrosim.Start_URDF("body" + str(self.myID) + ".urdf")
-        # Root node
-        root_node = NODE( self.node_size, self.recursive_limit, "neurons", self.root_link, self.root_joint, 
-                          self.node_pos, self.joint_pos, "node_orientation", self.node_scale)
+        # Create body file 
+        if (self.recursive_limit == self.num_links): 
+            pyrosim.Start_URDF("body" + str(self.myID) + ".urdf")
+            # Create graph 
+            G = nx.Graph()
+            self.terminal_only = 0
+        
+        # Recursive method
+        if (self.recursive_limit == 0):
+            pyrosim.End()
+            self.recursive_limit = self.num_links
+            return
 
-        pyrosim.End()
+        # If it hasn't reached the recursive limit
+        if (self.recursive_limit > 0):
+            # Terminal flag (one before last)
+            if (self.recursive_limit == 1):
+                self.terminal_only = 1
+
+            # Root node case
+            if (self.recursive_limit == self.num_links):
+                # Initialize node class
+                self.node = NODE(G, self.recursive_limit)
+                #Set connection
+                current_link = self.node.link_ID
+                scale = [1,1,1] # no change
+                link_pos = [0,.5,-.5] # no change
+                joint_pos = [0,.5,-.5] # no change
+                # terminal_only
+                
+                self.connection = CONNECTIONS(G,current_link, scale, link_pos, joint_pos, self.terminal_only)
+                self.recursive_limit -= 1
+
+            # Normal case 
+            else: 
+                self.node.snake_node(scale=self.connection.scale, joint_pos=self.connection.joint_pos, link_pos=self.connection.link_pos)
+                #Set connection
+                # self.node.link_ID
+                scale = [1,1,1] # no change
+                link_pos = [0,0,0] # no change
+                joint_pos = [0,0,0] # no change
+                self.connection.snake_connection(id=self.node.link_ID, scale=scale,link_pos=link_pos, joint_pos=joint_pos, TO=self.terminal_only)
+                # Update recursive limit
+                self.recursive_limit = self.node.recursive_limit
+           
+            pyrosim.Send_Cube( name="s" + str(self.node.link_ID), pos=self.node.link_position,size=self.node.link_size)
+            
+            # When it's not terminal
+            if self.connection.terminal_only == 0:
+                pyrosim.Send_Joint( name= 's' + str(self.node.link_ID) + '_' + 's' + str(self.node.link_ID + 1), 
+                                    parent= 's' + str(self.node.link_ID), child= 's' + str(self.node.link_ID + 1),
+                                    type= self.node.joint_type, position=self.node.joint_position, jointAxis=self.node.joint_axis)
+            
+            
+
+            # RECURSIVE CALL
+            self.Create_Body()
+                    
 
     def Create_Brain(self):
         pyrosim.Start_NeuralNetwork("brain" + str(self.myID) + ".nndf")
@@ -83,8 +131,8 @@ class SOLUTION:
 
 
     def Mutate(self):
-        
-
+        pass
+        '''
         # random size or joint
         sizeOrJoint = random.randint(0,1)
         if sizeOrJoint == 0:
@@ -153,7 +201,7 @@ class SOLUTION:
                 self.sensorToHidden = sensorToHidden
                 self.hiddenToMotor = hiddenToMotor
             
-
+    
         # change joint axis
         else:
             randomRowSToH = random.randint(0,self.numSensorNeurons-1)
@@ -164,7 +212,7 @@ class SOLUTION:
             self.sensorToHidden[randomRowSToH, randomColumnSToH] = random.random() * 2 -1
             self.hiddenToMotor[randomRowHToM, randomColumnHToM] = random.random() * 2 -1
 
-            randomJoint = random.randint(0, self.numLinksJoint)
+            randomJoint = random.randint(0, self.num_links - 2)
             randomCol = random.randint(0, 2)
             if self.normalAxis[randomJoint, randomCol] == 0:
                 self.normalAxis[randomJoint, randomCol] = 1
@@ -173,7 +221,7 @@ class SOLUTION:
                 if numpy.count_nonzero(row) == 1 and row[randomCol] == 1:
                     pass
                 else:
-                    self.normalAxis[randomJoint, randomCol] = 0
+                    self.normalAxis[randomJoint, randomCol] = 0'''
 
     def Set_ID(self):
         return self.myID + 1

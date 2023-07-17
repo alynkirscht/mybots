@@ -1,70 +1,61 @@
-import random
 import numpy
-from connections import CONNECTIONS
-import pyrosim
+import networkx as nx
 class NODE:
-    def __init__(self, size, RL, neurons, root_node_pos, root_joint_pos, node_pos, joint_pos, node_orientation, scale):
+    def __init__(self, graph, RL):
+        # Graph
+        self.graph = graph
         # Link 
-        self.node_ID = 0
-        self.part_dimensions = size
-        self.node_position = root_node_pos
-    
+        self.link_ID = 0
+        self.link_size = [1,1,1]
+        self.link_position = [0,0,0.5]
+
         # Joint     
         self.joint_type = "revolute"
-        self.set_Joint_Axis()
-        self.joint_position = root_joint_pos
+        self.joint_Axis()
+        self.joint_position = [0, .5, .5]
 
         # Recursive limit 
         self.recursive_limit = RL
 
-        # Neurons     
-        self.neurons = neurons # I have no idea 
+        # Connections
+        self.connections = [self.link_ID + 1] # This formula changes depending on the shape
 
-        # Connections 
-        self.conn = CONNECTIONS(node_pos, joint_pos, node_orientation, scale, 0)
+        self.add_Node()
 
-        self.create_links() 
-       
-    def set_Joint_Axis(self):
+    def snake_node(self, scale, joint_pos, link_pos):
+        self.link_ID += 1
+        self.link_size = [size * scale[i] for i, size in enumerate(self.link_size)] # [1,1,1] * [x,y,z]
+        # Link position
+        self.link_position = numpy.array(self.link_position)
+        link_pos = numpy.array(link_pos)
+        self.link_position = numpy.add(self.link_position, link_pos)
+        self.link_position = self.link_position.tolist()
+
+        # Joint position
+        self.joint_position = numpy.array(self.joint_position)
+        joint_pos = numpy.array(joint_pos)
+        self.joint_position = numpy.add(self.joint_position, joint_pos)
+        self.joint_position = self.joint_position.tolist()
+
+        self.joint_axis = self.joint_Axis()
+        self.recursive_limit -= 1
+        self.connections = [self.link_ID + 1]  
+
+        self.add_Node()
+
+
+    def joint_Axis(self):
         self.joint_axis = numpy.zeros(3)
         while numpy.all(self.joint_axis == 0):
             self.joint_axis = numpy.random.randint(2, size=3)
+            self.joint_axis = str(self.joint_axis).replace('[', '').replace(']', '')
+
+        return self.joint_axis
+
+    def add_Node(self):
+        self.graph.add_node(self.link_ID, dimensions = self.link_size, recursive_limit = self.recursive_limit,
+                    position = self.link_position, joint_position = self.joint_position, joint_axis = self.joint_axis, connections = self.connections)
+
+
     
-    def create_Links(self):
-        if (self.recursive_limit == 0):
-            return
-        # If it hasn't reached the recursive limit
-        if (self.recursive_limit > 0): 
-            pyrosim.Send_Cube( name="s" + str(self.node_ID), pos=self.conn.node_pos,size=self.part_dimensions)
-            # If it's not the last link
-            if (self.conn.terminal_only == 0):
-                pyrosim.Send_Joint( name = "s" + str(self.node_ID) + "_s" + str(self.node_ID + 1),
-                                    parent = "s" + str(self.node_ID), child = "s" + str(self.node_ID + 1),
-                                    type = self.joint_type, position = self.conn.joint_pos, 
-                                    jointAxis=self.joint_axis)
-            
-            self.update_Variables()
-            self.create_Links()
-
-    def update_Variables(self):
-            #Link
-            self.node_ID += 1
-            self.part_dimensions *= self.conn.scale
-            self.node_position = self.conn.node_pos
-
-            # Joint
-            self.set_Joint_Axis()
-            self.joint_position = self.conn.joint_pos
-
-            # Recurisve limit
-            self.recursive_limit -= 1
-
-            # Neurons
-            self.neurons = "no idea"
-
-            # Terminal only flag (Recursive limit reaches one before last)
-            if (self.recursive_limit == 2):
-                self.conn.terminal_only == 1
-            
-            
-    
+       
