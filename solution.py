@@ -101,6 +101,10 @@ class SOLUTION:
     def Create_Body(self):
         for node, attributes in self.G.nodes(data=True):
             print(f"Node {node}: {attributes}")
+        for edge in self.G.edges():
+            node1, node2 = edge
+            edge_data = self.G[node1][node2]
+            print(f"Edge {edge}: {edge_data}")    
         """This is Karl Sims new"""
         pyrosim.Start_URDF("body" + str(self.myID) + ".urdf")
 
@@ -147,10 +151,8 @@ class SOLUTION:
 
 
     def Mutate(self):
-        pass
-        """
         # Chooses mutation
-        mutation = 0 #random.randint(0,4)
+        mutation = 3 #random.randint(0,4)
         
         # Change size of one link
         if mutation == 0:
@@ -167,7 +169,7 @@ class SOLUTION:
             self.hiddenToMotor[randomRowHToM, randomColumnHToM] = random.random() * 2 -1       
         # Change normalAxis
         elif mutation == 1:
-            rand_joint = random.randint(0, self.num_links)
+            rand_joint = random.randint(0, self.num_links - 1)
             rand_axis =  self.node.joint_Axis()
             self.G.nodes[rand_joint]["joint_axis"] = rand_axis
 
@@ -186,10 +188,14 @@ class SOLUTION:
             link_pos = [0,0,0] # no change
             joint_pos = [0,0,0] # no change
 
-            self.G[self.num_links - 1][self.num_links]["terminal"] = 0
-            self.connection.snake_connection(self.num_links + 1, scale, link_pos, joint_pos, self.terminal_only)
-            self.node.snake_node(self.connection.scale, self.connection.joint_pos, self.connection.link_pos)
+            self.G[self.num_links - 2][self.num_links - 1]["terminal"] = 0
+            self.G.nodes[self.num_links - 1]["connections"] = [self.current_link]
+            self.connections = []
+            self.connection.snake_connection(self.num_links - 1, scale, link_pos, joint_pos, self.terminal_only, self.connections)
+            self.node.snake_node(self.connection.scale, self.connection.joint_pos, self.connection.link_pos, self.connection.conns)
 
+
+            self.current_link += 1
             self.recursive_limit += 1
             self.num_links = self.recursive_limit
 
@@ -221,8 +227,10 @@ class SOLUTION:
         # decrease size if snake is of size 5 or rand variable is 1 and is of size 4
         elif mutation == 3: 
             # Remove last node and connection
-            self.G.remove_edge(self.num_links - 1, self.num_links)
-            self.G.remove_node(self.num_links)
+            self.G.remove_node(self.num_links - 1)
+            self.G.nodes[self.num_links - 2]["connections"] = []
+            # self.G.remove_edge(self.num_links - 1, self.num_links - 2)
+            
 
             self.num_links -= 1
             self.recursive_limit = self.num_links
@@ -247,7 +255,7 @@ class SOLUTION:
             self.sensorToHidden = sensorToHidden
             self.hiddenToMotor = hiddenToMotor            
 
-        """
+        
     def Set_ID(self):
         return self.myID + 1
 
