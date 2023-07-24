@@ -22,7 +22,7 @@ class NODE:
 
         self.add_Node()
 
-    def snake_node(self, scale, joint_pos, link_pos):
+    def snake_node(self, scale, joint_pos, link_pos, connections):
         self.link_ID += 1
         self.link_size = [size * scale[i] for i, size in enumerate(self.link_size)] # [1,1,1] * [x,y,z]
         # Link position
@@ -39,7 +39,8 @@ class NODE:
 
         self.joint_axis = self.joint_Axis()
         self.recursive_limit -= 1
-        self.connections = [self.link_ID + 1]  
+        self.connections = []
+        self.connections = connections.copy() 
 
         self.add_Node()
 
@@ -48,8 +49,8 @@ class NODE:
         self.joint_axis = numpy.zeros(3)
         while numpy.all(self.joint_axis == 0):
             self.joint_axis = numpy.random.randint(2, size=3)
-            self.joint_axis = str(self.joint_axis).replace('[', '').replace(']', '')
 
+        self.joint_axis = str(self.joint_axis).replace('[', '').replace(']', '')
         return self.joint_axis
 
     def add_Node(self):
