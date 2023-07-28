@@ -18,7 +18,7 @@ class SOLUTION:
         """Recursion variables """
         self.recursive_limit = 4 # I am gonna choose 4 and then modify the snakes from there, random.randint(3,5)
         self.num_links = self.recursive_limit # Starting recursive number
-        self.count = 1
+        self.link_id = 0
         self.G = nx.Graph()
         self.Create_Graph()
         self.numSensorNeurons = self.num_links
@@ -62,28 +62,27 @@ class SOLUTION:
             # Root node case
             if (self.recursive_limit == self.num_links):
                 # Initialize node class
-                self.node = NODE(self.G, self.recursive_limit)
+                self.node = NODE(self.G, self.recursive_limit, self.link_id)
                 #Set connection
-                self.current_link = self.node.link_ID
                 scale = [1,1,1] # no change
                 link_pos = [0,.5,-.5] # no change
                 joint_pos = [0,.5,-.5] # no change
                 # terminal_only
-                self.connections = [self.current_link + 2]
-                self.connection = CONNECTIONS(self.G,self.current_link, scale, link_pos, joint_pos, self.terminal_only, conns=self.connections.copy())
+                self.connections = [self.link_id + 2]
+                self.connection = CONNECTIONS(self.G,self.link_id, scale, link_pos, joint_pos, self.terminal_only, conns=self.connections.copy())
                 self.recursive_limit -= 1
-                self.current_link += 1
+                self.link_id += 1
 
             # Normal case 
             else: 
                 
-                self.node.snake_node(scale=self.connection.scale, joint_pos=self.connection.joint_pos, link_pos=self.connection.link_pos, connections=self.connection.conns)
+                self.node.snake_node(id = self.link_id, RL=self.recursive_limit, scale=self.connection.scale, joint_pos=self.connection.joint_pos, link_pos=self.connection.link_pos, connections=self.connection.conns)
                 scale = [1,1,1] # no change
                 link_pos = [0,0,0] # no change
                 joint_pos = [0,0,0] # no change
                 #Set connection only if it's not last 
                 if (self.terminal_only == 0):
-                    self.connections = [self.current_link + 2]
+                    self.connections = [self.link_id + 2]
                 else:
                     self.connections.clear()
                 if (self.connection.terminal_only == 0):    
@@ -92,7 +91,7 @@ class SOLUTION:
                 # Update recursive limit
                 # self.recursive_limit = self.node.recursive_limit
                 self.recursive_limit -= 1  
-                self.current_link += 1
+                self.link_id += 1
   
 
         # RECURSIVE CALL
@@ -152,7 +151,7 @@ class SOLUTION:
 
     def Mutate(self):
         # Chooses mutation
-        mutation = 3 #random.randint(0,4)
+        mutation = random.randint(0,4)
         
         # Change size of one link
         if mutation == 0:
@@ -189,13 +188,13 @@ class SOLUTION:
             joint_pos = [0,0,0] # no change
 
             self.G[self.num_links - 2][self.num_links - 1]["terminal"] = 0
-            self.G.nodes[self.num_links - 1]["connections"] = [self.current_link]
+            self.G.nodes[self.num_links - 1]["connections"] = [self.link_id]
             self.connections = []
             self.connection.snake_connection(self.num_links - 1, scale, link_pos, joint_pos, self.terminal_only, self.connections)
-            self.node.snake_node(self.connection.scale, self.connection.joint_pos, self.connection.link_pos, self.connection.conns)
+            self.node.snake_node(self.num_links, self.recursive_limit, self.connection.scale, self.connection.joint_pos, self.connection.link_pos, self.connection.conns)
 
 
-            self.current_link += 1
+            self.link_id += 1
             self.recursive_limit += 1
             self.num_links = self.recursive_limit
 
@@ -232,6 +231,7 @@ class SOLUTION:
             # self.G.remove_edge(self.num_links - 1, self.num_links - 2)
             
 
+            self.link_id -= 1
             self.num_links -= 1
             self.recursive_limit = self.num_links
             

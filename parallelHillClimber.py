@@ -58,7 +58,7 @@ class PARALLEL_HILL_CLIMBER:
 
     def Select(self):
         for i in self.parents:
-            if (self.parents[i].fitness < self.children[i].fitness):
+            if (self.parents[i].fitness > self.children[i].fitness):
                 self.parents[i] = self.children[i]
 
     def Store_Fitness(self, currentGeneration):
@@ -73,13 +73,15 @@ class PARALLEL_HILL_CLIMBER:
         for i in self.parents:
             print(self.parents[i].fitness, self.children[i].fitness)
             fitness = self.parents[i].fitness
+            
             # Write to file
-            """with open('data\\nh6.csv', 'a', newline='') as file:
+            with open('data\\SNAKES_TEST_1.csv', 'a', newline='') as file:
                 writer = csv.writer(file)
 
-                writer.writerow(self.parents[i].normalAxis)
+                writer.writerow(self.parents[i].G.nodes("joint_axis"))
                 writer.writerow([fitness])
-                file.close()"""
+                file.close()
+            
         print("")
 
 
