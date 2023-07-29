@@ -75,11 +75,10 @@ class PARALLEL_HILL_CLIMBER:
             fitness = self.parents[i].fitness
             
             # Write to file
-            with open('data\\SNAKES_TEST_1.csv', 'a', newline='') as file:
+            with open('data\\REMOVE_1.csv', 'a', newline='') as file:
                 writer = csv.writer(file)
-
-                writer.writerow(self.parents[i].G.nodes("joint_axis"))
-                writer.writerow([fitness])
+                # parent fitness, children fitness, children dimensions
+                writer.writerow([self.parents[i].fitness, self.children[i].fitness])
                 file.close()
             
         print("")

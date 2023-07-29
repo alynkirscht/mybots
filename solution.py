@@ -9,8 +9,7 @@ import constants as c
 from node import NODE
 from connections import CONNECTIONS
 import networkx as nx
-import matplotlib.pyplot as plt
-
+import csv
 class SOLUTION:
     def __init__(self, nextAvailableID):
         
@@ -155,7 +154,7 @@ class SOLUTION:
         
         # Change size of one link
         if mutation == 0:
-            rand_link = random.randint(0, self.num_links - 1)
+            rand_link =  random.randint(0, self.num_links)
             rand_size = random.uniform(0.5, 1.5)
             self.G.nodes[rand_link]["dimensions"] = [ col * rand_size for col in self.G.nodes[rand_link]["dimensions"]]
 
