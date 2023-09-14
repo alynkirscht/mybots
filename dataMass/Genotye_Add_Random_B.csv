@@ -1,0 +1,1008 @@
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.7078 -0.5739 -0.2079', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.6156  0.3033 -0.9049', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4999 -0.3773 -0.1188', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3175  0.3279  0.6893', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': '-0.8881  0.8619  0.5895', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3003  0.0948 -0.8278', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3589 -0.2834 -0.547 ', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3982 -0.5178 -0.137 ', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.124   0.222  -0.6296', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.5355 -0.9524  0.5205', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.6712 -0.198  -0.4204', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.7602  0.8916 -0.6677', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': '-0.0469  0.0325  0.0613', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.7332  0.115   0.5118', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.2078  0.5542 -0.3154', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.9365  0.2752  0.44  ', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.446   0.8596 -0.3876', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4331 -0.1574 -0.3691', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '0.9687 0.3502 0.8729', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3923 -0.9298  0.888 ', 'connections': []}"
+
+
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.7078 -0.5739 -0.2079', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.6156  0.3033 -0.9049', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4999 -0.3773 -0.1188', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3175  0.3279  0.6893', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': '-0.8881  0.8619  0.5895', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3003  0.0948 -0.8278', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3589 -0.2834 -0.547 ', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3982 -0.5178 -0.137 ', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.124   0.222  -0.6296', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.5355 -0.9524  0.5205', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.6712 -0.198  -0.4204', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.7602  0.8916 -0.6677', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': '-0.0469  0.0325  0.0613', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.7332  0.115   0.5118', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.2078  0.5542 -0.3154', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.9365  0.2752  0.44  ', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.446   0.8596 -0.3876', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4331 -0.1574 -0.3691', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '0.9687 0.3502 0.8729', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3923 -0.9298  0.888 ', 'connections': []}"
+
+
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.7078 -0.5739 -0.2079', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.6156  0.3033 -0.9049', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4999 -0.3773 -0.1188', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3175  0.3279  0.6893', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.0001, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4432 -0.6179 -0.0485', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': '-0.8881  0.8619  0.5895', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3003  0.0948 -0.8278', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3589 -0.2834 -0.547 ', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3982 -0.5178 -0.137 ', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.0001, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3632 -0.1099  0.168 ', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.124   0.222  -0.6296', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.5355 -0.9524  0.5205', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.6712 -0.198  -0.4204', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.7602  0.8916 -0.6677', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.0001, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.5754 -0.6421  0.2949', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': '-0.0469  0.0325  0.0613', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.7332  0.115   0.5118', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.2078  0.5542 -0.3154', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.9365  0.2752  0.44  ', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.446   0.8596 -0.3876', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4331 -0.1574 -0.3691', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '0.9687 0.3502 0.8729', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3923 -0.9298  0.888 ', 'connections': []}"
+
+
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.7078 -0.5739 -0.2079', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.6156  0.3033 -0.9049', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4999 -0.3773 -0.1188', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3175  0.3279  0.6893', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.0001, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4432 -0.6179 -0.0485', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': '-0.8881  0.8619  0.5895', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3003  0.0948 -0.8278', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3589 -0.2834 -0.547 ', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3982 -0.5178 -0.137 ', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.0001, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3632 -0.1099  0.168 ', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.124   0.222  -0.6296', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.5355 -0.9524  0.5205', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.6712 -0.198  -0.4204', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.7602  0.8916 -0.6677', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.0001, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.5754 -0.6421  0.2949', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': '-0.0469  0.0325  0.0613', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.7332  0.115   0.5118', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.2078  0.5542 -0.3154', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.9365  0.2752  0.44  ', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.0001, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.9131 -0.7902 -0.5058', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.446   0.8596 -0.3876', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4331 -0.1574 -0.3691', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '0.9687 0.3502 0.8729', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3923 -0.9298  0.888 ', 'connections': []}"
+
+
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.7078 -0.5739 -0.2079', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.6156  0.3033 -0.9049', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4999 -0.3773 -0.1188', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3175  0.3279  0.6893', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.7379, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4432 -0.6179 -0.0485', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': '-0.8881  0.8619  0.5895', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3003  0.0948 -0.8278', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3589 -0.2834 -0.547 ', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3982 -0.5178 -0.137 ', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.1568, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3632 -0.1099  0.168 ', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.124   0.222  -0.6296', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.5355 -0.9524  0.5205', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.6712 -0.198  -0.4204', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.7602  0.8916 -0.6677', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.0001, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.5754 -0.6421  0.2949', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': '-0.0469  0.0325  0.0613', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.7332  0.115   0.5118', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.2078  0.5542 -0.3154', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.9365  0.2752  0.44  ', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.0001, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.9131 -0.7902 -0.5058', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.446   0.8596 -0.3876', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4331 -0.1574 -0.3691', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '0.9687 0.3502 0.8729', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3923 -0.9298  0.888 ', 'connections': []}"
+
+
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.7078 -0.5739 -0.2079', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.6156  0.3033 -0.9049', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4999 -0.3773 -0.1188', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3175  0.3279  0.6893', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.7379, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4432 -0.6179 -0.0485', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': '-0.8881  0.8619  0.5895', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3003  0.0948 -0.8278', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3589 -0.2834 -0.547 ', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3982 -0.5178 -0.137 ', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.1568, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3632 -0.1099  0.168 ', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.124   0.222  -0.6296', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.5355 -0.9524  0.5205', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.6712 -0.198  -0.4204', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.7602  0.8916 -0.6677', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.0001, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.5754 -0.6421  0.2949', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': '-0.0469  0.0325  0.0613', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.7332  0.115   0.5118', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.2078  0.5542 -0.3154', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.9365  0.2752  0.44  ', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.9688, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.9131 -0.7902 -0.5058', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.446   0.8596 -0.3876', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4331 -0.1574 -0.3691', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '0.9687 0.3502 0.8729', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3923 -0.9298  0.888 ', 'connections': []}"
+
+
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.7078 -0.5739 -0.2079', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.6156  0.3033 -0.9049', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4999 -0.3773 -0.1188', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3175  0.3279  0.6893', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.7379, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4432 -0.6179 -0.0485', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': '-0.8881  0.8619  0.5895', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3003  0.0948 -0.8278', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3589 -0.2834 -0.547 ', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3982 -0.5178 -0.137 ', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.1568, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3632 -0.1099  0.168 ', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.124   0.222  -0.6296', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.5355 -0.9524  0.5205', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.6712 -0.198  -0.4204', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.7602  0.8916 -0.6677', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.0001, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.5754 -0.6421  0.2949', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': '-0.0469  0.0325  0.0613', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.7332  0.115   0.5118', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.2078  0.5542 -0.3154', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.9365  0.2752  0.44  ', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.9688, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.9131 -0.7902 -0.5058', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.446   0.8596 -0.3876', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4331 -0.1574 -0.3691', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '0.9687 0.3502 0.8729', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3923 -0.9298  0.888 ', 'connections': []}"
+
+
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.7078 -0.5739 -0.2079', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.6156  0.3033 -0.9049', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4999 -0.3773 -0.1188', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3175  0.3279  0.6893', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4432 -0.6179 -0.0485', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': '-0.8881  0.8619  0.5895', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3003  0.0948 -0.8278', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3589 -0.2834 -0.547 ', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3982 -0.5178 -0.137 ', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.1568, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3632 -0.1099  0.168 ', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.124   0.222  -0.6296', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.5355 -0.9524  0.5205', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.6712 -0.198  -0.4204', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.7602  0.8916 -0.6677', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.0001, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.5754 -0.6421  0.2949', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': '-0.0469  0.0325  0.0613', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.7332  0.115   0.5118', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.2078  0.5542 -0.3154', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.9365  0.2752  0.44  ', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.976, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.9131 -0.7902 -0.5058', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.446   0.8596 -0.3876', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4331 -0.1574 -0.3691', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '0.9687 0.3502 0.8729', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3923 -0.9298  0.888 ', 'connections': []}"
+
+
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.7078 -0.5739 -0.2079', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.6156  0.3033 -0.9049', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4999 -0.3773 -0.1188', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3175  0.3279  0.6893', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4432 -0.6179 -0.0485', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': '-0.8881  0.8619  0.5895', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3003  0.0948 -0.8278', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3589 -0.2834 -0.547 ', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3982 -0.5178 -0.137 ', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.1568, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3632 -0.1099  0.168 ', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.124   0.222  -0.6296', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.5355 -0.9524  0.5205', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.6712 -0.198  -0.4204', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.7602  0.8916 -0.6677', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.0001, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.5754 -0.6421  0.2949', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': '-0.0469  0.0325  0.0613', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.7332  0.115   0.5118', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.2078  0.5542 -0.3154', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.9365  0.2752  0.44  ', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.976, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.9131 -0.7902 -0.5058', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.446   0.8596 -0.3876', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4331 -0.1574 -0.3691', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '0.9687 0.3502 0.8729', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3923 -0.9298  0.888 ', 'connections': []}"
+
+
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.7078 -0.5739 -0.2079', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.6156  0.3033 -0.9049', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4999 -0.3773 -0.1188', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3175  0.3279  0.6893', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4432 -0.6179 -0.0485', 'connections': [5]}"
+5,"{'dimensions': [1, 1, 1], 'recursive_limit': 5, 'mass': 0.0001, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.9063 -0.3856  0.6305', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': '-0.8881  0.8619  0.5895', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3003  0.0948 -0.8278', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3589 -0.2834 -0.547 ', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3982 -0.5178 -0.137 ', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.1568, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3632 -0.1099  0.168 ', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.124   0.222  -0.6296', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.5355 -0.9524  0.5205', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.6712 -0.198  -0.4204', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.7602  0.8916 -0.6677', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.0001, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.5754 -0.6421  0.2949', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': '-0.0469  0.0325  0.0613', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.7332  0.115   0.5118', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.2078  0.5542 -0.3154', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.9365  0.2752  0.44  ', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.976, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.9131 -0.7902 -0.5058', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.446   0.8596 -0.3876', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4331 -0.1574 -0.3691', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '0.9687 0.3502 0.8729', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3923 -0.9298  0.888 ', 'connections': []}"
+
+
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.7078 -0.5739 -0.2079', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.6156  0.3033 -0.9049', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4999 -0.3773 -0.1188', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3175  0.3279  0.6893', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4432 -0.6179 -0.0485', 'connections': [5]}"
+5,"{'dimensions': [1, 1, 1], 'recursive_limit': 5, 'mass': 0.0001, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.9063 -0.3856  0.6305', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': '-0.8881  0.8619  0.5895', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3003  0.0948 -0.8278', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3589 -0.2834 -0.547 ', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3982 -0.5178 -0.137 ', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.6015, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3632 -0.1099  0.168 ', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.124   0.222  -0.6296', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.5355 -0.9524  0.5205', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.6712 -0.198  -0.4204', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.7602  0.8916 -0.6677', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.0001, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.5754 -0.6421  0.2949', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': '-0.0469  0.0325  0.0613', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.7332  0.115   0.5118', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.2078  0.5542 -0.3154', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.9365  0.2752  0.44  ', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.976, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.9131 -0.7902 -0.5058', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.446   0.8596 -0.3876', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4331 -0.1574 -0.3691', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '0.9687 0.3502 0.8729', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3923 -0.9298  0.888 ', 'connections': []}"
+
+
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.7078 -0.5739 -0.2079', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.6156  0.3033 -0.9049', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4999 -0.3773 -0.1188', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3175  0.3279  0.6893', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4432 -0.6179 -0.0485', 'connections': [5]}"
+5,"{'dimensions': [1, 1, 1], 'recursive_limit': 5, 'mass': 0.0001, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.9063 -0.3856  0.6305', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': '-0.8881  0.8619  0.5895', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3003  0.0948 -0.8278', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3589 -0.2834 -0.547 ', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3982 -0.5178 -0.137 ', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.6015, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3632 -0.1099  0.168 ', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.124   0.222  -0.6296', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.5355 -0.9524  0.5205', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.6712 -0.198  -0.4204', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.7602  0.8916 -0.6677', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.0001, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.5754 -0.6421  0.2949', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': '-0.0469  0.0325  0.0613', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.7332  0.115   0.5118', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.2078  0.5542 -0.3154', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.9365  0.2752  0.44  ', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.976, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.9131 -0.7902 -0.5058', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.446   0.8596 -0.3876', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4331 -0.1574 -0.3691', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '0.9687 0.3502 0.8729', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3923 -0.9298  0.888 ', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.0001, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3593  0.5491 -0.3316', 'connections': []}"
+
+
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.7078 -0.5739 -0.2079', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.6156  0.3033 -0.9049', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4999 -0.3773 -0.1188', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3175  0.3279  0.6893', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4432 -0.6179 -0.0485', 'connections': [5]}"
+5,"{'dimensions': [1, 1, 1], 'recursive_limit': 5, 'mass': 0.0001, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.9063 -0.3856  0.6305', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': '-0.8881  0.8619  0.5895', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3003  0.0948 -0.8278', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3589 -0.2834 -0.547 ', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3982 -0.5178 -0.137 ', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.6015, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3632 -0.1099  0.168 ', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.124   0.222  -0.6296', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.5355 -0.9524  0.5205', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.6712 -0.198  -0.4204', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.7602  0.8916 -0.6677', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.0001, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.5754 -0.6421  0.2949', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': '-0.0469  0.0325  0.0613', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.7332  0.115   0.5118', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.2078  0.5542 -0.3154', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.9365  0.2752  0.44  ', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.9131 -0.7902 -0.5058', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.446   0.8596 -0.3876', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4331 -0.1574 -0.3691', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '0.9687 0.3502 0.8729', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3923 -0.9298  0.888 ', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.0001, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3593  0.5491 -0.3316', 'connections': []}"
+
+
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.7078 -0.5739 -0.2079', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.6156  0.3033 -0.9049', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4999 -0.3773 -0.1188', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3175  0.3279  0.6893', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4432 -0.6179 -0.0485', 'connections': [5]}"
+5,"{'dimensions': [1, 1, 1], 'recursive_limit': 5, 'mass': 0.0001, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.9063 -0.3856  0.6305', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': '-0.8881  0.8619  0.5895', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3003  0.0948 -0.8278', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3589 -0.2834 -0.547 ', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3982 -0.5178 -0.137 ', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.6015, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3632 -0.1099  0.168 ', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.124   0.222  -0.6296', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.5355 -0.9524  0.5205', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.6712 -0.198  -0.4204', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.7602  0.8916 -0.6677', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.0001, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.5754 -0.6421  0.2949', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': '-0.0469  0.0325  0.0613', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.7332  0.115   0.5118', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.2078  0.5542 -0.3154', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.9365  0.2752  0.44  ', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.9131 -0.7902 -0.5058', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.446   0.8596 -0.3876', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4331 -0.1574 -0.3691', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '0.9687 0.3502 0.8729', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3923 -0.9298  0.888 ', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.1684, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3593  0.5491 -0.3316', 'connections': []}"
+
+
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.7078 -0.5739 -0.2079', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.6156  0.3033 -0.9049', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4999 -0.3773 -0.1188', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3175  0.3279  0.6893', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4432 -0.6179 -0.0485', 'connections': [5]}"
+5,"{'dimensions': [1, 1, 1], 'recursive_limit': 5, 'mass': 0.0001, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.9063 -0.3856  0.6305', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': '-0.8881  0.8619  0.5895', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3003  0.0948 -0.8278', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3589 -0.2834 -0.547 ', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3982 -0.5178 -0.137 ', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.6015, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3632 -0.1099  0.168 ', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.124   0.222  -0.6296', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.5355 -0.9524  0.5205', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.6712 -0.198  -0.4204', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.7602  0.8916 -0.6677', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.0001, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.5754 -0.6421  0.2949', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': '-0.0469  0.0325  0.0613', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.7332  0.115   0.5118', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.2078  0.5542 -0.3154', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.9365  0.2752  0.44  ', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.9131 -0.7902 -0.5058', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.446   0.8596 -0.3876', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4331 -0.1574 -0.3691', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '0.9687 0.3502 0.8729', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3923 -0.9298  0.888 ', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.1684, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3593  0.5491 -0.3316', 'connections': []}"
+
+
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.7078 -0.5739 -0.2079', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.6156  0.3033 -0.9049', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4999 -0.3773 -0.1188', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3175  0.3279  0.6893', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4432 -0.6179 -0.0485', 'connections': [5]}"
+5,"{'dimensions': [1, 1, 1], 'recursive_limit': 5, 'mass': 0.1668, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.9063 -0.3856  0.6305', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': '-0.8881  0.8619  0.5895', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3003  0.0948 -0.8278', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3589 -0.2834 -0.547 ', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3982 -0.5178 -0.137 ', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.6015, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3632 -0.1099  0.168 ', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.124   0.222  -0.6296', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.5355 -0.9524  0.5205', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.6712 -0.198  -0.4204', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.7602  0.8916 -0.6677', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.0001, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.5754 -0.6421  0.2949', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': '-0.0469  0.0325  0.0613', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.7332  0.115   0.5118', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.2078  0.5542 -0.3154', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.9365  0.2752  0.44  ', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.9131 -0.7902 -0.5058', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.446   0.8596 -0.3876', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4331 -0.1574 -0.3691', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '0.9687 0.3502 0.8729', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3923 -0.9298  0.888 ', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.1684, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3593  0.5491 -0.3316', 'connections': []}"
+
+
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.7078 -0.5739 -0.2079', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.6156  0.3033 -0.9049', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4999 -0.3773 -0.1188', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3175  0.3279  0.6893', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4432 -0.6179 -0.0485', 'connections': [5]}"
+5,"{'dimensions': [1, 1, 1], 'recursive_limit': 5, 'mass': 0.1668, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.9063 -0.3856  0.6305', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': '-0.8881  0.8619  0.5895', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3003  0.0948 -0.8278', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3589 -0.2834 -0.547 ', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3982 -0.5178 -0.137 ', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.6015, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3632 -0.1099  0.168 ', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.124   0.222  -0.6296', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.5355 -0.9524  0.5205', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.6712 -0.198  -0.4204', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.7602  0.8916 -0.6677', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.0001, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.5754 -0.6421  0.2949', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': '-0.0469  0.0325  0.0613', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.7332  0.115   0.5118', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.2078  0.5542 -0.3154', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.9365  0.2752  0.44  ', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.9131 -0.7902 -0.5058', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.446   0.8596 -0.3876', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4331 -0.1574 -0.3691', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '0.9687 0.3502 0.8729', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3923 -0.9298  0.888 ', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.2258, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3593  0.5491 -0.3316', 'connections': []}"
+
+
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.7078 -0.5739 -0.2079', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.6156  0.3033 -0.9049', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4999 -0.3773 -0.1188', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3175  0.3279  0.6893', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4432 -0.6179 -0.0485', 'connections': [5]}"
+5,"{'dimensions': [1, 1, 1], 'recursive_limit': 5, 'mass': 0.1668, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.9063 -0.3856  0.6305', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': '-0.8881  0.8619  0.5895', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3003  0.0948 -0.8278', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3589 -0.2834 -0.547 ', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3982 -0.5178 -0.137 ', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.6015, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3632 -0.1099  0.168 ', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.124   0.222  -0.6296', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.5355 -0.9524  0.5205', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.6712 -0.198  -0.4204', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.7602  0.8916 -0.6677', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.0001, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.5754 -0.6421  0.2949', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': '-0.0469  0.0325  0.0613', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.7332  0.115   0.5118', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.2078  0.5542 -0.3154', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.9365  0.2752  0.44  ', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.9131 -0.7902 -0.5058', 'connections': [5]}"
+5,"{'dimensions': [1, 1, 1], 'recursive_limit': 5, 'mass': 0.0001, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.1224 -0.8038 -0.8505', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.446   0.8596 -0.3876', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4331 -0.1574 -0.3691', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '0.9687 0.3502 0.8729', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3923 -0.9298  0.888 ', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.2258, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3593  0.5491 -0.3316', 'connections': []}"
+
+
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.7078 -0.5739 -0.2079', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.6156  0.3033 -0.9049', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4999 -0.3773 -0.1188', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3175  0.3279  0.6893', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4432 -0.6179 -0.0485', 'connections': [5]}"
+5,"{'dimensions': [1, 1, 1], 'recursive_limit': 5, 'mass': 0.1668, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.9063 -0.3856  0.6305', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': '-0.8881  0.8619  0.5895', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3003  0.0948 -0.8278', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3589 -0.2834 -0.547 ', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3982 -0.5178 -0.137 ', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.6015, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3632 -0.1099  0.168 ', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.124   0.222  -0.6296', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.5355 -0.9524  0.5205', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.6712 -0.198  -0.4204', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.7602  0.8916 -0.6677', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.6869, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.5754 -0.6421  0.2949', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': '-0.0469  0.0325  0.0613', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.7332  0.115   0.5118', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.2078  0.5542 -0.3154', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.9365  0.2752  0.44  ', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.9131 -0.7902 -0.5058', 'connections': [5]}"
+5,"{'dimensions': [1, 1, 1], 'recursive_limit': 5, 'mass': 0.0001, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.1224 -0.8038 -0.8505', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.446   0.8596 -0.3876', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4331 -0.1574 -0.3691', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '0.9687 0.3502 0.8729', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3923 -0.9298  0.888 ', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.2258, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3593  0.5491 -0.3316', 'connections': []}"
+
+
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.7078 -0.5739 -0.2079', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.6156  0.3033 -0.9049', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4999 -0.3773 -0.1188', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3175  0.3279  0.6893', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4432 -0.6179 -0.0485', 'connections': [5]}"
+5,"{'dimensions': [1, 1, 1], 'recursive_limit': 5, 'mass': 0.1668, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.9063 -0.3856  0.6305', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': '-0.8881  0.8619  0.5895', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3003  0.0948 -0.8278', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3589 -0.2834 -0.547 ', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3982 -0.5178 -0.137 ', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.6015, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3632 -0.1099  0.168 ', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.124   0.222  -0.6296', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.5355 -0.9524  0.5205', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.6712 -0.198  -0.4204', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.7602  0.8916 -0.6677', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.6869, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.5754 -0.6421  0.2949', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': '-0.0469  0.0325  0.0613', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.7332  0.115   0.5118', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.2078  0.5542 -0.3154', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.9365  0.2752  0.44  ', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.9131 -0.7902 -0.5058', 'connections': [5]}"
+5,"{'dimensions': [1, 1, 1], 'recursive_limit': 5, 'mass': 0.0001, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.1224 -0.8038 -0.8505', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.446   0.8596 -0.3876', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4331 -0.1574 -0.3691', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '0.9687 0.3502 0.8729', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3923 -0.9298  0.888 ', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.2258, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3593  0.5491 -0.3316', 'connections': []}"
+
+
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.7078 -0.5739 -0.2079', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.6156  0.3033 -0.9049', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4999 -0.3773 -0.1188', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3175  0.3279  0.6893', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4432 -0.6179 -0.0485', 'connections': [5]}"
+5,"{'dimensions': [1, 1, 1], 'recursive_limit': 5, 'mass': 0.1668, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.9063 -0.3856  0.6305', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': '-0.8881  0.8619  0.5895', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3003  0.0948 -0.8278', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3589 -0.2834 -0.547 ', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3982 -0.5178 -0.137 ', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.6015, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3632 -0.1099  0.168 ', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.124   0.222  -0.6296', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.5355 -0.9524  0.5205', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.6712 -0.198  -0.4204', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.7602  0.8916 -0.6677', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.6869, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.5754 -0.6421  0.2949', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': '-0.0469  0.0325  0.0613', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.7332  0.115   0.5118', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.2078  0.5542 -0.3154', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.9365  0.2752  0.44  ', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.9131 -0.7902 -0.5058', 'connections': [5]}"
+5,"{'dimensions': [1, 1, 1], 'recursive_limit': 5, 'mass': 0.223, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.1224 -0.8038 -0.8505', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.446   0.8596 -0.3876', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4331 -0.1574 -0.3691', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '0.9687 0.3502 0.8729', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3923 -0.9298  0.888 ', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.2258, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3593  0.5491 -0.3316', 'connections': []}"
+
+
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.7078 -0.5739 -0.2079', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.6156  0.3033 -0.9049', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4999 -0.3773 -0.1188', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3175  0.3279  0.6893', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4432 -0.6179 -0.0485', 'connections': [5]}"
+5,"{'dimensions': [1, 1, 1], 'recursive_limit': 5, 'mass': 0.1668, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.9063 -0.3856  0.6305', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': '-0.8881  0.8619  0.5895', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3003  0.0948 -0.8278', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3589 -0.2834 -0.547 ', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3982 -0.5178 -0.137 ', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.6015, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3632 -0.1099  0.168 ', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.124   0.222  -0.6296', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.5355 -0.9524  0.5205', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.6712 -0.198  -0.4204', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.7602  0.8916 -0.6677', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.6869, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.5754 -0.6421  0.2949', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': '-0.0469  0.0325  0.0613', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.7332  0.115   0.5118', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.2078  0.5542 -0.3154', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.9365  0.2752  0.44  ', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.9131 -0.7902 -0.5058', 'connections': [5]}"
+5,"{'dimensions': [1, 1, 1], 'recursive_limit': 5, 'mass': 0.223, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.1224 -0.8038 -0.8505', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.446   0.8596 -0.3876', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4331 -0.1574 -0.3691', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '0.9687 0.3502 0.8729', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3923 -0.9298  0.888 ', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.2258, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3593  0.5491 -0.3316', 'connections': []}"
+
+
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.7078 -0.5739 -0.2079', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.6156  0.3033 -0.9049', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4999 -0.3773 -0.1188', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3175  0.3279  0.6893', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4432 -0.6179 -0.0485', 'connections': [5]}"
+5,"{'dimensions': [1, 1, 1], 'recursive_limit': 5, 'mass': 0.1668, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.9063 -0.3856  0.6305', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': '-0.8881  0.8619  0.5895', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3003  0.0948 -0.8278', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3589 -0.2834 -0.547 ', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3982 -0.5178 -0.137 ', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.6015, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3632 -0.1099  0.168 ', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.124   0.222  -0.6296', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.5355 -0.9524  0.5205', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.6712 -0.198  -0.4204', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.7602  0.8916 -0.6677', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.6869, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.5754 -0.6421  0.2949', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': '-0.0469  0.0325  0.0613', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.7332  0.115   0.5118', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.2078  0.5542 -0.3154', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.9365  0.2752  0.44  ', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.9131 -0.7902 -0.5058', 'connections': [5]}"
+5,"{'dimensions': [1, 1, 1], 'recursive_limit': 5, 'mass': 0.223, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.1224 -0.8038 -0.8505', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.446   0.8596 -0.3876', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4331 -0.1574 -0.3691', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '0.9687 0.3502 0.8729', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3923 -0.9298  0.888 ', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.2258, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3593  0.5491 -0.3316', 'connections': []}"
+
+
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.7078 -0.5739 -0.2079', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.6156  0.3033 -0.9049', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4999 -0.3773 -0.1188', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3175  0.3279  0.6893', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4432 -0.6179 -0.0485', 'connections': [5]}"
+5,"{'dimensions': [1, 1, 1], 'recursive_limit': 5, 'mass': 0.1668, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.9063 -0.3856  0.6305', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': '-0.8881  0.8619  0.5895', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3003  0.0948 -0.8278', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3589 -0.2834 -0.547 ', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3982 -0.5178 -0.137 ', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.6015, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3632 -0.1099  0.168 ', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.124   0.222  -0.6296', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.5355 -0.9524  0.5205', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.6712 -0.198  -0.4204', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.7602  0.8916 -0.6677', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.6869, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.5754 -0.6421  0.2949', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': '-0.0469  0.0325  0.0613', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.7332  0.115   0.5118', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.2078  0.5542 -0.3154', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.9365  0.2752  0.44  ', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.9131 -0.7902 -0.5058', 'connections': [5]}"
+5,"{'dimensions': [1, 1, 1], 'recursive_limit': 5, 'mass': 0.223, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.1224 -0.8038 -0.8505', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.446   0.8596 -0.3876', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4331 -0.1574 -0.3691', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '0.9687 0.3502 0.8729', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3923 -0.9298  0.888 ', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.6287, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3593  0.5491 -0.3316', 'connections': []}"
+
+
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.7078 -0.5739 -0.2079', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.6156  0.3033 -0.9049', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4999 -0.3773 -0.1188', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3175  0.3279  0.6893', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4432 -0.6179 -0.0485', 'connections': [5]}"
+5,"{'dimensions': [1, 1, 1], 'recursive_limit': 5, 'mass': 0.1668, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.9063 -0.3856  0.6305', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': '-0.8881  0.8619  0.5895', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3003  0.0948 -0.8278', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3589 -0.2834 -0.547 ', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3982 -0.5178 -0.137 ', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.6015, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3632 -0.1099  0.168 ', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.124   0.222  -0.6296', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.5355 -0.9524  0.5205', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.6712 -0.198  -0.4204', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.7602  0.8916 -0.6677', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.6869, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.5754 -0.6421  0.2949', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': '-0.0469  0.0325  0.0613', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.7332  0.115   0.5118', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.2078  0.5542 -0.3154', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.9365  0.2752  0.44  ', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.9131 -0.7902 -0.5058', 'connections': [5]}"
+5,"{'dimensions': [1, 1, 1], 'recursive_limit': 5, 'mass': 0.223, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.1224 -0.8038 -0.8505', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.446   0.8596 -0.3876', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4331 -0.1574 -0.3691', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '0.9687 0.3502 0.8729', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3923 -0.9298  0.888 ', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.6287, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3593  0.5491 -0.3316', 'connections': []}"
+
+
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.7078 -0.5739 -0.2079', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.6156  0.3033 -0.9049', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4999 -0.3773 -0.1188', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3175  0.3279  0.6893', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4432 -0.6179 -0.0485', 'connections': [5]}"
+5,"{'dimensions': [1, 1, 1], 'recursive_limit': 5, 'mass': 0.1856, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.9063 -0.3856  0.6305', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': '-0.8881  0.8619  0.5895', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3003  0.0948 -0.8278', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3589 -0.2834 -0.547 ', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3982 -0.5178 -0.137 ', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.6015, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3632 -0.1099  0.168 ', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.124   0.222  -0.6296', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.5355 -0.9524  0.5205', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.6712 -0.198  -0.4204', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.7602  0.8916 -0.6677', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.6869, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.5754 -0.6421  0.2949', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': '-0.0469  0.0325  0.0613', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.7332  0.115   0.5118', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.2078  0.5542 -0.3154', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.9365  0.2752  0.44  ', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.9131 -0.7902 -0.5058', 'connections': [5]}"
+5,"{'dimensions': [1, 1, 1], 'recursive_limit': 5, 'mass': 0.223, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.1224 -0.8038 -0.8505', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.446   0.8596 -0.3876', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4331 -0.1574 -0.3691', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '0.9687 0.3502 0.8729', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3923 -0.9298  0.888 ', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.6287, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3593  0.5491 -0.3316', 'connections': []}"
+
+
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.7078 -0.5739 -0.2079', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.6156  0.3033 -0.9049', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4999 -0.3773 -0.1188', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3175  0.3279  0.6893', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4432 -0.6179 -0.0485', 'connections': [5]}"
+5,"{'dimensions': [1, 1, 1], 'recursive_limit': 5, 'mass': 0.1856, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.9063 -0.3856  0.6305', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': '-0.8881  0.8619  0.5895', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3003  0.0948 -0.8278', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3589 -0.2834 -0.547 ', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3982 -0.5178 -0.137 ', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.6015, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3632 -0.1099  0.168 ', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.124   0.222  -0.6296', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.5355 -0.9524  0.5205', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.6712 -0.198  -0.4204', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.7602  0.8916 -0.6677', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.6869, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.5754 -0.6421  0.2949', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': '-0.0469  0.0325  0.0613', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.7332  0.115   0.5118', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.2078  0.5542 -0.3154', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.9365  0.2752  0.44  ', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.9131 -0.7902 -0.5058', 'connections': [5]}"
+5,"{'dimensions': [1, 1, 1], 'recursive_limit': 5, 'mass': 0.223, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.1224 -0.8038 -0.8505', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.446   0.8596 -0.3876', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4331 -0.1574 -0.3691', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '0.9687 0.3502 0.8729', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3923 -0.9298  0.888 ', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.6287, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3593  0.5491 -0.3316', 'connections': []}"
+
+
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.7078 -0.5739 -0.2079', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.6156  0.3033 -0.9049', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4999 -0.3773 -0.1188', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3175  0.3279  0.6893', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4432 -0.6179 -0.0485', 'connections': [5]}"
+5,"{'dimensions': [1, 1, 1], 'recursive_limit': 5, 'mass': 0.1856, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.9063 -0.3856  0.6305', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': '-0.8881  0.8619  0.5895', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3003  0.0948 -0.8278', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3589 -0.2834 -0.547 ', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3982 -0.5178 -0.137 ', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.6015, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3632 -0.1099  0.168 ', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.124   0.222  -0.6296', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.5355 -0.9524  0.5205', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.6712 -0.198  -0.4204', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.7602  0.8916 -0.6677', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.6869, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.5754 -0.6421  0.2949', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': '-0.0469  0.0325  0.0613', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.7332  0.115   0.5118', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.2078  0.5542 -0.3154', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.9365  0.2752  0.44  ', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.9131 -0.7902 -0.5058', 'connections': [5]}"
+5,"{'dimensions': [1, 1, 1], 'recursive_limit': 5, 'mass': 0.223, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.1224 -0.8038 -0.8505', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.446   0.8596 -0.3876', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4331 -0.1574 -0.3691', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '0.9687 0.3502 0.8729', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3923 -0.9298  0.888 ', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.6287, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3593  0.5491 -0.3316', 'connections': []}"
+
+
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.7078 -0.5739 -0.2079', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.6156  0.3033 -0.9049', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4999 -0.3773 -0.1188', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3175  0.3279  0.6893', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4432 -0.6179 -0.0485', 'connections': [5]}"
+5,"{'dimensions': [1, 1, 1], 'recursive_limit': 5, 'mass': 0.1856, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.9063 -0.3856  0.6305', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': '-0.8881  0.8619  0.5895', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3003  0.0948 -0.8278', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3589 -0.2834 -0.547 ', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3982 -0.5178 -0.137 ', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3632 -0.1099  0.168 ', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.124   0.222  -0.6296', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.5355 -0.9524  0.5205', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.6712 -0.198  -0.4204', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.7602  0.8916 -0.6677', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.6869, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.5754 -0.6421  0.2949', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': '-0.0469  0.0325  0.0613', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.7332  0.115   0.5118', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.2078  0.5542 -0.3154', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.9365  0.2752  0.44  ', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.9131 -0.7902 -0.5058', 'connections': [5]}"
+5,"{'dimensions': [1, 1, 1], 'recursive_limit': 5, 'mass': 0.223, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.1224 -0.8038 -0.8505', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.446   0.8596 -0.3876', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4331 -0.1574 -0.3691', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '0.9687 0.3502 0.8729', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3923 -0.9298  0.888 ', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.6287, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3593  0.5491 -0.3316', 'connections': []}"
+
+
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.7078 -0.5739 -0.2079', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.6156  0.3033 -0.9049', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4999 -0.3773 -0.1188', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3175  0.3279  0.6893', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4432 -0.6179 -0.0485', 'connections': [5]}"
+5,"{'dimensions': [1, 1, 1], 'recursive_limit': 5, 'mass': 0.1856, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.9063 -0.3856  0.6305', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': '-0.8881  0.8619  0.5895', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3003  0.0948 -0.8278', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3589 -0.2834 -0.547 ', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3982 -0.5178 -0.137 ', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3632 -0.1099  0.168 ', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.124   0.222  -0.6296', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.5355 -0.9524  0.5205', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.6712 -0.198  -0.4204', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.7602  0.8916 -0.6677', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.6869, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.5754 -0.6421  0.2949', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': '-0.0469  0.0325  0.0613', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.7332  0.115   0.5118', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.2078  0.5542 -0.3154', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.9365  0.2752  0.44  ', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.9131 -0.7902 -0.5058', 'connections': [5]}"
+5,"{'dimensions': [1, 1, 1], 'recursive_limit': 5, 'mass': 0.223, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.1224 -0.8038 -0.8505', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.446   0.8596 -0.3876', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4331 -0.1574 -0.3691', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '0.9687 0.3502 0.8729', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3923 -0.9298  0.888 ', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.6287, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3593  0.5491 -0.3316', 'connections': []}"
+
+
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.7078 -0.5739 -0.2079', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.6156  0.3033 -0.9049', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4999 -0.3773 -0.1188', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3175  0.3279  0.6893', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4432 -0.6179 -0.0485', 'connections': [5]}"
+5,"{'dimensions': [1, 1, 1], 'recursive_limit': 5, 'mass': 0.6357, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.9063 -0.3856  0.6305', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': '-0.8881  0.8619  0.5895', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3003  0.0948 -0.8278', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3589 -0.2834 -0.547 ', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3982 -0.5178 -0.137 ', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3632 -0.1099  0.168 ', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.124   0.222  -0.6296', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.5355 -0.9524  0.5205', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.6712 -0.198  -0.4204', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.7602  0.8916 -0.6677', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.6869, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.5754 -0.6421  0.2949', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': '-0.0469  0.0325  0.0613', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.7332  0.115   0.5118', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.2078  0.5542 -0.3154', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.9365  0.2752  0.44  ', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.9131 -0.7902 -0.5058', 'connections': [5]}"
+5,"{'dimensions': [1, 1, 1], 'recursive_limit': 5, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.1224 -0.8038 -0.8505', 'connections': []}"
+
+0,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 1, 'position': [0, 0, 0.5], 'joint_position': [0, 0.5, 0.5], 'joint_axis': ' 0.446   0.8596 -0.3876', 'connections': [1]}"
+1,"{'dimensions': [1, 1, 1], 'recursive_limit': 3, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.4331 -0.1574 -0.3691', 'connections': [2]}"
+2,"{'dimensions': [1, 1, 1], 'recursive_limit': 2, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '0.9687 0.3502 0.8729', 'connections': [3]}"
+3,"{'dimensions': [1, 1, 1], 'recursive_limit': 1, 'mass': 1, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': ' 0.3923 -0.9298  0.888 ', 'connections': [4]}"
+4,"{'dimensions': [1, 1, 1], 'recursive_limit': 4, 'mass': 0.6287, 'position': [0.0, 0.5, 0.0], 'joint_position': [0.0, 1.0, 0.0], 'joint_axis': '-0.3593  0.5491 -0.3316', 'connections': []}"
+
+
+
