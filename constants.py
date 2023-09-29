@@ -9,7 +9,10 @@ MIN_SIN = 0
 OFFSET= 0
 MAX_FORCE = 15
 SLEEP_TIME = 1/999999999
-numberOfGenerations = 1
-populationSize = 50
+numberOfGenerations = 30
+populationSize = 5
 motorJointRange = 0.5
 numHiddenNeurons = 5
+currentlyTesting = "8Remove_Random_A"
+massChange = "random"
+

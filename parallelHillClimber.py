@@ -22,10 +22,10 @@ class PARALLEL_HILL_CLIMBER:
         for i in range(0, c.populationSize):
             self.parents[i]= SOLUTION(self.nextAvailableID)
             self.nextAvailableID += 1
+            
         
     def Evolve(self):
         self.Evaluate(self.parents)
-        
         for currentGeneration in range(c.numberOfGenerations):
             self.Evolve_For_One_Generation(currentGeneration + 1)
             
@@ -63,10 +63,15 @@ class PARALLEL_HILL_CLIMBER:
 
     def Store_Fitness(self, currentGeneration):
         population = 0
+
         for key in self.parents:
             sol = self.parents[key]
             self.fitnessMatrix[population][currentGeneration-1] = sol.fitness
             population += 1
+
+
+            
+
 
     def Print(self):
         print("")
@@ -74,12 +79,13 @@ class PARALLEL_HILL_CLIMBER:
             print(self.parents[i].fitness, self.children[i].fitness)
             fitness = self.parents[i].fitness
             
-            # Write to file
+            """# Write to file
             with open('data\\REMOVE_1.csv', 'a', newline='') as file:
                 writer = csv.writer(file)
                 # parent fitness, children fitness, children dimensions
                 writer.writerow([self.parents[i].fitness, self.children[i].fitness])
                 file.close()
+            """
             
         print("")
 
@@ -107,18 +113,20 @@ class PARALLEL_HILL_CLIMBER:
         self.parents[bestFitnessID].Start_Simulation("GUI")
         
         # Create output matrices
-        """if(c.numHiddenNeurons == 0):
-            currentlyTesting = "A5" 
-        elif(c.numHiddenNeurons > 0):
-            currentlyTesting = "B6"
-        numpy.savetxt("matrix" + currentlyTesting + ".csv", self.fitnessMatrix, delimiter =', ')
-        numpy.save("matrix" + currentlyTesting + ".npy", self.fitnessMatrix)"""
+        numpy.savetxt("matrix_" + c.currentlyTesting + ".csv", self.fitnessMatrix, delimiter =', ')
+        numpy.save("matrix_" + c.currentlyTesting + ".npy", self.fitnessMatrix)
 
         
 
     def Evaluate(self, solutions):
         for i in solutions:
+            gen_complete = False
             solutions[i].Start_Simulation("DIRECT")
+            if i == len(solutions) - 1:
+                gen_complete = True
+            self.parents[i].Store_Genotype(gen_complete)
+
+            
 
         for i in solutions:
             solutions[i].Wait_For_Simulation_To_End()

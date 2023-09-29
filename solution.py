@@ -10,12 +10,13 @@ from node import NODE
 from connections import CONNECTIONS
 import networkx as nx
 import csv
+from decimal import Decimal
 class SOLUTION:
     def __init__(self, nextAvailableID):
         
 
         """Recursion variables """
-        self.recursive_limit = 4 # I am gonna choose 4 and then modify the snakes from there, random.randint(3,5)
+        self.recursive_limit = 8 # I am gonna choose 4 and then modify the snakes from there, random.randint(3,5)
         self.num_links = self.recursive_limit # Starting recursive number
         self.link_id = 0
         self.G = nx.Graph()
@@ -75,7 +76,7 @@ class SOLUTION:
             # Normal case 
             else: 
                 
-                self.node.snake_node(id = self.link_id, RL=self.recursive_limit, scale=self.connection.scale, joint_pos=self.connection.joint_pos, link_pos=self.connection.link_pos, connections=self.connection.conns)
+                self.node.snake_node(id = self.link_id, RL=self.recursive_limit, scale=self.connection.scale, mass = 1, joint_pos=self.connection.joint_pos, link_pos=self.connection.link_pos, connections=self.connection.conns)
                 scale = [1,1,1] # no change
                 link_pos = [0,0,0] # no change
                 joint_pos = [0,0,0] # no change
@@ -96,13 +97,31 @@ class SOLUTION:
         # RECURSIVE CALL
         self.Create_Graph()
 
+    def Store_Genotype(self,gen_complete):
+        csv_file = "Genotye_" + c.currentlyTesting + ".csv"
+
+        new_gen_count = 0 # Count if population is complete
+        # Open the CSV file for writing
+        with open(csv_file, "a", newline="") as csvfile:
+            csv_writer = csv.writer(csvfile)
+            
+            # Iterate through self.G.nodes(data=True) and write each node and its attributes to the CSV file
+            for node, attributes in self.G.nodes(data=True):
+                print(f"Node {node}: {attributes}")
+                print("")
+                csv_writer.writerow([node, attributes])
+            csv_writer.writerow([])
+            if (gen_complete):
+                csv_writer.writerow([])
+                csv_writer.writerow([])
+            print("")
+            print("")
+
     def Create_Body(self):
         for node, attributes in self.G.nodes(data=True):
             print(f"Node {node}: {attributes}")
-        for edge in self.G.edges():
-            node1, node2 = edge
-            edge_data = self.G[node1][node2]
-            print(f"Edge {edge}: {edge_data}")    
+
+        print("")
         """This is Karl Sims new"""
         pyrosim.Start_URDF("body" + str(self.myID) + ".urdf")
 
@@ -150,7 +169,7 @@ class SOLUTION:
 
     def Mutate(self):
         # Chooses mutation
-        mutation = random.randint(0,4)
+        mutation = 3 #random.randint(0,4)
         
         # Change size of one link
         if mutation == 0:
@@ -168,9 +187,50 @@ class SOLUTION:
         # Change normalAxis
         elif mutation == 1:
             rand_joint = random.randint(0, self.num_links - 1)
-            rand_axis =  self.node.joint_Axis()
-            self.G.nodes[rand_joint]["joint_axis"] = rand_axis
+            sum_or_subs = random.randint(0, 1)
 
+            numbers_str = self.G.nodes[rand_joint]["joint_axis"]
+            numbers_list = numbers_str.split(',')
+            numbers_float = [float(number) for number in numbers_list] # Converts strings into floats
+
+
+            # Random
+            # Sum
+            if (sum_or_subs == 0):
+                numbers_float[rand_joint] += round(numpy.random.uniform(0, 1), 4)
+            # Substraction
+            else:
+                numbers_float[rand_joint] -=round(numpy.random.uniform(0, 1), 4)
+
+            # .0001
+            # Sum
+            if (sum_or_subs == 0):
+                numbers_float[rand_joint] += .0001
+            # Substraction
+            else:
+                numbers_float[rand_joint] -= .0001
+                 
+
+            # Validation no bigger than 1, no less than -1, no triple 0
+            if joint_normal > 1:
+                joint_normal = 1
+            if joint_normal < -1:
+                joint_normal = -1
+            
+            # Check if array adds to 0
+            sum_of_numbers = sum(numbers_float)
+            # It sum is zero add or remove 0.0001 
+            if (sum_of_numbers) == 0:
+                if sum_or_subs == 0:
+                    numbers_float[rand_joint] = 0.0001
+                else:
+                    numbers_float[rand_joint] = -0.0001
+                
+
+
+            self.G.nodes[rand_joint]["joint_axis"] = joint_normal
+
+            # Update neurons
             randomRowSToH = random.randint(0,self.numSensorNeurons-1)
             randomColumnSToH = random.randint(0,self.numHiddenNeurons-1)
             randomRowHToM = random.randint(0,self.numHiddenNeurons-1)
@@ -180,79 +240,235 @@ class SOLUTION:
             self.hiddenToMotor[randomRowHToM, randomColumnHToM] = random.random() * 2 -1
         # Add link
         elif mutation == 2:
-            self.terminal_only = 1
+            # if last block mass == 1 add new node:
+            if (self.G.nodes[self.num_links - 1]["mass"] == 1):
+                self.terminal_only = 1
+                self.mass = .0001
 
-            scale = [1,1,1] # no change
-            link_pos = [0,0,0] # no change
-            joint_pos = [0,0,0] # no change
+                scale = [1,1,1] # no change
+                link_pos = [0,0,0] # no change
+                joint_pos = [0,0,0] # no change
 
-            self.G[self.num_links - 2][self.num_links - 1]["terminal"] = 0
-            self.G.nodes[self.num_links - 1]["connections"] = [self.link_id]
-            self.connections = []
-            self.connection.snake_connection(self.num_links - 1, scale, link_pos, joint_pos, self.terminal_only, self.connections)
-            self.node.snake_node(self.num_links, self.recursive_limit, self.connection.scale, self.connection.joint_pos, self.connection.link_pos, self.connection.conns)
+                self.G[self.num_links - 2][self.num_links - 1]["terminal"] = 0
+                self.G.nodes[self.num_links - 1]["connections"] = [self.link_id]
+                self.connections = []
+                self.connection.snake_connection(self.num_links - 1, scale, link_pos, joint_pos, self.terminal_only, self.connections)
+                self.node.snake_node(self.num_links, self.recursive_limit, self.connection.scale, self.mass, self.connection.joint_pos, self.connection.link_pos, self.connection.conns)
 
 
-            self.link_id += 1
-            self.recursive_limit += 1
-            self.num_links = self.recursive_limit
+                self.link_id += 1
+                self.recursive_limit += 1
+                self.num_links = self.recursive_limit
 
-            # update neurons
-            self.numSensorNeurons = self.num_links
-            self.numMotorNeurons = self.num_links - 1
+                # update neurons
+                self.numSensorNeurons = self.num_links
+                self.numMotorNeurons = self.num_links - 1
 
-            # Increase size by 1 in both dimensions
-            sensorToHidden = numpy.zeros((self.numSensorNeurons, self.numHiddenNeurons))
-            sensorToHidden[:self.numSensorNeurons -1, :] = self.sensorToHidden
+                # Increase size by 1 in both dimensions
+                sensorToHidden = numpy.zeros((self.numSensorNeurons, self.numHiddenNeurons))
+                sensorToHidden[:self.numSensorNeurons -1, :] = self.sensorToHidden
 
-            hiddenToMotor = numpy.zeros((self.numHiddenNeurons, self.numMotorNeurons))
-            hiddenToMotor[:, :self.numMotorNeurons -1] = self.hiddenToMotor
+                hiddenToMotor = numpy.zeros((self.numHiddenNeurons, self.numMotorNeurons))
+                hiddenToMotor[:, :self.numMotorNeurons -1] = self.hiddenToMotor
 
-            # Append new values
-            new_weight_row_sToH = numpy.random.random((1, self.numHiddenNeurons)) * 2 - 1
-            sensorToHidden[-1, :] = new_weight_row_sToH
-            new_weight_column_sToH = numpy.random.random((self.numSensorNeurons, 1)) * 2 - 1
-            sensorToHidden[:, -1] = new_weight_column_sToH.flatten()
+                # Append new values
+                new_weight_row_sToH = numpy.random.random((1, self.numHiddenNeurons)) * 2 - 1
+                sensorToHidden[-1, :] = new_weight_row_sToH
+                new_weight_column_sToH = numpy.random.random((self.numSensorNeurons, 1)) * 2 - 1
+                sensorToHidden[:, -1] = new_weight_column_sToH.flatten()
 
-            new_weight_row_hToM = numpy.random.random((1, self.numMotorNeurons)) * 2 - 1
-            hiddenToMotor[-1, :] = new_weight_row_hToM
-            new_weight_column_hToM = numpy.random.random((self.numHiddenNeurons, 1)) * 2 - 1
-            hiddenToMotor[:, -1] = new_weight_column_hToM.flatten()
+                new_weight_row_hToM = numpy.random.random((1, self.numMotorNeurons)) * 2 - 1
+                hiddenToMotor[-1, :] = new_weight_row_hToM
+                new_weight_column_hToM = numpy.random.random((self.numHiddenNeurons, 1)) * 2 - 1
+                hiddenToMotor[:, -1] = new_weight_column_hToM.flatten()
 
-            self.sensorToHidden = sensorToHidden
-            self.hiddenToMotor = hiddenToMotor
+                self.sensorToHidden = sensorToHidden
+                self.hiddenToMotor = hiddenToMotor
+            else:
+                # Add random
+                if c.massChange == "random":
+                    mass = self.G.nodes[self.num_links - 1]["mass"]
+                    mass += random.uniform(0.0001, 0.9999)
+                    mass = round(mass, 4)
+                    if mass > 1:
+                        mass = 1
+                    self.G.nodes[self.num_links - 1]["mass"] = mass
 
-        # decrease size if snake is of size 5 or rand variable is 1 and is of size 4
+                # Add .0001
+                elif c.massChange == ".0001":
+                    mass = self.G.nodes[self.num_links - 1]["mass"]
+                    mass += .0001
+                    mass = round(mass, 4)
+                    if mass > 1:
+                        mass = 1
+                    self.G.nodes[self.num_links - 1]["mass"] = mass
+                
+                # Add .001
+                elif c.massChange == ".001":
+                    mass = self.G.nodes[self.num_links - 1]["mass"]
+                    mass += .001
+                    mass = round(mass, 4)
+                    if mass > 1:
+                        mass = 1
+                    self.G.nodes[self.num_links - 1]["mass"] = mass
+                
+                # Add .01
+                elif c.massChange == ".01":
+                    mass = self.G.nodes[self.num_links - 1]["mass"]
+                    mass += .01
+                    mass = round(mass, 4)
+                    if mass > 1:
+                        mass = 1
+                    self.G.nodes[self.num_links - 1]["mass"] = mass
+                
+                # Add .1
+                elif c.massChange == ".1":
+                    mass = self.G.nodes[self.num_links - 1]["mass"]
+                    mass += .1
+                    mass = round(mass, 4)
+                    if mass > 1:
+                        mass = 1
+                    self.G.nodes[self.num_links - 1]["mass"] = mass
+                
+                # Evolve brain
+                randomRowSToH = random.randint(0,self.numSensorNeurons-1)
+                randomColumnSToH = random.randint(0,self.numHiddenNeurons-1)
+                randomRowHToM = random.randint(0,self.numHiddenNeurons-1)
+                randomColumnHToM = random.randint(0,self.numMotorNeurons-1)
+
+                self.sensorToHidden[randomRowSToH, randomColumnSToH] = random.random() * 2 -1
+                self.hiddenToMotor[randomRowHToM, randomColumnHToM] = random.random() * 2 -1
+        # Remove link
         elif mutation == 3: 
-            # Remove last node and connection
-            self.G.remove_node(self.num_links - 1)
-            self.G.nodes[self.num_links - 2]["connections"] = []
-            # self.G.remove_edge(self.num_links - 1, self.num_links - 2)
+            lessThan0 = False
+            # Remove random
+            if c.massChange == "random":
+                mass = self.G.nodes[self.num_links - 1]["mass"]
+                mass -= random.uniform(0.0001, 0.9999)
+                mass = round(mass, 4)   
+                if mass <= 0 :
+                    lessThan0 = True
+                    # Remove last node and connection
+                    self.G.remove_node(self.num_links - 1)
+                    self.G.nodes[self.num_links - 2]["connections"] = []
+                    self.link_id -= 1
+                    self.num_links -= 1
+                    self.recursive_limit = self.num_links
+
+                else:
+                    self.G.nodes[self.num_links - 1]["mass"] = mass
+
+            # Remove .0001
+            elif c.massChange == ".0001":
+                mass = self.G.nodes[self.num_links - 1]["mass"]
+                mass -= .0001
+                mass = round(mass, 4)
+                if mass <= 0:
+                    lessThan0 = True
+                    # Remove last node and connection
+                    self.G.remove_node(self.num_links - 1)
+                    self.G.nodes[self.num_links - 2]["connections"] = []
+                    self.link_id -= 1
+                    self.num_links -= 1
+                    self.recursive_limit = self.num_links
+                else:
+                    self.G.nodes[self.num_links - 1]["mass"] = mass
+
+            # Remove .001
+            elif c.massChange == ".001":
+                mass = self.G.nodes[self.num_links - 1]["mass"]
+                mass -= .001
+                mass = round(mass, 4)
+                if mass <= 0:
+                    lessThan0 = True
+                    # Remove last node and connection
+                    self.G.remove_node(self.num_links - 1)
+                    self.G.nodes[self.num_links - 2]["connections"] = []
+                    self.link_id -= 1
+                    self.num_links -= 1
+                    self.recursive_limit = self.num_links
+                else:
+                    self.G.nodes[self.num_links - 1]["mass"] = mass
+
+            # Remove .01
+            elif c.massChange == ".01":
+                mass = self.G.nodes[self.num_links - 1]["mass"]
+                mass -= .01
+                mass = round(mass, 4)
+                if mass <= 0:
+                    lessThan0 = True
+                    # Remove last node and connection
+                    self.G.remove_node(self.num_links - 1)
+                    self.G.nodes[self.num_links - 2]["connections"] = []
+                    self.link_id -= 1
+                    self.num_links -= 1
+                    self.recursive_limit = self.num_links
+                else:
+                    self.G.nodes[self.num_links - 1]["mass"] = mass
+            
+            # Remove .1
+            elif c.massChange == ".1":
+                mass = self.G.nodes[self.num_links - 1]["mass"]
+                mass -= .1
+                mass = round(mass, 4)
+                if mass <= 0:
+                    lessThan0 = True
+                    # Remove last node and connection
+                    self.G.remove_node(self.num_links - 1)
+                    self.G.nodes[self.num_links - 2]["connections"] = []
+                    self.link_id -= 1
+                    self.num_links -= 1
+                    self.recursive_limit = self.num_links
+                else:
+                    self.G.nodes[self.num_links - 1]["mass"] = mass
+
+            # Remove 1
+            elif c.massChange == "1":
+                mass = self.G.nodes[self.num_links - 1]["mass"]
+                mass -= 1
+                mass = round(mass, 4)
+                if mass <= 0 and self.link_id > 2:
+                    lessThan0 = True
+                    # Remove last node and connection
+                    self.G.remove_node(self.num_links - 1)
+                    self.G.nodes[self.num_links - 2]["connections"] = []
+                    self.link_id -= 1
+                    self.num_links -= 1
+                    self.recursive_limit = self.num_links
+                else:
+                    self.G.nodes[self.num_links - 1]["mass"] = mass
+            
+            if lessThan0:
+                # update neurons
+                self.numSensorNeurons = self.num_links
+                self.numMotorNeurons = self.num_links - 1
             
 
-            self.link_id -= 1
-            self.num_links -= 1
-            self.recursive_limit = self.num_links
-            
-            # update neurons
-            self.numSensorNeurons = self.num_links
-            self.numMotorNeurons = self.num_links - 1
+                
+                # Create the new array with the desired size
+                sensorToHidden = numpy.zeros((self.numSensorNeurons, self.numHiddenNeurons))
+                hiddenToMotor = numpy.zeros((self.numHiddenNeurons, self.numMotorNeurons))
 
-            
-            # Create the new array with the desired size
-            sensorToHidden = numpy.zeros((self.numSensorNeurons, self.numHiddenNeurons))
-            hiddenToMotor = numpy.zeros((self.numHiddenNeurons, self.numMotorNeurons))
+                # Copy the values from the original array to the new array
+                for i in range(self.numSensorNeurons):
+                    for j in range(self.numHiddenNeurons):
+                        sensorToHidden[i,j] = sensorToHidden[i,j]
+                for i in range(self.numHiddenNeurons):
+                    for j in range(self.numMotorNeurons):
+                        hiddenToMotor[i,j] = hiddenToMotor[i,j]
+                
+                self.sensorToHidden = sensorToHidden
+                self.hiddenToMotor = hiddenToMotor  
+            else:
+                # Update brain
+                randomRowSToH = random.randint(0,self.numSensorNeurons-1)
+                randomColumnSToH = random.randint(0,self.numHiddenNeurons-1)
+                randomRowHToM = random.randint(0,self.numHiddenNeurons-1)
+                randomColumnHToM = random.randint(0,self.numMotorNeurons-1)
 
-            # Copy the values from the original array to the new array
-            for i in range(self.numSensorNeurons):
-                for j in range(self.numHiddenNeurons):
-                    sensorToHidden[i,j] = sensorToHidden[i,j]
-            for i in range(self.numHiddenNeurons):
-                for j in range(self.numMotorNeurons):
-                    hiddenToMotor[i,j] = hiddenToMotor[i,j]
-            
-            self.sensorToHidden = sensorToHidden
-            self.hiddenToMotor = hiddenToMotor            
+                self.sensorToHidden[randomRowSToH, randomColumnSToH] = random.random() * 2 -1
+                self.hiddenToMotor[randomRowHToM, randomColumnHToM] = random.random() * 2 -1
+
 
         
     def Set_ID(self):

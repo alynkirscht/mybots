@@ -1,290 +1,260 @@
 import numpy
 import matplotlib.pyplot
 import constants as c
-from scipy.stats import mannwhitneyu
+import scipy.stats as stats
+import scikits.bootstrap as bootstrap
+import csv
 
 
 # A is without any hidden neurons
 # B is with 5 hidden neurons
 
 def main():
-    #matrix()
-    #figure()
-    plot_mean()
     #std_dev()
-    #plot_all_means()
-    #plot_trial(1)
-    #plot_all_best()
-    #plot_trial(4)
-    #mann_whitney_u()
-
-def plot_all_best():
-    A_mins = [0] * c.numTrials
-    B_mins = [0] * c.numTrials
-
-    trials = []
-
-    for i in range (0, c.numTrials):
-        trials.append(i)
-
-    for i in range(0,c.numTrials):
-        i = str(i)
-        A = numpy.load("data/matrixA" + i + ".npy")
-        B = numpy.load("data/matrixB" + i + ".npy")
-
-        i = int(i)
-
-        A_mins [i-1] = A.min()
-        B_mins [i-1] = B.min()
-
-    matplotlib.pyplot.plot(trials, A_mins, color="blue", label = "No Hidden Neurons")
-    matplotlib.pyplot.plot(trials, B_mins, color="yellow", label = "5 Hidden Neurons")
-    matplotlib.pyplot.legend(loc="upper left")
-
-    matplotlib.pyplot.title("Best Fitness")
-    matplotlib.pyplot.xlabel("Trial")
-    matplotlib.pyplot.ylabel("Fitness Value")
-
-
-
-    matplotlib.pyplot.show()
-
-
-
-
-    print(A_mins)
-    print(B_mins)
-
-    i = int(i)
-
-def plot_all_means():
-    for i in range(1,5):
-        i = str(i)
-        A = numpy.load("data/matrixA" + i + ".npy")
-        B = numpy.load("data/matrixB" + i + ".npy")
-        A = numpy.mean(A, axis = 0)
-        B = numpy.mean(B, axis = 0)
-
-        if i == "1":
-            matplotlib.pyplot.plot(A, color = "blue", label = "Variant A")
-            matplotlib.pyplot.plot(B, color = "red", label = "Variant B")
-
-        else:
-            matplotlib.pyplot.plot(A, color = "blue")
-            matplotlib.pyplot.plot(B, color = "red")
-        
-
-
-    matplotlib.pyplot.legend(loc="upper right")
-    matplotlib.pyplot.title("Plot All Means")
-    matplotlib.pyplot.xlabel("Generation")
-    matplotlib.pyplot.ylabel("Fitness Value")
-
-    matplotlib.pyplot.show()
-    i = int(i)
-
-
-def plot_mean():
-
-    A1 = numpy.load("data/matrixA1.npy")
-    A2 = numpy.load("data/matrixA2.npy")
-    A3 = numpy.load("data/matrixA3.npy")
-    A4 = numpy.load("data/matrixA4.npy")
-    A5 = numpy.load("data/matrixA5.npy")
-
-
-    A1 = numpy.mean(A1, axis = 0)
-    A2 = numpy.mean(A2, axis = 0)
-    A3 = numpy.mean(A3, axis = 0)
-    A4 = numpy.mean(A4, axis = 0)
-    A5 = numpy.mean(A5, axis = 0)
-
-    A = numpy.mean(numpy.array([A1, A2, A3, A4, A5], dtype=object), axis=0)
-
-
-    B1 = numpy.load("data/matrixB1.npy")
-    B2 = numpy.load("data/matrixB2.npy")
-    B3 = numpy.load("data/matrixB3.npy")
-    B4 = numpy.load("data/matrixB4.npy")
-    B5 = numpy.load("data/matrixB5.npy")
-
-    B1 = numpy.mean(B1, axis = 0)
-    B2 = numpy.mean(B2, axis = 0)
-    B3 = numpy.mean(B3, axis = 0)
-    B4 = numpy.mean(B4, axis = 0)
-    B5 = numpy.mean(B5, axis = 0)
-
-    B = numpy.mean(numpy.array([B1, B2, B3, B4, B5], dtype=object), axis=0)
-
-    matplotlib.pyplot.plot(A, label = "Variant A", color="blue")
-  
-    matplotlib.pyplot.plot(B, label = "Variant B", color="red")
-
-    matplotlib.pyplot.legend(loc="upper right")
-    matplotlib.pyplot.title("Fitness Curve")
-    matplotlib.pyplot.xlabel("Generation")
-    matplotlib.pyplot.ylabel("Fitness Value")
-
-    matplotlib.pyplot.show()
-
+    mann_whitney_u()
 
 def std_dev():
-    A1 = numpy.load("data/matrixA1.npy")
-    A2 = numpy.load("data/matrixA2.npy")
-    A3 = numpy.load("data/matrixA3.npy")
-    A4 = numpy.load("data/matrixA4.npy")
-    A5 = numpy.load("data/matrixA5.npy")
+    add_remove = "8Remove"
+        
+    af_data = numpy.empty((0, 30), dtype=float)
+    af1_data = numpy.empty((0, 30), dtype=float)
+    af01_data = numpy.empty((0, 30), dtype=float)
+    af001_data = numpy.empty((0, 30), dtype=float)
+    af0001_data = numpy.empty((0, 30), dtype=float)
+    afRandom_data = numpy.empty((0, 30), dtype=float)
+    characters = ['A', 'B', 'C', 'D', 'E']
 
+    for char in characters:
+        # Load data
+        af = numpy.load(f"dataMass\matrix_{add_remove}_1_{char}.npy")
+        af1 = numpy.load(f"dataMass\matrix_{add_remove}_.1_{char}.npy")
+        af01 = numpy.load(f"dataMass\matrix_{add_remove}_.01_{char}.npy")
+        af001 = numpy.load(f"dataMass\matrix_{add_remove}_.001_{char}.npy")
+        af0001 = numpy.load(f"dataMass\matrix_{add_remove}_.0001_{char}.npy")
+        afRandom = numpy.load(f"dataMass\matrix_{add_remove}_Random_{char}.npy")
 
-    A1 = numpy.mean(A1, axis = 0)
-    A2 = numpy.mean(A2, axis = 0)
-    A3 = numpy.mean(A3, axis = 0)
-    A4 = numpy.mean(A4, axis = 0)
-    A5 = numpy.mean(A5, axis = 0)
+        # Stack the loaded data for each variable vertically
+        af_data = numpy.vstack((af_data, af))
+        af1_data = numpy.vstack((af1_data, af1))
+        af01_data = numpy.vstack((af01_data, af01))
+        af001_data = numpy.vstack((af001_data, af001))
+        af0001_data = numpy.vstack((af0001_data, af0001))
+        afRandom_data = numpy.vstack((afRandom_data, afRandom))
+    
+    af_lower = numpy.zeros(c.numberOfGenerations)
+    af1_lower = numpy.zeros(c.numberOfGenerations)
+    af01_lower = numpy.zeros(c.numberOfGenerations)
+    af001_lower = numpy.zeros(c.numberOfGenerations)
+    af0001_lower = numpy.zeros(c.numberOfGenerations)
+    afRandom_lower = numpy.zeros(c.numberOfGenerations)
+    af_upper = numpy.zeros(c.numberOfGenerations)
+    af1_upper = numpy.zeros(c.numberOfGenerations)
+    af01_upper = numpy.zeros(c.numberOfGenerations)
+    af001_upper = numpy.zeros(c.numberOfGenerations)
+    af0001_upper = numpy.zeros(c.numberOfGenerations)
+    afRandom_upper = numpy.zeros(c.numberOfGenerations)
 
-    A = numpy.mean(numpy.array([A1, A2, A3, A4, A5], dtype=object), axis=0)
+    for generation in range(c.numberOfGenerations):
+        afCIs = bootstrap.ci(data=af_data[:,generation],statfunction=numpy.mean)
+        af_lower[generation] = afCIs[0]
+        af_upper[generation] = afCIs[1]
 
+        af1CIs = bootstrap.ci(data=af1_data[:,generation],statfunction=numpy.mean)
+        af1_lower[generation] = af1CIs[0]
+        af1_upper[generation] = af1CIs[1]
 
-    B1 = numpy.load("data/matrixB1.npy")
-    B2 = numpy.load("data/matrixB2.npy")
-    B3 = numpy.load("data/matrixB3.npy")
-    B4 = numpy.load("data/matrixB4.npy")
-    B5 = numpy.load("data/matrixB5.npy")
+        af01CIs = bootstrap.ci(data=af01_data[:,generation],statfunction=numpy.mean)
+        af01_lower[generation] = af01CIs[0]
+        af01_upper[generation] = af01CIs[1]
 
-    B1 = numpy.mean(B1, axis = 0)
-    B2 = numpy.mean(B2, axis = 0)
-    B3 = numpy.mean(B3, axis = 0)
-    B4 = numpy.mean(B4, axis = 0)
-    B5 = numpy.mean(B5, axis = 0)
+        af001CIs = bootstrap.ci(data=af001_data[:,generation],statfunction=numpy.mean)
+        af001_lower[generation] = af001CIs[0]
+        af001_upper[generation] = af001CIs[1]
 
-    B = numpy.mean(numpy.array([B1, B2, B3, B4, B5], dtype=object), axis=0)
+        af0001CIs = bootstrap.ci(data=af0001_data[:,generation],statfunction=numpy.mean)
+        af0001_lower[generation] = af0001CIs[0]
+        af0001_upper[generation] = af0001CIs[1]
 
+        afRandomCIs = bootstrap.ci(data=afRandom_data[:,generation],statfunction=numpy.mean)
+        afRandom_lower[generation] = afRandomCIs[0]
+        afRandom_upper[generation] = afRandomCIs[1]
 
-    sA = numpy.std(A)
-    sB = numpy.std(B)
+    # Calculate the overall means
+    mean_af = numpy.mean(numpy.array(af_data), axis=0)
+    mean_af1 = numpy.mean(numpy.array(af1_data), axis=0)
+    mean_af01 = numpy.mean(numpy.array(af01_data), axis=0)
+    mean_af001 = numpy.mean(numpy.array(af001_data), axis=0)
+    mean_af0001 = numpy.mean(numpy.array(af0001_data), axis=0)
+    mean_afRandom = numpy.mean(numpy.array(afRandom_data), axis=0)
+    
+    generations = numpy.arange(c.numberOfGenerations)
 
-    matplotlib.pyplot.plot(A+sA, color = "cornflowerblue", label = "Variant A +/- stdev")
-    matplotlib.pyplot.plot(A, color = "blue", label = "Variant A")
-    matplotlib.pyplot.plot(A-sA, color = "cornflowerblue")
- 
-    matplotlib.pyplot.plot(B+sB, color = "orange", label = "Variant B +/1 stdev")    
-    matplotlib.pyplot.plot(B, color = "red", label = "Variant B")
-    matplotlib.pyplot.plot(B-sB, color = "orange")
+    # Plot the means
+    matplotlib.pyplot.plot(mean_af, label="1", color="red")
+    matplotlib.pyplot.fill_between(generations, af_lower, af_upper, alpha=0.4, color="red")
 
+    matplotlib.pyplot.plot(mean_af1, label="0.1", color="orange")
+    #matplotlib.pyplot.fill_between(generations, af1_lower, af1_upper, alpha=0.4, color="orange")
 
+    matplotlib.pyplot.plot(mean_af01, label="0.01", color="yellow")
+    matplotlib.pyplot.fill_between(generations, af01_lower, af01_upper, alpha=0.4, color="yellow")
 
-    matplotlib.pyplot.legend(loc="upper right")
-    matplotlib.pyplot.title("Fitness Curves with Std Deviations")
+    matplotlib.pyplot.plot(mean_af001, label="0.001", color="green")
+    matplotlib.pyplot.fill_between(generations, af001_lower, af001_upper, alpha=0.4, color="green")
+
+    matplotlib.pyplot.plot(mean_af0001, label="0.0001", color="blue")
+    matplotlib.pyplot.fill_between(generations, af0001_lower, af0001_upper, alpha=0.4, color="blue")
+
+    matplotlib.pyplot.plot(mean_afRandom, label="Random", color="purple")
+    #matplotlib.pyplot.fill_between(generations, afRandom_lower, afRandom_upper, alpha=0.4, color="purple")
+
+    matplotlib.pyplot.legend(loc="lower left")
+    matplotlib.pyplot.title("Fitness Curve for Removing Block With Lenght 8 links")
     matplotlib.pyplot.xlabel("Generation")
     matplotlib.pyplot.ylabel("Fitness Value")
 
     matplotlib.pyplot.show()
-
-def figure():
-    # Load the fitness matrices from the .npy files
-    fitnessMatrixA1 = numpy.load("data/matrixA1.npy")
-    fitnessMatrixB1 = numpy.load("data/matrixB1.npy")
-    fitnessMatrixA2 = numpy.load("data/matrixA2.npy")
-    fitnessMatrixB2 = numpy.load("data/matrixB2.npy")
-    fitnessMatrixA3 = numpy.load("data/matrixA3.npy")
-    fitnessMatrixB3 = numpy.load("data/matrixB3.npy")
-    fitnessMatrixA4 = numpy.load("data/matrixA4.npy")
-    fitnessMatrixB4 = numpy.load("data/matrixB4.npy")
-    fitnessMatrixA5 = numpy.load("data/matrixA5.npy")
-    fitnessMatrixB5 = numpy.load("data/matrixB5.npy")
-    '''
-    # Plot each row of the "A" matrix as thin lines
-    for i in range(fitnessMatrixA1.shape[0]):
-        matplotlib.pyplot.plot(fitnessMatrixA1[i,:], color="blue", linewidth=0.5)
-        matplotlib.pyplot.plot(fitnessMatrixA2[i,:], color="blue", linewidth=0.5)
-        matplotlib.pyplot.plot(fitnessMatrixA3[i,:], color="blue", linewidth=0.5)
-        matplotlib.pyplot.plot(fitnessMatrixA4[i,:], color="blue", linewidth=0.5)
-        matplotlib.pyplot.plot(fitnessMatrixA5[i,:], color="blue", linewidth=0.5)
-    '''
-    # Plot each row of the "B" matrix as thick lines
-    for i in range(fitnessMatrixB1.shape[0]):
-        matplotlib.pyplot.plot(fitnessMatrixB1[i,:], color="red", linewidth=0.5)
-        matplotlib.pyplot.plot(fitnessMatrixB2[i,:], color="red", linewidth=0.5)
-        matplotlib.pyplot.plot(fitnessMatrixB3[i,:], color="red", linewidth=0.5)
-        matplotlib.pyplot.plot(fitnessMatrixB4[i,:], color="red",linewidth=0.5)
-        matplotlib.pyplot.plot(fitnessMatrixB5[i,:], color="red",linewidth=0.5)
-
-    # Add title and axis labels
-    matplotlib.pyplot.title("Fitness Curves with Hidden Neurons")
-    matplotlib.pyplot.xlabel("Generation")
-    matplotlib.pyplot.ylabel("Fitness")
-
-    # Add legend
-    matplotlib.pyplot.legend()
-
-    # Show the plot
-    matplotlib.pyplot.show()
-
-def matrix():
-    # Create an empty fitness matrix
-    fitnessMatrix = numpy.zeros((c.populationSize, c.numberOfGenerations))
-
-    # Open the fitness file for reading
-    with open("fitness.txt", "r") as f:
-        # Loop over each generation
-        for j in range(c.numberOfGenerations):
-            # Loop over each parent in the generation
-            for i in range(c.populationSize):
-                try:
-                    fitness = float(next(f).strip())
-                except StopIteration:
-                    # Handle case where there are no more lines in the file
-                    break
-                # Store the fitness value in the fitness matrix
-                fitnessMatrix[i][j] = fitness
-            # Increment the index of the file lines by population size to go to the next generation
-            """ for k in range(c.populationSize):
-                try:
-                    next(f)
-                except StopIteration:
-                    break"""
-    
-    numpy.savetxt("data/matrix" + "B3" + ".csv", fitnessMatrix, delimiter =', ')
-    numpy.save("data/matrix" + "B3" + ".npy", fitnessMatrix)
     
 def mann_whitney_u():
-    a_first = []
-    a_last = []
-    b_first = []
-    b_last = []
+    add_remove = "Add"
 
-    fitnessMatrixA1 = numpy.load("data/matrixA1.npy")
-    fitnessMatrixB1 = numpy.load("data/matrixB1.npy")
-    fitnessMatrixA2 = numpy.load("data/matrixA2.npy")
-    fitnessMatrixB2 = numpy.load("data/matrixB2.npy")
-    fitnessMatrixA3 = numpy.load("data/matrixA3.npy")
-    fitnessMatrixB3 = numpy.load("data/matrixB3.npy")
-    fitnessMatrixA4 = numpy.load("data/matrixA4.npy")
-    fitnessMatrixB4 = numpy.load("data/matrixB4.npy")
-    fitnessMatrixA5 = numpy.load("data/matrixA5.npy")
-    fitnessMatrixB5 = numpy.load("data/matrixB5.npy")
+    af_first = []
+    af_last = []
 
-    for matrix in [fitnessMatrixA1, fitnessMatrixA2, fitnessMatrixA3, fitnessMatrixA4, fitnessMatrixA5]:
-        a_first += list(matrix[:, 0])
-        a_last += list(matrix[:, -1])
+    af1_first = []
+    af1_last = []
 
-    for matrix in [fitnessMatrixB1, fitnessMatrixB2, fitnessMatrixB3, fitnessMatrixB4, fitnessMatrixB5]:
-        b_first += list(matrix[:, 0])
-        b_last += list(matrix[:, -1])
+    af01_first = []
+    af01_last = []
+
+    af001_first = []
+    af001_last = []
+
+    af0001_first = []
+    af0001_last = []
+
+    afRandom_first = []
+    afRandom_last = []        
+
+    characters = ['A', 'B', 'C', 'D', 'E']
+
+    for char in characters:
+        # Load data
+        af = numpy.load(f"dataMass\matrix_{add_remove}_1_{char}.npy")
+        af1 = numpy.load(f"dataMass\matrix_{add_remove}_.1_{char}.npy")
+        af01 = numpy.load(f"dataMass\matrix_{add_remove}_.01_{char}.npy")
+        af001 = numpy.load(f"dataMass\matrix_{add_remove}_.001_{char}.npy")
+        af0001 = numpy.load(f"dataMass\matrix_{add_remove}_.0001_{char}.npy")
+        afRandom = numpy.load(f"dataMass\matrix_{add_remove}_Random_{char}.npy")
+
+        af_first += list(af[:, 0])
+        af_last += list(af[:, -1])
+
+        af1_first += list(af1[:, 0])
+        af1_last += list(af1[:, -1])
+
+        af01_first += list(af01[:, 0])
+        af01_last += list(af01[:, -1])
+
+        af001_first += list(af001[:, 0])
+        af001_last += list(af001[:, -1])
+
+        af0001_first += list(af0001[:, 0])
+        af0001_last += list(af0001[:, -1])
+
+        afRandom_first += list(afRandom[:, 0])
+        afRandom_last += list(afRandom[:, -1])
+
+    comparisons_first = [af_first, af1_first, af01_first, af001_first, af0001_first, afRandom_first]
+    comparisons_last = [af_last, af1_last, af01_last, af001_last, af0001_last, afRandom_last]
+    matrix_first = []
+    matrix_last = []
+    num_comparisons = len(comparisons_first) * (len(comparisons_first) - 1)  # 15 unique comparisons
+    bonferroni_alpha = .05 / num_comparisons
 
 
-    U1, p = mannwhitneyu(a_first, a_last)
-    print("Evolution in variant A: " + str(U1) + " p = " + str(p))
-    U1, p = mannwhitneyu(b_first, b_last)
-    print("Evolution in variant B: " + str(U1) + " p = " + str(p))
+    # Compare af to all
+    rowf = [None]
+    rowl = [None]
 
-    U1, p = mannwhitneyu(a_first, b_first)
-    print("Fair test? " + str(U1) + " p = " + str(p))
+    # 1 v all
+    count = 0
+    for data in comparisons_first[1:]:
+        U, p = stats.mannwhitneyu(af_first, data)
+        rowf.append(p * num_comparisons)
+        count += 1
 
-    U1, p = mannwhitneyu(a_last, b_last)
-    print("Significant different? " + str(U1) + " p = " + str(p))
+    matrix_first.append(rowf)
+    rowf = [None, None]
+    
+    for data in comparisons_last[1:]:
+        U, p = stats.mannwhitneyu(af_last, data)
+        rowl.append(p * num_comparisons)  
+    matrix_last.append(rowl)
+    rowl = [None, None]
 
+    # .1 v all
+    for data in comparisons_first[2:]:
+        U, p = stats.mannwhitneyu(af1_first, data)
+        rowf.append(p * num_comparisons)
+    matrix_first.append(rowf)
+    rowf = [None, None, None]
 
+    for data in comparisons_last[2:]:
+        U, p = stats.mannwhitneyu(af1_last, data)
+        rowl.append(p * num_comparisons)
+    matrix_last.append(rowl)
+    rowl = [None, None, None]
 
+    # .01 v all
+    for data in comparisons_first[3:]:
+        U, p = stats.mannwhitneyu(af01_first, data)
+        rowf.append(p * num_comparisons)
+    matrix_first.append(rowf)
+    rowf = [None, None, None, None]
+
+    for data in comparisons_last[3:]:
+        U, p = stats.mannwhitneyu(af01_last, data)
+        rowl.append(p * num_comparisons)
+    matrix_last.append(rowl)
+    rowl = [None, None, None, None]  
+
+    # .001 v all
+    for data in comparisons_first[4:]:
+        U, p = stats.mannwhitneyu(af001_first, data)
+        rowf.append(p * num_comparisons)
+    matrix_first.append(rowf)
+    rowf = [None, None, None, None, None]
+
+    for data in comparisons_last[4:]:
+        U, p = stats.mannwhitneyu(af001_last, data)
+        rowl.append(p * num_comparisons) 
+    matrix_last.append(rowl)
+    rowl = [None, None, None, None, None]
+
+    # .0001 v all
+    for data in comparisons_first[5:]:
+        U, p = stats.mannwhitneyu(af0001_first, data)
+        rowf.append(p * num_comparisons)
+    matrix_first.append(rowf)
+    rowf = []
+
+    for data in comparisons_last[5:]:
+        U, p = stats.mannwhitneyu(af0001_last, data)
+        rowl.append(p * num_comparisons)
+    matrix_last.append(rowl)
+    rowl = []
+
+    file = f"MannWhitney_firstGen_{add_remove}.csv"
+    with open(file, 'w', newline='') as file:
+        csv_writer = csv.writer(file)
+        for row in matrix_first:
+            csv_writer.writerow(row)
+
+    file = f"MannWhitney_lastGen_{add_remove}.csv"
+    with open(file, 'w', newline='') as file:
+        csv_writer = csv.writer(file)
+        for row in matrix_last:
+            csv_writer.writerow(row)
 
 main()
