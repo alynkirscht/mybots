@@ -15,12 +15,15 @@ p.setGravity(0,0,-9.8)
 
 #Add floor
 planeId = p.loadURDF("plane.urdf")
+p.changeDynamics(planeId, -1, restitution=0.5)
 
-#Add robot
-robotId = p.loadURDF("body.urdf")
+#Add robots
+#box1 = p.loadURDF("box1.urdf")
+box2 = p.loadURDF("box2.urdf")
+box3 = p.loadSoftBody("box3.urdf")
+#p.changeDynamics(box1, -1, restitution = 1.0)  # Adjust friction and restitution as needed
+p.changeDynamics(box2, -1, restitution=1.0)  # Adjust friction and restitution as needed
 
-#Reads in the world described in world.sdf
-p.loadSDF("world.sdf")
 
 #The for loop is used to slow things down
 for i in range(1000):
@@ -28,5 +31,5 @@ for i in range(1000):
     p.stepSimulation()
     #Slows things down by 1/60 second of each iteration of the loop
     time.sleep(1/60)
-    print (i)
+    #print (i)
 p.disconnect()
