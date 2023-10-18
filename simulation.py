@@ -7,7 +7,7 @@ from robot import ROBOT
 import time
 
 class SIMULATION:
-    def __init__(self, directOrGUI, solutionID):
+    def __init__(self, directOrGUI, solutionID, restitution, num_links):
         if (directOrGUI == "DIRECT"):
             self.physicsClient = p.connect(p.DIRECT)
         elif (directOrGUI == "GUI"):
@@ -19,7 +19,7 @@ class SIMULATION:
         p.setGravity(0,0,c.GRAVITY)
         
         self.solutionID = solutionID
-        self.robot = ROBOT(self.solutionID)
+        self.robot = ROBOT(self.solutionID, restitution, num_links)
         self.world = WORLD()
 
         self.directOrGUI = directOrGUI

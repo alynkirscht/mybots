@@ -5,11 +5,19 @@ from motor import MOTOR
 import constants as c
 from pyrosim.neuralNetwork import NEURAL_NETWORK
 import os
+from solution import SOLUTION
+import networkx as nx
+
 
 class ROBOT:
-    def __init__(self, solutionID):
+    def __init__(self, solutionID, restitution, num_links):
         #Add robot
         self.robotId = p.loadURDF("body" + solutionID + ".urdf")
+        for link_index in range(num_links):
+            p.changeDynamics(self.robot_id, linkIndex=link_index, restitution=float(restitution))
+        #p.changeDynamics(self.robotId, linkIndex=int(num_links) - 1, restitution=float(restitution))
+
+
         os.system("del body" + solutionID + ".urdf")
 
         #Set up sensors

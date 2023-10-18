@@ -6,7 +6,9 @@ import sys
 print(sys.argv[0])
 directOrGUI = sys.argv[1]
 solutionID = sys.argv[2]
-simulation = SIMULATION(directOrGUI, solutionID)
+restitution = sys.argv[3]
+num_links = sys.argv[4]
+simulation = SIMULATION(directOrGUI, solutionID, restitution, num_links)
 simulation.Run()
 simulation.Get_Fitness()
 

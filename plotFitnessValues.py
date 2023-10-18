@@ -14,7 +14,7 @@ def main():
     mann_whitney_u()
 
 def std_dev():
-    add_remove = "8Remove"
+    add_remove = "Add_Restitution"
         
     af_data = numpy.empty((0, 30), dtype=float)
     af1_data = numpy.empty((0, 30), dtype=float)
@@ -100,13 +100,13 @@ def std_dev():
     matplotlib.pyplot.fill_between(generations, af01_lower, af01_upper, alpha=0.4, color="yellow")
 
     matplotlib.pyplot.plot(mean_af001, label="0.001", color="green")
-    matplotlib.pyplot.fill_between(generations, af001_lower, af001_upper, alpha=0.4, color="green")
+    #matplotlib.pyplot.fill_between(generations, af001_lower, af001_upper, alpha=0.4, color="green")
 
     matplotlib.pyplot.plot(mean_af0001, label="0.0001", color="blue")
-    matplotlib.pyplot.fill_between(generations, af0001_lower, af0001_upper, alpha=0.4, color="blue")
+    #matplotlib.pyplot.fill_between(generations, af0001_lower, af0001_upper, alpha=0.4, color="blue")
 
     matplotlib.pyplot.plot(mean_afRandom, label="Random", color="purple")
-    #matplotlib.pyplot.fill_between(generations, afRandom_lower, afRandom_upper, alpha=0.4, color="purple")
+    matplotlib.pyplot.fill_between(generations, afRandom_lower, afRandom_upper, alpha=0.4, color="purple")
 
     matplotlib.pyplot.legend(loc="lower left")
     matplotlib.pyplot.title("Fitness Curve for Removing Block With Lenght 8 links")
@@ -116,7 +116,7 @@ def std_dev():
     matplotlib.pyplot.show()
     
 def mann_whitney_u():
-    add_remove = "Add"
+    add_remove = "Add_Restitution"
 
     af_first = []
     af_last = []

@@ -13,6 +13,7 @@ numberOfGenerations = 30
 populationSize = 5
 motorJointRange = 0.5
 numHiddenNeurons = 5
-currentlyTesting = "8Remove_Random_A"
+currentlyTesting = "Add_Restitution_1_E"
 massChange = "random"
+restitutionChange = "1"
 

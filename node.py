@@ -9,6 +9,7 @@ class NODE:
         self.link_size = [1,1,1]
         self.link_position = [0,0,0.5]
         self.mass = 1
+        self.restitution = 0
 
         # Joint     
         self.joint_type = "revolute"
@@ -23,12 +24,13 @@ class NODE:
 
         self.add_Node()
 
-    def snake_node(self, id, RL, scale, mass, joint_pos, link_pos, connections):
+    def snake_node(self, id, RL, scale, joint_pos, link_pos, connections, mass=1, restitution=0):
         self.link_ID = id
         """for node, attributes in self.graph.nodes(data=True):
             print(f"Node {node}: {attributes}")"""
         self.link_size = [size * scale[i] for i, size in enumerate(self.graph.nodes[self.link_ID - 1]["dimensions"])] # [1,1,1] * [x,y,z]
         self.mass = mass
+        self.restitution = restitution
 
         # Link position
         self.link_position = numpy.array(self.graph.nodes[self.link_ID - 1]["position"])
@@ -60,7 +62,7 @@ class NODE:
         return self.joint_axis
 
     def add_Node(self):
-        self.graph.add_node(self.link_ID, dimensions = self.link_size, recursive_limit = self.recursive_limit, mass = self.mass,
+        self.graph.add_node(self.link_ID, dimensions = self.link_size, recursive_limit = self.recursive_limit, mass = self.mass, restitution= self.restitution,
                     position = self.link_position, joint_position = self.joint_position, joint_axis = self.joint_axis, connections = self.connections)
 
        
