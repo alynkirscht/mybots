@@ -18,11 +18,11 @@ planeId = p.loadURDF("plane.urdf")
 p.changeDynamics(planeId, -1, restitution=0.5)
 
 #Add robots
-#box1 = p.loadURDF("box1.urdf")
-box2 = p.loadURDF("box2.urdf")
-box3 = p.loadSoftBody("box3.urdf")
-#p.changeDynamics(box1, -1, restitution = 1.0)  # Adjust friction and restitution as needed
-p.changeDynamics(box2, -1, restitution=1.0)  # Adjust friction and restitution as needed
+box1 = p.loadURDF("box1.urdf")
+
+#p.changeDynamics(box1, -1, restitution = 1)  
+
+print(p.getDynamicsInfo(box1, -1))  # -1 indicates the base link
 
 
 #The for loop is used to slow things down

@@ -29,9 +29,9 @@ def Create_Robot():
     pyrosim.Send_Joint( name = "s0_s1", parent = "s0", child = "s1",
                         type = "revolute", position = [0,0.5,0.5])"""
     
-    pyrosim.Start_URDF("box2.urdf")
+    pyrosim.Start_URDF("box1.urdf")
     #Store Link1 with specific position and size
-    pyrosim.Send_Cube(name="s1", pos=[0,0,3], size=[1, 1, 1],restitution=1)
+    pyrosim.Send_Cube(name="s1", pos=[0,0,3], size=[1, 1, 1])
     
     pyrosim.End()
 
