@@ -15,12 +15,12 @@ p.setGravity(0,0,-9.8)
 
 #Add floor
 planeId = p.loadURDF("plane.urdf")
-p.changeDynamics(planeId, -1, restitution=0.5)
+p.changeDynamics(planeId, -1, restitution=1)
 
 #Add robots
 box1 = p.loadURDF("box1.urdf")
 
-#p.changeDynamics(box1, -1, restitution = 1)  
+p.changeDynamics(box1, -1, restitution = 1.05)  
 
 print(p.getDynamicsInfo(box1, -1))  # -1 indicates the base link
 
