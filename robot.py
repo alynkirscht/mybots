@@ -13,8 +13,9 @@ class ROBOT:
     def __init__(self, solutionID, restitution, num_links):
         #Add robot
         self.robotId = p.loadURDF("body" + solutionID + ".urdf")
-        for link_index in range(num_links):
-            p.changeDynamics(self.robot_id, linkIndex=link_index, restitution=float(restitution))
+        # Change the restitution of all links
+        for link_index in range(int(num_links)):
+            p.changeDynamics(self.robotId, linkIndex=link_index, restitution=float(restitution))
         #p.changeDynamics(self.robotId, linkIndex=int(num_links) - 1, restitution=float(restitution))
 
 

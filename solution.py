@@ -166,7 +166,7 @@ class SOLUTION:
 
     def Mutate(self):
         # Chooses mutation
-        mutation = 3 #random.randint(0,4)
+        mutation = 5 #random.randint(0,4)
         
         # Change size of one link
         if mutation == 0:
@@ -568,6 +568,18 @@ class SOLUTION:
 
                 self.sensorToHidden[randomRowSToH, randomColumnSToH] = random.random() * 2 -1
                 self.hiddenToMotor[randomRowHToM, randomColumnHToM] = random.random() * 2 -1
+        # Change restitution in all blocks
+        elif mutation == 5:
+            for num_link in range(self.num_links): 
+                self.G.nodes[num_link]["restitution"] = c.restitution
+
+            randomRowSToH = random.randint(0,self.numSensorNeurons-1)
+            randomColumnSToH = random.randint(0,self.numHiddenNeurons-1)
+            randomRowHToM = random.randint(0,self.numHiddenNeurons-1)
+            randomColumnHToM = random.randint(0,self.numMotorNeurons-1)
+
+            self.sensorToHidden[randomRowSToH, randomColumnSToH] = random.random() * 2 -1
+            self.hiddenToMotor[randomRowHToM, randomColumnHToM] = random.random() * 2 -1     
 
 
         
