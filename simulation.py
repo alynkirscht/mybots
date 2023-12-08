@@ -35,7 +35,6 @@ class SIMULATION:
             #Steps physics inside the world
             p.stepSimulation()
 
-
             #Enable sensing in robot
             self.robot.Sense(i)
 

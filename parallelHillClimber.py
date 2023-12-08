@@ -35,7 +35,7 @@ class PARALLEL_HILL_CLIMBER:
         
         self.Spawn()
     
-        self.Mutate()
+        self.Mutate(currentGeneration)
         
         self.Evaluate(self.children)
     
@@ -52,9 +52,9 @@ class PARALLEL_HILL_CLIMBER:
             self.children[i] = copy.deepcopy(self.parents[i])
             self.nextAvailableID += 1
            
-    def Mutate(self):
+    def Mutate(self, currentGeneration):
         for i in self.children:
-            self.children[i].Mutate()
+            self.children[i].Mutate(currentGeneration)
 
     def Select(self):
         for i in self.parents:

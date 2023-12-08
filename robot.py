@@ -14,11 +14,12 @@ class ROBOT:
         #Add robot
         self.robotId = p.loadURDF("body" + solutionID + ".urdf")
         # Change the restitution of all links
-        for link_index in range(int(num_links)):
-            p.changeDynamics(self.robotId, linkIndex=link_index, restitution=float(restitution))
+        if restitution != 0:
+            for link_index in range(int(num_links)):
+                p.changeDynamics(self.robotId, linkIndex=link_index, restitution=float(restitution))
         #p.changeDynamics(self.robotId, linkIndex=int(num_links) - 1, restitution=float(restitution))
 
-
+        self.z = []
         os.system("del body" + solutionID + ".urdf")
 
         #Set up sensors
@@ -75,9 +76,12 @@ class ROBOT:
         basePositionAndOrientation = p.getBasePositionAndOrientation(self.robotId)
         basePosition = basePositionAndOrientation[0]
         yPosition = basePosition[1]
+        self.z.append(basePosition[2])
+
+        fitness = yPosition #+ max(self.z)
     
         file = open("tmp" + solutionID + ".txt", "w")
-        file.write(str(yPosition))
+        file.write(str(fitness))
         file.close()
         os.system("rename tmp" + str(solutionID) + ".txt fitness" +
                   str(solutionID) + ".txt")

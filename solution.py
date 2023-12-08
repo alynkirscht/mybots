@@ -12,7 +12,7 @@ class SOLUTION:
     def __init__(self, nextAvailableID):
 
         """Recursion variables """
-        self.recursive_limit = 4 # I am gonna choose 4 and then modify the snakes from there, random.randint(3,5)
+        self.recursive_limit = 8 # I am gonna choose 4 and then modify the snakes from there, random.randint(3,5)
         self.num_links = self.recursive_limit # Starting recursive number
         self.link_id = 0
         self.G = nx.Graph()
@@ -124,14 +124,12 @@ class SOLUTION:
         # Creat links from graph
         for node in self.G.nodes():
             pyrosim.Send_Cube( name="s" + str(node), pos=self.G.nodes[node]["position"],size=self.G.nodes[node]["dimensions"])
-            print("LINK")
             # Create joints from graph (only if connections is filled)
             if (len(self.G.nodes[node]["connections"]) > 0):
                 for edge in range(len(self.G.nodes[node]["connections"])):
                     pyrosim.Send_Joint( name= 's' + str(node) + '_' + 's' + str(self.G.nodes[node]["connections"][edge]), 
                                         parent= 's' + str(node), child= 's' + str(self.G.nodes[node]["connections"][edge]),
                                         type= "revolute", position=self.G.nodes[node]["joint_position"], jointAxis=self.G.nodes[node]["joint_axis"])      
-                    print("JOINT")         
     
         pyrosim.End()                    
 
@@ -164,9 +162,9 @@ class SOLUTION:
         pyrosim.End()
 
 
-    def Mutate(self):
+    def Mutate(self, currentGen):
         # Chooses mutation
-        mutation = 5 #random.randint(0,4)
+        mutation = 4 #random.randint(0,4)
         
         # Change size of one link
         if mutation == 0:
@@ -579,7 +577,138 @@ class SOLUTION:
             randomColumnHToM = random.randint(0,self.numMotorNeurons-1)
 
             self.sensorToHidden[randomRowSToH, randomColumnSToH] = random.random() * 2 -1
-            self.hiddenToMotor[randomRowHToM, randomColumnHToM] = random.random() * 2 -1     
+            self.hiddenToMotor[randomRowHToM, randomColumnHToM] = random.random() * 2 -1  
+        # Add new block (change size)    
+        elif mutation == 6:
+            # LOST
+            
+            if (self.num_links == 4 and c.length_y != 0):
+                self.terminal_only = 1
+                self.restitution = 0
+                length_y = c.length_y
+
+
+                if (self.G.nodes[self.num_links - 1]["position"] == [0,0.5,0] and length_y == 0.25):
+                    scale = [1, length_y, 1]
+                    link_pos = [0,-3*(length_y/2), 0]
+                    joint_pos = [0,0,0] # no change
+                elif (self.G.nodes[self.num_links - 1]["position"] == [0,0.5,0] and length_y == 0.5):
+                    scale = [1, length_y, 1]
+                    link_pos = [0,-(length_y/2), 0]
+                    joint_pos = [0,0,0] # no change
+                elif (self.G.nodes[self.num_links - 1]["position"] == [0,0.5,0] and length_y == 0.75):
+                    scale = [1, length_y, 1]
+                    link_pos = [0,-(length_y/6), 0]
+                    joint_pos = [0,0,0] # no change
+                elif (self.G.nodes[self.num_links - 1]["position"] == [0,0.5,0] and length_y == 1):
+                    scale = [1, length_y, 1]
+                    link_pos = [0,0, 0] # no change
+                    joint_pos = [0,0,0] # no change
+
+                self.G[self.num_links - 2][self.num_links - 1]["terminal"] = 0
+                self.G.nodes[self.num_links - 1]["connections"] = [self.link_id]
+                self.connections = []
+                self.connection.snake_connection(self.num_links - 1, scale, link_pos, joint_pos, self.terminal_only, self.connections)
+                self.node.snake_node(id = self.num_links, RL = self.recursive_limit, scale = self.connection.scale, joint_pos = self.connection.joint_pos, link_pos = self.connection.link_pos, connections = self.connection.conns, restitution = self.restitution)
+
+
+                self.link_id += 1
+                self.recursive_limit += 1
+                self.num_links = self.recursive_limit
+
+                # update neurons
+                self.numSensorNeurons = self.num_links
+                self.numMotorNeurons = self.num_links - 1
+
+                # Increase size by 1 in both dimensions
+                sensorToHidden = numpy.zeros((self.numSensorNeurons, self.numHiddenNeurons))
+                sensorToHidden[:self.numSensorNeurons -1, :] = self.sensorToHidden
+
+                hiddenToMotor = numpy.zeros((self.numHiddenNeurons, self.numMotorNeurons))
+                hiddenToMotor[:, :self.numMotorNeurons -1] = self.hiddenToMotor
+
+                # Append new values
+                new_weight_row_sToH = numpy.random.random((1, self.numHiddenNeurons)) * 2 - 1
+                sensorToHidden[-1, :] = new_weight_row_sToH
+                new_weight_column_sToH = numpy.random.random((self.numSensorNeurons, 1)) * 2 - 1
+                sensorToHidden[:, -1] = new_weight_column_sToH.flatten()
+
+                new_weight_row_hToM = numpy.random.random((1, self.numMotorNeurons)) * 2 - 1
+                hiddenToMotor[-1, :] = new_weight_row_hToM
+                new_weight_column_hToM = numpy.random.random((self.numHiddenNeurons, 1)) * 2 - 1
+                hiddenToMotor[:, -1] = new_weight_column_hToM.flatten()
+
+                self.sensorToHidden = sensorToHidden
+                self.hiddenToMotor = hiddenToMotor 
+            else:  
+                randomRowSToH = random.randint(0,self.numSensorNeurons-1)
+                randomColumnSToH = random.randint(0,self.numHiddenNeurons-1)
+                randomRowHToM = random.randint(0,self.numHiddenNeurons-1)
+                randomColumnHToM = random.randint(0,self.numMotorNeurons-1)
+
+                self.sensorToHidden[randomRowSToH, randomColumnSToH] = random.random() * 2 -1
+                self.hiddenToMotor[randomRowHToM, randomColumnHToM] = random.random() * 2 -1 
+        # Add new block (brain burn-in)    
+        elif mutation == 7:
+            n = currentGen / c.burn_in_denominator
+
+            if (self.num_links == 4):
+                self.terminal_only = 1
+                self.restitution = 0
+
+                scale = [1, 1, 1]
+                link_pos = [0,0, 0] # no change
+                joint_pos = [0,0,0] # no change
+
+                self.G[self.num_links - 2][self.num_links - 1]["terminal"] = 0
+                self.G.nodes[self.num_links - 1]["connections"] = [self.link_id]
+                self.connections = []
+                self.connection.snake_connection(self.num_links - 1, scale, link_pos, joint_pos, self.terminal_only, self.connections)
+                self.node.snake_node(id = self.num_links, RL = self.recursive_limit, scale = self.connection.scale, joint_pos = self.connection.joint_pos, link_pos = self.connection.link_pos, connections = self.connection.conns, restitution = self.restitution)
+
+
+                self.link_id += 1
+                self.recursive_limit += 1
+                self.num_links = self.recursive_limit
+
+                # update neurons
+                self.numSensorNeurons = self.num_links
+                self.numMotorNeurons = self.num_links - 1
+
+                # Increase size by 1 in both dimensions
+                sensorToHidden = numpy.zeros((self.numSensorNeurons, self.numHiddenNeurons))
+                sensorToHidden[:self.numSensorNeurons -1, :] = self.sensorToHidden
+
+                hiddenToMotor = numpy.zeros((self.numHiddenNeurons, self.numMotorNeurons))
+                hiddenToMotor[:, :self.numMotorNeurons -1] = self.hiddenToMotor
+
+                # Append new values
+                new_weight_row_sToH = numpy.random.random((1, self.numHiddenNeurons)) * 2 * n - n
+                sensorToHidden[-1, :] = new_weight_row_sToH
+                new_weight_column_sToH = numpy.random.random((self.numSensorNeurons, 1)) * 2 * n - n 
+                sensorToHidden[:, -1] = new_weight_column_sToH.flatten()
+
+                new_weight_row_hToM = numpy.random.random((1, self.numMotorNeurons)) * 2 * n - n
+                hiddenToMotor[-1, :] = new_weight_row_hToM
+                new_weight_column_hToM = numpy.random.random((self.numSensorNeurons, 1)) * 2 * n - n 
+                hiddenToMotor[:, -1] = new_weight_column_hToM.flatten()
+
+                self.sensorToHidden = sensorToHidden
+                self.hiddenToMotor = hiddenToMotor 
+            else:                  
+                randomRowSToH = random.randint(0,self.numSensorNeurons-1)
+                randomColumnSToH = random.randint(0,self.numHiddenNeurons-1)
+                randomRowHToM = random.randint(0,self.numHiddenNeurons-1)
+                randomColumnHToM = random.randint(0,self.numMotorNeurons-1)
+
+                if (randomRowSToH == self.numSensorNeurons - 1 or randomColumnSToH == self.numHiddenNeurons - 1 or randomRowHToM == self.numHiddenNeurons - 1 or randomColumnHToM == self.numMotorNeurons - 1):
+                    self.sensorToHidden[randomRowSToH, randomColumnSToH] = random.random() * 2 * n - n
+                    self.hiddenToMotor[randomRowHToM, randomColumnHToM] = random.random() * 2 * n - n
+                else:
+                    self.sensorToHidden[randomRowSToH, randomColumnSToH] = random.random() * 2 - 1
+                    self.hiddenToMotor[randomRowHToM, randomColumnHToM] = random.random() * 2 - 1 
+
+
 
 
         
