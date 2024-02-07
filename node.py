@@ -7,7 +7,7 @@ class NODE:
         # Link 
         self.link_ID = id
         self.link_size = [1,1,1]
-        self.link_position = [0,0,0.5]
+        self.link_position = [0,0,1]
         self.mass = 1
         self.restitution = 0
 

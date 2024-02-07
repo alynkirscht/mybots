@@ -12,7 +12,7 @@ class SOLUTION:
     def __init__(self, nextAvailableID):
 
         """Recursion variables """
-        self.recursive_limit = 8 # I am gonna choose 4 and then modify the snakes from there, random.randint(3,5)
+        self.recursive_limit = 4 # I am gonna choose 4 and then modify the snakes from there, random.randint(3,5)
         self.num_links = self.recursive_limit # Starting recursive number
         self.link_id = 0
         self.G = nx.Graph()
@@ -61,8 +61,8 @@ class SOLUTION:
                 self.node = NODE(self.G, self.recursive_limit, self.link_id)
                 #Set connection
                 scale = [1,1,1] # no change
-                link_pos = [0,.5,-.5] # no change
-                joint_pos = [0,.5,-.5] # no change
+                link_pos = [0,.5, -0.5] # no change
+                joint_pos = [0,.5,-0.5] # no change
                 # terminal_only
                 self.connections = [self.link_id + 2]
                 self.connection = CONNECTIONS(self.G,self.link_id, scale, link_pos, joint_pos, self.terminal_only, conns=self.connections.copy())
@@ -112,7 +112,26 @@ class SOLUTION:
                 csv_writer.writerow([])
             print("")
             print("")
+    
+    def Store_Brain(self, gen_complete):
+        csv_file = "Brain_" + c.currentlyTesting + ".csv"
 
+        new_gen_count = 0  # Count if population is complete
+
+        # Open the CSV file for writing brain
+        with open(csv_file, "a", newline="") as csvfile:
+            csv_writer = csv.writer(csvfile)
+
+            # Store the sensorToHidden weights and hiddenToMotor weights
+            csv_writer.writerow([self.sensorToHidden])
+            csv_writer.writerow([self.hiddenToMotor])
+            csv_writer.writerow([self.sensorToHidden])
+            csv_writer.writerow([])
+
+            if gen_complete:
+                csv_writer.writerow([])
+                csv_writer.writerow([])
+        
     def Create_Body(self):
         for node, attributes in self.G.nodes(data=True):
             print(f"Node {node}: {attributes}")
@@ -161,17 +180,17 @@ class SOLUTION:
         
         pyrosim.End()
 
-
     def Mutate(self, currentGen):
         # Chooses mutation
-        mutation = 4 #random.randint(0,4)
+        mutation = 7 #random.randint(0,4)
         
         # Change size of one link
         if mutation == 0:
-            rand_link =  random.randint(0, self.num_links)
+            print("mutation",mutation)
+            """ rand_link =  random.randint(0, self.num_links)
             rand_size = random.uniform(0.5, 1.5)
-            self.G.nodes[rand_link]["dimensions"] = [ col * rand_size for col in self.G.nodes[rand_link]["dimensions"]]
-
+            self.G.nodes[rand_link]["dimensions"] = [ col * rand_size for col in self.G.nodes[rand_link]["dimensions"]]"""
+            
             randomRowSToH = random.randint(0,self.numSensorNeurons-1)
             randomColumnSToH = random.randint(0,self.numHiddenNeurons-1)
             randomRowHToM = random.randint(0,self.numHiddenNeurons-1)
@@ -334,7 +353,6 @@ class SOLUTION:
 
                 self.sensorToHidden[randomRowSToH, randomColumnSToH] = random.random() * 2 -1
                 self.hiddenToMotor[randomRowHToM, randomColumnHToM] = random.random() * 2 -1
-        
         # Add link (change restitution)
         elif mutation == 3:
             # if last block restitution == 0 add new node:
@@ -650,7 +668,7 @@ class SOLUTION:
                 self.hiddenToMotor[randomRowHToM, randomColumnHToM] = random.random() * 2 -1 
         # Add new block (brain burn-in)    
         elif mutation == 7:
-            n = currentGen / c.burn_in_denominator
+            n =  currentGen / c.burn_in_denominator
 
             if (self.num_links == 4):
                 self.terminal_only = 1
@@ -688,9 +706,9 @@ class SOLUTION:
                 new_weight_column_sToH = numpy.random.random((self.numSensorNeurons, 1)) * 2 * n - n 
                 sensorToHidden[:, -1] = new_weight_column_sToH.flatten()
 
-                new_weight_row_hToM = numpy.random.random((1, self.numMotorNeurons)) * 2 * n - n
+                new_weight_row_hToM = numpy.random.random((1, self.numMotorNeurons)) * 2 - 1
                 hiddenToMotor[-1, :] = new_weight_row_hToM
-                new_weight_column_hToM = numpy.random.random((self.numSensorNeurons, 1)) * 2 * n - n 
+                new_weight_column_hToM = numpy.random.random((self.numSensorNeurons, 1)) * 2 - 1
                 hiddenToMotor[:, -1] = new_weight_column_hToM.flatten()
 
                 self.sensorToHidden = sensorToHidden
@@ -701,9 +719,10 @@ class SOLUTION:
                 randomRowHToM = random.randint(0,self.numHiddenNeurons-1)
                 randomColumnHToM = random.randint(0,self.numMotorNeurons-1)
 
-                if (randomRowSToH == self.numSensorNeurons - 1 or randomColumnSToH == self.numHiddenNeurons - 1 or randomRowHToM == self.numHiddenNeurons - 1 or randomColumnHToM == self.numMotorNeurons - 1):
+                if (randomRowSToH == self.numSensorNeurons - 1 or randomColumnSToH == self.numHiddenNeurons - 1):
                     self.sensorToHidden[randomRowSToH, randomColumnSToH] = random.random() * 2 * n - n
-                    self.hiddenToMotor[randomRowHToM, randomColumnHToM] = random.random() * 2 * n - n
+                    self.hiddenToMotor[randomRowHToM, randomColumnHToM] = random.random() * 2 - 1 
+
                 else:
                     self.sensorToHidden[randomRowSToH, randomColumnSToH] = random.random() * 2 - 1
                     self.hiddenToMotor[randomRowHToM, randomColumnHToM] = random.random() * 2 - 1 

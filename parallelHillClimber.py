@@ -125,6 +125,7 @@ class PARALLEL_HILL_CLIMBER:
             if i == len(solutions) - 1:
                 gen_complete = True
             self.parents[i].Store_Genotype(gen_complete)
+            self.parents[i].Store_Brain(gen_complete)
 
             
 

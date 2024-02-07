@@ -13,10 +13,22 @@ numberOfGenerations = 30
 populationSize = 5
 motorJointRange = 0.5
 numHiddenNeurons = 5
-currentlyTesting = "8Remove_0_D"
+currentlyTesting = "burn_in_10_E"
 massChange = 0
-#restitutionChange = "1"
+#restitutionChange = 0
 #restitution = 0
-length_y = 0
+#length_y = 0
 burn_in_denominator = numberOfGenerations/3
+
+'''
+# List of test cases
+test_cases = ["burn_in_0_A", "burn_in_0_B", "burn_in_0_C", "burn_in_0_D", "burn_in_0_E"]
+
+# Loop through each test case
+for test_case in test_cases:
+    # Set the currently testing variable
+    currentlyTesting = test_case
+    
+    # Execute the search.py file
+    subprocess.run(['python', 'search.py'])'''
 
