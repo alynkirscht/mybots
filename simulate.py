@@ -56,13 +56,24 @@ targetAngles_FrontLeg = amplitude_FrontLeg*numpy.sin(frequency_FrontLeg * numpy.
 #numpy.save("data\\targetAnglesFrontLeg.npy",targetAngles_FrontLeg)
 #exit()
 
+
+
 #The for loop is used to slow things down
 for i in range(1000):
+    random_num = random.random()
+
+    enable_collisions = False
+    if random_num < 0.5 and i % 10 == 0:
+        enable_collisions = True
+    p.setCollisionFilterPair(robotId, planeId, 1, -1, enableCollision=False)
+
     #Steps physics inside the world
     p.stepSimulation()
     #Add sensor to BackLeg and FrontLeg links
     backLegSensorValues[i] = pyrosim.Get_Touch_Sensor_Value_For_Link("BackLeg")
     frontLegSensorValues[i] = pyrosim.Get_Touch_Sensor_Value_For_Link("FrontLeg")
+
+    print(backLegSensorValues[i])
 
     #Add motor for BackLeg and FrontLeg to torso joints
     pyrosim.Set_Motor_For_Joint(bodyIndex = robotId, jointName= "Torso_BackLeg",
