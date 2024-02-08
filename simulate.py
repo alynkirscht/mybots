@@ -5,7 +5,7 @@ import time
 import pybullet_data
 import pyrosim.pyrosim as pyrosim
 import numpy
-import random
+import random 
 
 pi = numpy.pi
 amplitude_BackLeg = pi/4
