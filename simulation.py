@@ -14,11 +14,14 @@ class SIMULATION:
             self.physicsClient = p.connect(p.DIRECT)
         elif (directOrGUI == "GUI"):
             self.physicsClient = p.connect(p.GUI)
+            p.configureDebugVisualizer(p.COV_ENABLE_GUI,0)
             
         #Create normal force generated when hitting floor
         p.setAdditionalSearchPath(pybullet_data.getDataPath())
         #Add force of gravity
         p.setGravity(0,0,c.GRAVITY)
+
+        p.setPhysicsEngineParameter(fixedTimeStep=c.TIMESTEP) 
         
         self.solutionID = solutionID
         self.robot = ROBOT(self.solutionID, restitution, num_links)
@@ -53,7 +56,7 @@ class SIMULATION:
 
             if (self.directOrGUI == "GUI"):
                 time.sleep(c.SLEEP_TIME) 
-            """
+            
             for snake_idx, robot_id in enumerate(self.snake_robot_ids):
                 # Get and store z-positions of links for each snake
                 link_z_positions = []
@@ -76,7 +79,7 @@ class SIMULATION:
             # Write z-positions for each snake
             for row in zip(*self.z_positions_matrix):
                 csv_writer.writerow(row) # Unpack the row list and write it to the CSV file
-        """    
+        
             
     def Get_Fitness(self):
         self.robot.Get_Fitness(self.solutionID)

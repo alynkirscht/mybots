@@ -10,12 +10,12 @@ import ast
 # B is with 5 hidden neurons
 
 def main():
-    std_dev()
+    #std_dev()
     #mann_whitney_u()
     #convert_numpy()
     #scatterplot_all()
     #scatterplot_single()
-    #min_z()
+    min_z()
 
 def std_dev():
     add_remove = "burn_in"
@@ -23,19 +23,19 @@ def std_dev():
     af0_data = numpy.empty((0,30), dtype=float)
     af_data = numpy.empty((0, 30), dtype=float)
     af1_data = numpy.empty((0, 30), dtype=float)
-    af01_data = numpy.empty((0, 30), dtype=float)
-    af001_data = numpy.empty((0, 30), dtype=float)
-    af0001_data = numpy.empty((0, 30), dtype=float)
-    afRandom_data = numpy.empty((0, 30), dtype=float)
+    #af01_data = numpy.empty((0, 30), dtype=float)
+    #af001_data = numpy.empty((0, 30), dtype=float)
+    #af0001_data = numpy.empty((0, 30), dtype=float)
+    #afRandom_data = numpy.empty((0, 30), dtype=float)
     characters = ['A', 'B', 'C', 'D', 'E']
 
     for char in characters:
         # Load data
         af0 = numpy.load(f"burn_in2\matrix_{add_remove}_0_{char}.npy")
         af = numpy.load(f"burn_in2\matrix_{add_remove}_1_{char}.npy")
-        af1 = numpy.load(f"burn_in2\matrix_{add_remove}_10_{char}.npy")
-        af01 = numpy.load(f"burn_in2\matrix_{add_remove}_15_{char}.npy")
-        af001 = numpy.load(f"burn_in2\matrix_{add_remove}_30_{char}.npy")
+        af1 = numpy.load(f"burn_in2\matrix_{add_remove}_N_{char}.npy")
+        #af01 = numpy.load(f"burn_in2\matrix_{add_remove}_15_{char}.npy")
+        #af001 = numpy.load(f"burn_in2\matrix_{add_remove}_30_{char}.npy")
         #af0001 = numpy.load(f"burn_in2\matrix_{add_remove}_.0001_{char}.npy")
         #afRandom = numpy.load(f"burn_in2\matrix_{add_remove}_Random_{char}.npy")
 
@@ -43,23 +43,23 @@ def std_dev():
         af0_data = numpy.vstack((af0_data, af0))
         af_data = numpy.vstack((af_data, af))
         af1_data = numpy.vstack((af1_data, af1))
-        af01_data = numpy.vstack((af01_data, af01))
-        af001_data = numpy.vstack((af001_data, af001))
+        #af01_data = numpy.vstack((af01_data, af01))
+        #af001_data = numpy.vstack((af001_data, af001))
         #af0001_data = numpy.vstack((af0001_data, af0001))
         #afRandom_data = numpy.vstack((afRandom_data, afRandom))
     
     af0_lower = numpy.zeros(c.numberOfGenerations)
     af_lower = numpy.zeros(c.numberOfGenerations)
     af1_lower = numpy.zeros(c.numberOfGenerations)
-    af01_lower = numpy.zeros(c.numberOfGenerations)
-    af001_lower = numpy.zeros(c.numberOfGenerations)
+    #af01_lower = numpy.zeros(c.numberOfGenerations)
+    #af001_lower = numpy.zeros(c.numberOfGenerations)
     #af0001_lower = numpy.zeros(c.numberOfGenerations)
     #afRandom_lower = numpy.zeros(c.numberOfGenerations)
     af0_upper = numpy.zeros(c.numberOfGenerations)
     af_upper = numpy.zeros(c.numberOfGenerations)
     af1_upper = numpy.zeros(c.numberOfGenerations)
-    af01_upper = numpy.zeros(c.numberOfGenerations)
-    af001_upper = numpy.zeros(c.numberOfGenerations)
+    #af01_upper = numpy.zeros(c.numberOfGenerations)
+    #af001_upper = numpy.zeros(c.numberOfGenerations)
     #af0001_upper = numpy.zeros(c.numberOfGenerations)
     #afRandom_upper = numpy.zeros(c.numberOfGenerations)
 
@@ -77,13 +77,13 @@ def std_dev():
         af1_lower[generation] = af1CIs[0]
         af1_upper[generation] = af1CIs[1]
 
-        af01CIs = bootstrap.ci(data=af01_data[:,generation],statfunction=numpy.mean)
-        af01_lower[generation] = af01CIs[0]
-        af01_upper[generation] = af01CIs[1]
+        #af01CIs = bootstrap.ci(data=af01_data[:,generation],statfunction=numpy.mean)
+        #af01_lower[generation] = af01CIs[0]
+        #af01_upper[generation] = af01CIs[1]
 
-        af001CIs = bootstrap.ci(data=af001_data[:,generation],statfunction=numpy.mean)
-        af001_lower[generation] = af001CIs[0]
-        af001_upper[generation] = af001CIs[1]
+        #af001CIs = bootstrap.ci(data=af001_data[:,generation],statfunction=numpy.mean)
+        #af001_lower[generation] = af001CIs[0]
+        #af001_upper[generation] = af001CIs[1]
 
         #af0001CIs = bootstrap.ci(data=af0001_data[:,generation],statfunction=numpy.mean)
         #af0001_lower[generation] = af0001CIs[0]
@@ -97,8 +97,8 @@ def std_dev():
     mean_af0 = numpy.mean(numpy.array(af0_data), axis=0)
     mean_af = numpy.mean(numpy.array(af_data), axis=0)
     mean_af1 = numpy.mean(numpy.array(af1_data), axis=0)
-    mean_af01 = numpy.mean(numpy.array(af01_data), axis=0)
-    mean_af001 = numpy.mean(numpy.array(af001_data), axis=0)
+    #mean_af01 = numpy.mean(numpy.array(af01_data), axis=0)
+    #mean_af001 = numpy.mean(numpy.array(af001_data), axis=0)
     #mean_af0001 = numpy.mean(numpy.array(af0001_data), axis=0)
     #mean_afRandom = numpy.mean(numpy.array(afRandom_data), axis=0)
     
@@ -108,17 +108,17 @@ def std_dev():
     matplotlib.pyplot.plot(mean_af0, label="No block added", color="red")
     matplotlib.pyplot.fill_between(generations, af0_lower, af0_upper, alpha=0.4, color="red")
 
-    matplotlib.pyplot.plot(mean_af, label="1 whole block added", color="orange")
-    matplotlib.pyplot.fill_between(generations, af_lower, af_upper, alpha=0.4, color="orange")
+    matplotlib.pyplot.plot(mean_af, label="1 whole block added", color="blue")
+    matplotlib.pyplot.fill_between(generations, af_lower, af_upper, alpha=0.4, color="blue")
 
-    matplotlib.pyplot.plot(mean_af1, label="1 Block added with burn in of 10", color="yellow")
-    matplotlib.pyplot.fill_between(generations, af1_lower, af1_upper, alpha=0.4, color="yellow")
+    matplotlib.pyplot.plot(mean_af1, label="1 Block added with burn-in", color="green")
+    matplotlib.pyplot.fill_between(generations, af1_lower, af1_upper, alpha=0.4, color="green")
 
-    matplotlib.pyplot.plot(mean_af01, label="1 Block added with burn in of 15", color="lime")
-    matplotlib.pyplot.fill_between(generations, af01_lower, af01_upper, alpha=0.4, color="lime")
+    #matplotlib.pyplot.plot(mean_af01, label="1 Block added with burn in of 15", color="lime")
+    #matplotlib.pyplot.fill_between(generations, af01_lower, af01_upper, alpha=0.4, color="lime")
 
-    matplotlib.pyplot.plot(mean_af001, label="1 Block added with burn in of 30", color="green")
-    matplotlib.pyplot.fill_between(generations, af001_lower, af001_upper, alpha=0.4, color="green")
+    #matplotlib.pyplot.plot(mean_af001, label="1 Block added with burn in of 30", color="green")
+    #matplotlib.pyplot.fill_between(generations, af001_lower, af001_upper, alpha=0.4, color="green")
 
     #matplotlib.pyplot.plot(mean_af0001, label="0.0001", color="blue")
     #matplotlib.pyplot.fill_between(generations, af0001_lower, af0001_upper, alpha=0.4, color="blue")
@@ -263,25 +263,14 @@ def mann_whitney_u():
 def convert_numpy():
 ## FOR SOME REASON i CAN'T REMOVE QUOTATION MARKS USING PYTHON, BEFORE RUNNING THIS FUNCTION USE REPLACE ON IDE (ctrl + H in VSCode)
 # Loop over letters from 'a' to 'j'
-    for number in ['4','6','8','10']:
+    for number in [480,540]:
         for letter in ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J']:
             # Construct the file name based on the changing letter
-            csv_file = f"z__matrix_error_{number}_{letter}.csv"
-            with open(csv_file, 'r') as file:
-                reader = csv.reader(file)
-                rows = [row for row in reader]
-
-            # Clean the data, remove "[ and ]"
-            cleaned_rows = [[entry.strip('[').strip(']') for entry in row] for row in rows]
-
-            # Write cleaned data back to same file
-            with open(csv_file, 'w', newline='') as file:
-                writer = csv.writer(file)
-                writer.writerows(cleaned_rows)   
+            csv_file = f"dataTimesteps2\z__matrix_ts_range25_{number}_{letter}.csv"
                 
             # Convert csv to numpy array
             data_array = numpy.loadtxt(csv_file, delimiter=',')            
-            np_file = f"z_matrix_error_{number}_{letter}.npy"
+            np_file = f"dataTimesteps2\z__matrix_ts_range25_{number}_{letter}.npy"
             numpy.save(np_file, data_array)
 
 def scatterplot_all():
@@ -389,43 +378,51 @@ def scatterplot_single():
 def min_z():
     # List of changing letters
     letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J']
+    
+    # List to store the data for each timestep
+    timestep_values = [240, 300, 360, 420, 480, 540, 600]
+    timestep_values_up = [240, 260, 360, 420, 480, 540]
+    timestep_values_range = [480, 540]
+    data_arrays = {}
+    data_arrays_above = {}
+    data_arrays_range = {}
+    # Load data for each timestep and append it to the list
+    for timestep in timestep_values:
+        data_arrays[timestep] = [numpy.load(f"dataTimesteps2\z__matrix_timesteps_{timestep}_{letter}.npy") for letter in letters]
 
-    # List to store the data for each letter
-    data_4 = []
-    data_6 = []
-    data_8 = []
-    data_10 = []
+    for timestep in timestep_values_up:
+        data_arrays_above[timestep] = [numpy.load(f"dataTimesteps2\z_matrix_ts_above_{timestep}_{letter}.npy") for letter in letters]
 
-    for letter in letters:
-        # Load data for each letter and append it to the list
-        data_4.append(numpy.load(f"z_matrix_error_4_{letter}.npy"))
-        data_6.append(numpy.load(f"z_matrix_error_6_{letter}.npy"))
-        data_8.append(numpy.load(f"z_matrix_error_8_{letter}.npy"))
-        data_10.append(numpy.load(f"z_matrix_error_10_{letter}.npy"))
+    for timestep in timestep_values_range:
+        data_arrays_range[timestep] = [numpy.load(f"dataTimesteps2\z__matrix_ts_range25_{timestep}_{letter}.npy") for letter in letters] 
 
-    # Convert the list to a NumPy array
-    data_4_array = numpy.array(data_4)
-    data_6_array = numpy.array(data_6)
-    data_8_array = numpy.array(data_8)
-    data_10_array = numpy.array(data_10)
+    # Plot min z-coordinate for each timestep
+    for i, timestep in enumerate(timestep_values):
+        min_z_values = [numpy.min(data_arrays[timestep][i]) for i in range(len(data_arrays[timestep]))]
+        matplotlib.pyplot.plot([timestep] * len(letters), min_z_values, label=str(1/timestep), marker='s', color='blue')
 
-    # Calculate the mean along the first axis (axis=0)
-    min_d4 = numpy.min(data_4_array)
-    min_d6 = numpy.min(data_6_array)
-    min_d8 = numpy.min(data_8_array)
-    min_d10 = numpy.min(data_10_array)
+    
+    for i, timestep in enumerate(timestep_values_up):
+        min_z_values = [numpy.min(data_arrays_above[timestep][i]) for i in  range(len(data_arrays_above[timestep]))]
+        matplotlib.pyplot.plot([timestep] * len(letters), min_z_values, label=str(1/timestep), marker='o', color='red')
 
-    # Plot scatterplot
-    matplotlib.pyplot.plot(4, min_d4, label='min_d4', marker='o', color='blue')
-    matplotlib.pyplot.plot(6, min_d6, label='min_d6', marker='o', color='blue')
-    matplotlib.pyplot.plot(8, min_d8, label='min_d8', marker='o', color='blue')
-    matplotlib.pyplot.plot(10, min_d10, label='min_d10', marker='o', color='blue')    
+    for i, timestep in enumerate(timestep_values_range):
+        min_z_values = [numpy.min(data_arrays_range[timestep][i]) for i in  range(len(data_arrays_range[timestep]))]
+        matplotlib.pyplot.plot([timestep] * len(letters), min_z_values, label=str(1/timestep), marker='.', color='yellow')
+
+    # Create separate legends for red and blue plots
+    blue_patch = matplotlib.pyplot.Line2D([0], [0], marker='s', color='blue', label='Timesteps,starting at z=0.5, jointRange = 0.5', markersize=10)
+    red_patch = matplotlib.pyplot.Line2D([0], [0], marker='o', color='red', label='Timesteps, starting at z=1, jointRange = 0.5', markersize=10)
+    yellow_patch = matplotlib.pyplot.Line2D([0], [0], marker='.', color='yellow', label='Timesteps, starting at z=0.5, jointRange = 0.25', markersize=10)
+    matplotlib.pyplot.legend(handles=[blue_patch, red_patch, yellow_patch])
+
     # Set labels and title
-    matplotlib.pyplot.xlabel('# Blocks')
+    matplotlib.pyplot.xlabel('Timestep')
     matplotlib.pyplot.ylabel('Min Z-coordinate')
-    matplotlib.pyplot.title('Min Z-coordinate for Different # Blocks')
+    matplotlib.pyplot.title('Min Z-coordinate for Different Timesteps')
 
     # Show the plot
+    #matplotlib.pyplot.legend()
     matplotlib.pyplot.show()
     
 

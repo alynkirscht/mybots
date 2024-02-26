@@ -5,6 +5,7 @@ import os
 import numpy
 import csv
 import time
+import pickle
 
 class PARALLEL_HILL_CLIMBER:
     '''
@@ -25,9 +26,19 @@ class PARALLEL_HILL_CLIMBER:
             
         
     def Evolve(self):
+        if os.path.exists("checkpoint.pkl"):
+            with open("checkpoint.pkl", "rb") as f:
+                self.__dict__.update(pickle.load(f))
+
         self.Evaluate(self.parents)
         for currentGeneration in range(c.numberOfGenerations):
             self.Evolve_For_One_Generation(currentGeneration + 1)
+        
+            with open("checkpoint.pkl", "wb") as f:
+                pickle.dump(self.__dict__, f)
+            
+        if os.path.exists("checkpoint.pkl"):
+            os.remove("checkpoint.pkl")
             
                 
             

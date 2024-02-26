@@ -12,7 +12,7 @@ class SOLUTION:
     def __init__(self, nextAvailableID):
 
         """Recursion variables """
-        self.recursive_limit = 4 # I am gonna choose 4 and then modify the snakes from there, random.randint(3,5)
+        self.recursive_limit = 10 # I am gonna choose 4 and then modify the snakes from there, random.randint(3,5)
         self.num_links = self.recursive_limit # Starting recursive number
         self.link_id = 0
         self.G = nx.Graph()
@@ -186,10 +186,11 @@ class SOLUTION:
         
         # Change size of one link
         if mutation == 0:
-            print("mutation",mutation)
-            """ rand_link =  random.randint(0, self.num_links)
+            """
+            rand_link =  random.randint(0, self.num_links)
             rand_size = random.uniform(0.5, 1.5)
-            self.G.nodes[rand_link]["dimensions"] = [ col * rand_size for col in self.G.nodes[rand_link]["dimensions"]]"""
+            self.G.nodes[rand_link]["dimensions"] = [ col * rand_size for col in self.G.nodes[rand_link]["dimensions"]]
+            """
             
             randomRowSToH = random.randint(0,self.numSensorNeurons-1)
             randomColumnSToH = random.randint(0,self.numHiddenNeurons-1)
@@ -668,8 +669,7 @@ class SOLUTION:
                 self.hiddenToMotor[randomRowHToM, randomColumnHToM] = random.random() * 2 -1 
         # Add new block (brain burn-in)    
         elif mutation == 7:
-            n =  currentGen / c.burn_in_denominator
-
+            n = .01
             if (self.num_links == 4):
                 self.terminal_only = 1
                 self.restitution = 0
@@ -720,7 +720,7 @@ class SOLUTION:
                 randomColumnHToM = random.randint(0,self.numMotorNeurons-1)
 
                 if (randomRowSToH == self.numSensorNeurons - 1 or randomColumnSToH == self.numHiddenNeurons - 1):
-                    self.sensorToHidden[randomRowSToH, randomColumnSToH] = random.random() * 2 * n - n
+                    self.sensorToHidden[randomRowSToH, randomColumnSToH] = random.random() * 2 -1
                     self.hiddenToMotor[randomRowHToM, randomColumnHToM] = random.random() * 2 - 1 
 
                 else:
