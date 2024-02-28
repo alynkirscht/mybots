@@ -4,7 +4,6 @@ import constants as c
 import scipy.stats as stats
 import scikits.bootstrap as bootstrap
 import csv
-import ast
 
 # A is without any hidden neurons
 # B is with 5 hidden neurons
