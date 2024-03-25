@@ -20,6 +20,7 @@ class ROBOT:
                 p.changeDynamics(self.robotId, linkIndex=link_index, restitution=float(restitution))
         #p.changeDynamics(self.robotId, linkIndex=int(num_links) - 1, restitution=float(restitution))
         '''
+        
         self.z = []
         os.system("del body" + solutionID + ".urdf")
 

@@ -12,7 +12,7 @@ class SOLUTION:
     def __init__(self, nextAvailableID):
 
         """Recursion variables """
-        self.recursive_limit = 10 # I am gonna choose 4 and then modify the snakes from there, random.randint(3,5)
+        self.recursive_limit = 4 # I am gonna choose 4 and then modify the snakes from there, random.randint(3,5)
         self.num_links = self.recursive_limit # Starting recursive number
         self.link_id = 0
         self.G = nx.Graph()

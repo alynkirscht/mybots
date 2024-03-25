@@ -262,15 +262,17 @@ def mann_whitney_u():
 def convert_numpy():
 ## FOR SOME REASON i CAN'T REMOVE QUOTATION MARKS USING PYTHON, BEFORE RUNNING THIS FUNCTION USE REPLACE ON IDE (ctrl + H in VSCode)
 # Loop over letters from 'a' to 'j'
-    for number in [480,540]:
-        for letter in ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J']:
-            # Construct the file name based on the changing letter
-            csv_file = f"dataTimesteps2\z__matrix_ts_range25_{number}_{letter}.csv"
-                
-            # Convert csv to numpy array
-            data_array = numpy.loadtxt(csv_file, delimiter=',')            
-            np_file = f"dataTimesteps2\z__matrix_ts_range25_{number}_{letter}.npy"
-            numpy.save(np_file, data_array)
+    #for number in [480,540]:
+    for timestep in ['240', '360', '480', '600']:
+        for num in ['10', '8', '6', '4']:
+            for letter in ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J']:
+                # Construct the file name based on the changing letter
+                csv_file = f"dataTimeSteps3\z__matrix_ts_{timestep}_{num}_{letter}.csv"
+                    
+                # Convert csv to numpy array
+                data_array = numpy.loadtxt(csv_file, delimiter=',')            
+                np_file = f"dataTimeSteps3\z__matrix_ts{timestep}_{num}_{letter}.npy"
+                numpy.save(np_file, data_array)
 
 def scatterplot_all():
     # List of changing letters
@@ -375,53 +377,41 @@ def scatterplot_single():
     matplotlib.pyplot.show()
 
 def min_z():
-    # List of changing letters
-    letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J']
-    
-    # List to store the data for each timestep
-    timestep_values = [240, 300, 360, 420, 480, 540, 600]
-    timestep_values_up = [240, 260, 360, 420, 480, 540]
-    timestep_values_range = [480, 540]
-    data_arrays = {}
-    data_arrays_above = {}
-    data_arrays_range = {}
-    # Load data for each timestep and append it to the list
-    for timestep in timestep_values:
-        data_arrays[timestep] = [numpy.load(f"dataTimesteps2\z__matrix_timesteps_{timestep}_{letter}.npy") for letter in letters]
+    # List of changing sizes
+    sizes = ['10', '8', '6', '4']
 
-    for timestep in timestep_values_up:
-        data_arrays_above[timestep] = [numpy.load(f"dataTimesteps2\z_matrix_ts_above_{timestep}_{letter}.npy") for letter in letters]
+    # Define a color map for sizes
+    color_map = {'10': 'blue', '8': 'green', '6': 'red', '4': 'orange'}
 
-    for timestep in timestep_values_range:
-        data_arrays_range[timestep] = [numpy.load(f"dataTimesteps2\z__matrix_ts_range25_{timestep}_{letter}.npy") for letter in letters] 
+    # List to store the minimum z-values for each size and timestep
+    min_z_values = {size: {} for size in sizes}
 
-    # Plot min z-coordinate for each timestep
-    for i, timestep in enumerate(timestep_values):
-        min_z_values = [numpy.min(data_arrays[timestep][i]) for i in range(len(data_arrays[timestep]))]
-        matplotlib.pyplot.plot([timestep] * len(letters), min_z_values, label=str(1/timestep), marker='s', color='blue')
+    # Load data for each size and timestep and calculate the minimum z-value
+    for size in sizes:
+        for timestep in ['240', '360', '480', '600']:
+            # List to store the minimum z-values for the current timestep
+            min_z_values[size][timestep] = []
 
-    
-    for i, timestep in enumerate(timestep_values_up):
-        min_z_values = [numpy.min(data_arrays_above[timestep][i]) for i in  range(len(data_arrays_above[timestep]))]
-        matplotlib.pyplot.plot([timestep] * len(letters), min_z_values, label=str(1/timestep), marker='o', color='red')
+            # Load data for each letter and calculate the minimum z-value
+            for letter in ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J']:
+                data_array = numpy.load(f"dataTimeSteps3\z__matrix_ts{timestep}_{size}_{letter}.npy")
+                min_z_values[size][timestep].append(numpy.min(data_array))
 
-    for i, timestep in enumerate(timestep_values_range):
-        min_z_values = [numpy.min(data_arrays_range[timestep][i]) for i in  range(len(data_arrays_range[timestep]))]
-        matplotlib.pyplot.plot([timestep] * len(letters), min_z_values, label=str(1/timestep), marker='.', color='yellow')
+            # Calculate the overall minimum z-value for the current timestep and size
+            min_z_values[size][timestep] = min(min_z_values[size][timestep])
 
-    # Create separate legends for red and blue plots
-    blue_patch = matplotlib.pyplot.Line2D([0], [0], marker='s', color='blue', label='Timesteps,starting at z=0.5, jointRange = 0.5', markersize=10)
-    red_patch = matplotlib.pyplot.Line2D([0], [0], marker='o', color='red', label='Timesteps, starting at z=1, jointRange = 0.5', markersize=10)
-    yellow_patch = matplotlib.pyplot.Line2D([0], [0], marker='.', color='yellow', label='Timesteps, starting at z=0.5, jointRange = 0.25', markersize=10)
-    matplotlib.pyplot.legend(handles=[blue_patch, red_patch, yellow_patch])
+    # Plot min z-coordinate for each timestep and size
+    for size in sizes:
+        min_z_values_list = [min_z_values[size][timestep] - 0.5 for timestep in ['240', '360', '480', '600']]
+        matplotlib.pyplot.scatter([int(timestep) for timestep in ['240', '360', '480', '600']], min_z_values_list, label=f"Size {size}", color=color_map[size])
 
     # Set labels and title
-    matplotlib.pyplot.xlabel('Timestep')
-    matplotlib.pyplot.ylabel('Min Z-coordinate')
-    matplotlib.pyplot.title('Min Z-coordinate for Different Timesteps')
+    matplotlib.pyplot.xlabel('Timestep size (Hz)')
+    matplotlib.pyplot.ylabel('Min Z-coordinate - 0.5')
+    matplotlib.pyplot.title('Min Z-coordinate - 0.5 for Different Timesteps and Sizes')
 
     # Show the plot
-    #matplotlib.pyplot.legend()
+    matplotlib.pyplot.legend()
     matplotlib.pyplot.show()
     
 

@@ -34,6 +34,7 @@ class SIMULATION:
         # Initialize a matrix to store z-positions for each snake
         self.z_positions_matrix = [[] for _ in range(c.populationSize)]
         
+        
     def __del__(self):
         p.disconnect()
 
