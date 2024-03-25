@@ -10,7 +10,7 @@ class CONNECTIONS:
     def snake_connection(self, id, scale, link_pos, joint_pos, TO, conns):
         self.link_ID = id
         self.link_pos = link_pos
-        self.joint_pos = joint_pos
+        self.joint_pos = joint_pos 
         self.scale = scale
         self.terminal_only = TO
         self.conns = []

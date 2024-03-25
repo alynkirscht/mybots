@@ -33,6 +33,7 @@ class NODE:
         self.restitution = restitution
 
         # Link position
+        
         self.link_position = numpy.array(self.graph.nodes[self.link_ID - 1]["position"])
         link_pos = numpy.array(link_pos)
         self.link_position = numpy.add(self.link_position, link_pos)

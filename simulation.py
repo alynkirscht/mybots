@@ -58,7 +58,8 @@ class SIMULATION:
             if (self.directOrGUI == "GUI"):
                 time.sleep(c.SLEEP_TIME) 
             
-            for snake_idx, robot_id in enumerate(self.snake_robot_ids):
+            
+            """for snake_idx, robot_id in enumerate(self.snake_robot_ids):
                 # Get and store z-positions of links for each snake
                 link_z_positions = []
                 basePositionAndOrientation = p.getBasePositionAndOrientation(robot_id)
@@ -79,7 +80,7 @@ class SIMULATION:
             csv_writer = csv.writer(csvfile)
             # Write z-positions for each snake
             for row in zip(*self.z_positions_matrix):
-                csv_writer.writerow(row) # Unpack the row list and write it to the CSV file
+                csv_writer.writerow(row) # Unpack the row list and write it to the CSV file"""
         
             
     def Get_Fitness(self):
